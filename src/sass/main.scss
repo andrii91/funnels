@@ -1420,7 +1420,13 @@
        border-color: #7ADCBE;
      }
 
-     .progress-info {}
+     .progress-info {
+       .title {
+         span {
+      color: #000;
+         }
+       }
+     }
 
      .red {
        color: #E94C5D;
