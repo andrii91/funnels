@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Ovo';
+    src: url('Ovo.eot');
+    src: url('Ovo.eot?#iefix') format('embedded-opentype'),
+        url('Ovo.woff2') format('woff2'),
+        url('Ovo.woff') format('woff'),
+        url('Ovo.ttf') format('truetype'),
+        url('Ovo.svg#Ovo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

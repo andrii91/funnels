@@ -1,0 +1,43 @@
+$type-btn: bgred;
+$base-color-text: #000000;
+$bg-color: #fff;
+$bg-btn: #FF0000;
+$border-dark: rgba($base-color-text, 0.88);
+
+$background: #FFFFFF;
+$select-color: #fff;
+$select-background: #fff;
+$select-width: 220px;
+$select-height: 40px;
+
+$white: #fff;
+$red: #FF0000;
+$black: #000000;
+$green: #7BE0BF;
+$yellow: #FFF56B;
+$disable_color: #386175;
+
+
+.white {
+  color: $white;
+}
+
+.red {
+  color: $red;
+}
+
+.black {
+  color: $black;
+}
+
+.green {
+  color: $green;
+}
+
+.yellow {
+  color: $yellow;
+}
+
+.disable_color {
+  color: $disable_color;
+}

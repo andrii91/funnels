@@ -1,0 +1,116 @@
+& {
+  .steps-item {
+    padding-left: 120px;
+    padding-top: 0;
+    max-width: 520px;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #fff;
+      z-index: 3;
+    }
+
+    &:first-child {
+      &:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: calc(100% - 60px);
+        border-left: 5px dashed #000000;
+        top: 110px;
+        left: 45px;
+
+      }
+    }
+
+    &:last-child {
+      &:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: calc(100% - 30px);
+        border-left: 5px dashed #000000;
+        top: inherit;
+        bottom: calc(100% + 18px);
+        left: 45px;
+
+      }
+    }
+  }
+
+  &#funnels-lib .steps-item {
+    margin-bottom: 59px;
+  }
+
+  &#funnels-lib .steps-item .title {
+    margin-top: 25px;
+  }
+
+  &#funnels-lib .text-content {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .order-btn {
+    max-width: 350px;
+    width: 100%;
+    text-align: center;
+  }
+
+  &#funnels-lib .btn-group .order-btn:first-child {
+    right: 0;
+    margin-bottom: 27.5px;
+  }
+
+  &#funnels-lib .progress {
+    left: 20px;
+  }
+
+  .intl-tel-input .flag-container {
+    width: 100px;
+  }
+
+  &#funnels-lib .label .intl-tel-input.allow-dropdown input,
+  &#funnels-lib .label .intl-tel-input.allow-dropdown input[type=tel],
+  &#funnels-lib .label .intl-tel-input.allow-dropdown input[type=text],
+  &#funnels-lib .label .intl-tel-input.separate-dial-code input,
+  &#funnels-lib .label .intl-tel-input.separate-dial-code input[type=tel],
+  &#funnels-lib .label .intl-tel-input.separate-dial-code input[type=text] {
+    padding-left: 120px;
+  }
+
+  &#funnels-lib .label.label-phone .label-text {
+    left: 120px;
+  }
+
+  .intl-tel-input.separate-dial-code .selected-dial-code {
+    margin-left: 4px;
+  }
+
+  .intl-tel-input .selected-flag .iti-arrow {
+    margin-left: 5px;
+  }
+
+  .intl-tel-input .selected-flag {
+    padding: 0 12px;
+  }
+  
+  &#funnels-lib .veryfy {
+    flex-wrap: wrap;
+        display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    
+    .number-inputs {
+      margin-right: 0;
+    }
+  }
+  
+  padding-bottom: 80px;
+
+}
