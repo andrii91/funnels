@@ -19,7 +19,7 @@
 
 <body id="funnels-lib" class="">
   <div class="wrapper">
-   <h2>Чтобы посмотреть разные шрифты и темы выберите в соответствующем select option</h2>
+    <h2>Чтобы посмотреть разные шрифты и темы выберите в соответствующем select option</h2>
     <div class="wr-row">
       <div class="wr-col-6">
         <h3>fonts</h3>
@@ -32,7 +32,7 @@
           <option value="open_sans_bolt">Open Sans BOLD </option>
           <option value="open_sans_regular">Open Sans Regular </option>
           <option value="merriweather">Merriweather</option>
-          <option value="roboto_light" >Roboto Light</option>
+          <option value="roboto_light">Roboto Light</option>
           <option value="roboto_extra_bold">Roboto Extra bold</option>
           <option value="open_sans_extra_bold">open sans Extra bold</option>
         </select>
@@ -42,7 +42,12 @@
 
         <select name="theme" id="theme">
           <option selected value="default-tmpl">default tmpl</option>
-          <option  value="dark_green-tmpl">/* DARK GREEN */</option>
+          <option value="white_blue-tmpl">Light white/blue</option>
+          <option value="white_black-tmpl">Light white/black</option>
+          <option value="cream-tmpl">Light cream/black</option>
+          <option value="dark_green-tmpl">DARK GREEN</option>
+          <option value="dark_grey_yell-tmpl">DARK GREY YELL</option>
+          <option value="green-tmpl">GREEN</option>
         </select>
       </div>
     </div>
@@ -518,8 +523,17 @@
 
 
 
-  <script defer src="js/vendor.js"></script>
-  <script defer src="js/app.js"></script>
+  <script  src="js/vendor.js"></script>
+  <script  src="js/app.js"></script>
+  <script >
+    $(document).ready(function() {
+      $('.select-options li').click(function() {
+        $('body').removeClass()
+        $('body').addClass($('#fonts').val());
+        $('body').addClass($('#theme').val());
+      })
+    })
+  </script>
 </body>
 
 </html>

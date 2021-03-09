@@ -28,6 +28,7 @@ input:hover {
 .product-photo {
   margin: 30px 0;
   max-width: 350px;
+
   &:hover {
     img {
       transform: scale(1.1);
@@ -183,7 +184,7 @@ input:hover {
 .steps-item {
   padding-top: 115px;
   position: relative;
-//  margin-bottom: 30px;
+  //  margin-bottom: 30px;
 
   .title {
     font-style: normal;
@@ -315,19 +316,21 @@ input:hover {
     font-style: italic;
     margin: 20px 0 10px;
     position: relative;
-    
+
     a {
       position: absolute;
       background: #fff;
-      bottom: 0;
+      bottom: 2px;
       right: 0;
       display: block;
       color: $red;
       text-decoration: underline;
       z-index: 2;
+
       &:hover {
         text-decoration: none;
       }
+
       &:before {
         content: "";
         width: 49px;
@@ -340,43 +343,43 @@ input:hover {
       }
     }
   }
-  
+
   .testimonials-rating {
     margin-bottom: 10px;
-  padding: 10px 0;
+    padding: 10px 0;
 
-  .star {
-    width: 25px;
-    height: 25px;
-
-    svg {
+    .star {
       width: 25px;
       height: 25px;
-    }
-  }
 
-  .star {
-    svg {
-      fill: #fff;
-
-      path {
-        stroke: #FF0000;
-      }
-    }
-
-    display: inline-block;
-    vertical-align: middle;
-    text-align: left;
-
-    &.active {
       svg {
-        fill: #FF0000;
+        width: 25px;
+        height: 25px;
+      }
+    }
+
+    .star {
+      svg {
+        fill: #fff;
+
+        path {
+          stroke: #FF0000;
+        }
       }
 
+      display: inline-block;
+      vertical-align: middle;
+      text-align: left;
+
+      &.active {
+        svg {
+          fill: #FF0000;
+        }
+
+      }
     }
   }
-}
-  
+
 }
 
 .profile {
@@ -520,13 +523,14 @@ input:hover {
           border-color: #FF0000;
         }
       }
-      
-        &:disabled {
-          cursor: auto;
-        +label {
+
+      &:disabled {
+        cursor: auto;
+
+        + label {
           &:before {
-          cursor: auto;
-            
+            cursor: auto;
+
             background-color: #101010;
             border: 1px solid #101010;
             border-radius: 3px;
@@ -535,12 +539,12 @@ input:hover {
         }
       }
     }
-    
+
     &:disabled {
-      +label {
+      + label {
         &:before {
           cursor: auto;
-          
+
           background-color: #EFEFEF;
           border: 1px solid #EFEFEF;
           border-radius: 3px;
@@ -552,10 +556,10 @@ input:hover {
 
 
   label {
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 30px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
     margin: 0;
     padding-left: 44px;
     position: relative;
@@ -567,12 +571,12 @@ line-height: 30px;
     }
 
     &:before {
-    cursor: pointer;
-      
+      cursor: pointer;
+
       content: "";
       width: 28px;
       height: 28px;
-       background: #FFFFFF;
+      background: #FFFFFF;
       border: 1px solid #909BA6;
       border-radius: 3px;
       position: absolute;
@@ -581,7 +585,7 @@ line-height: 30px;
       transition: .3s;
     }
   }
-  
+
   &:hover {
     label {
       &:before {
@@ -619,9 +623,11 @@ input::-webkit-inner-spin-button {
   box-sizing: border-box;
   border-radius: 3px;
   margin-right: 12px;
+
   &:last-child {
     margin-right: 0;
   }
+
   &.blocked {
     background: #EFEFEF;
     border-color: #EFEFEF;
@@ -642,6 +648,7 @@ input::-webkit-inner-spin-button {
           background: $red;
           border-color: $red;
         }
+
         &:after {
           content: "";
           width: 16px;
@@ -649,11 +656,11 @@ input::-webkit-inner-spin-button {
           background: #FFFFFF;
           border-radius: 50%;
           position: absolute;
-          top: 8px;
+          top: 6px;
           left: 6px;
         }
       }
-      
+
       &:disabled {
         + label {
           &:after {
@@ -662,10 +669,11 @@ input::-webkit-inner-spin-button {
         }
       }
     }
-    
+
     &:disabled {
       + label {
         cursor: auto;
+
         &:before {
           background: #EFEFEF;
           border: 2px solid #EFEFEF;
@@ -685,11 +693,13 @@ input::-webkit-inner-spin-button {
     padding-left: 44px;
     position: relative;
     cursor: pointer;
+
     &:hover {
       &:before {
-         border: 2px solid #909BA6;
+        border: 2px solid #909BA6;
       }
     }
+
     &:before {
       content: "";
       width: 28px;
@@ -698,7 +708,7 @@ input::-webkit-inner-spin-button {
       border: 1px solid #909BA6;
       border-radius: 50%;
       position: absolute;
-      top: 2px;
+      top: 0px;
       left: 0;
       transition: .3s;
     }
@@ -721,6 +731,7 @@ input::-webkit-inner-spin-button {
   display: block;
   position: relative;
   margin: 12px 0;
+
   .label-text {
     font-style: normal;
     font-weight: normal;
@@ -733,21 +744,29 @@ input::-webkit-inner-spin-button {
     left: 20px;
     z-index: 0;
     cursor: text;
-      -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none;   /* Chrome/Safari/Opera */
-  -khtml-user-select: none;    /* Konqueror */
-  -moz-user-select: none;      /* Firefox */
-  -ms-user-select: none;       /* Internet Explorer/Edge */
-  user-select: none;           /* Non-prefixed version, currently*/
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: none;
+    /* Konqueror */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently*/
     transition: .3s;
-    
+
   }
+
   &-textarea {
     .label-text {
       transform: none;
       top: 20px;
     }
   }
+
   &.active {
     .label-text {
       font-size: 15px;
@@ -756,19 +775,26 @@ input::-webkit-inner-spin-button {
       top: 10px;
     }
   }
-  
+
   &.error {
     .label-text {
       color: $red;
     }
+
     .input-text {
       border: 1px solid $red;
     }
   }
-  
-  .intl-tel-input.allow-dropdown input, .intl-tel-input.allow-dropdown input[type=tel], .intl-tel-input.allow-dropdown input[type=text], .intl-tel-input.separate-dial-code input, .intl-tel-input.separate-dial-code input[type=tel], .intl-tel-input.separate-dial-code input[type=text] {
-        padding-left: 179px;
+
+  .intl-tel-input.allow-dropdown input,
+  .intl-tel-input.allow-dropdown input[type=tel],
+  .intl-tel-input.allow-dropdown input[type=text],
+  .intl-tel-input.separate-dial-code input,
+  .intl-tel-input.separate-dial-code input[type=tel],
+  .intl-tel-input.separate-dial-code input[type=text] {
+    padding-left: 179px;
   }
+
   &.label-phone {
     .label-text {
       left: 179px;
@@ -782,25 +808,30 @@ input::-webkit-inner-spin-button {
   border-radius: 3px;
   display: block;
   z-index: 1;
-//  height: 68px;
+  //  height: 68px;
   padding: 30px 20px 10px;
   font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 26px;
-display: flex;
-align-items: center;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
 
-color: #000000;
+  color: #000000;
 
   width: 100%;
   
+  &.error {
+    border-color: red;
+  }
+
   &[disabled] {
     background: #EFEFEF;
-border-radius: 3px;
+    border-radius: 3px;
     border-color: #EFEFEF;
   }
 }
+
 textarea.input-text {
   resize: none;
   min-height: 220px;
@@ -820,34 +851,39 @@ textarea.input-text {
 
 .veryfy-wrap {
   padding-top: 17px;
+
   .title {
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
     line-height: 26px;
   }
+
   .veryfy {
     .number-inputs {
       padding: 16px 0px 33px 0;
     }
+
     .order-btn {
       margin: 16px 0 33px;
     }
   }
-    &.error {
-      .title {
-        color: $red;
-      }
-        .veryfy {
-    .number-inputs {
-      input {
-        border: 2px solid $red;
-      }
+
+  &.error {
+    .title {
+      color: $red;
     }
-    
+
+    .veryfy {
+      .number-inputs {
+        input {
+          border: 2px solid $red;
+        }
+      }
+
+    }
   }
-  }
-  
+
 }
 
 .progress {
@@ -865,12 +901,14 @@ textarea.input-text {
 .progress-info {
   width: 195px;
   margin-right: 20px;
+
   .line {
-    background: rgba(0,0,0,.2);
+    background: rgba(0, 0, 0, .2);
     border-radius: 5px;
     width: 100%;
     height: 5px;
     overflow: hidden;
+
     span {
       background: #000000;
       border-radius: 5px 0px 0px 5px;
@@ -879,14 +917,14 @@ textarea.input-text {
       height: 5px;
     }
   }
-  
+
   .title {
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
     line-height: 24px;
     color: #333333;
-    
+
   }
 }
 
@@ -894,7 +932,8 @@ textarea.input-text {
   padding: 20px 0;
   border-top: 1px solid #909BA6;
   border-bottom: 1px solid #909BA6;
-  +.step {
+
+  + .step {
     border-top: 0;
   }
 }
@@ -923,12 +962,13 @@ textarea.input-text {
 
 .keywords {
   display: flex;
+
   input {
     background: none;
     border: 1px solid #909BA6;
     border-radius: 3px;
     z-index: 1;
-    padding:  20px ;
+    padding: 20px;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -940,6 +980,7 @@ textarea.input-text {
     margin-right: 20px;
     margin-top: 6px;
     margin-bottom: 26px;
+
     &[disabled] {
       background: #EFEFEF;
       border-radius: 3px;
@@ -947,6 +988,7 @@ textarea.input-text {
       cursor: default;
     }
   }
+
   .order-btn {
     margin-top: 6px;
   }
@@ -961,6 +1003,7 @@ textarea.input-text {
   align-items: center;
   text-transform: uppercase;
   color: #828282;
+
   svg {
     margin-left: 7px;
     margin-right: 5px;
@@ -974,9 +1017,10 @@ textarea.input-text {
   line-height: 21px;
   text-transform: uppercase;
   color: #898989;
-padding: 20px 0;
-display: flex;
-align-items: center;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+
   svg {
     margin-right: 5px;
   }
@@ -992,22 +1036,36 @@ align-items: center;
   padding: 0;
   margin: 0;
   display: flex;
+
   li {
     a {
       font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 31px;
-    color: #000000;
-    opacity: 0.3;
-    transition: .3s;
-    &:hover {
-      opacity: 1;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 31px;
+      color: #000000;
+      opacity: 0.3;
+      transition: .3s;
+
+      &:hover {
+        opacity: 1;
+      }
+
     }
-      
-    }
-    +li {
+
+    + li {
       margin-left: 20px;
     }
+  }
+}
+.create-steps {
+  .item {
+        display: -ms-flexbox;
+    display: flex !important;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    min-height: 100vh;
   }
 }
