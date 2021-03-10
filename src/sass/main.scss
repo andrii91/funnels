@@ -100,7 +100,7 @@
  .select-options {
    display: none;
    position: absolute;
-   top: 99%;
+   top: 97%;
    right: 0;
    left: 0;
    z-index: 999;
@@ -141,7 +141,7 @@
 
  #funnels-lib {
    color: $base-color-text;
-
+padding-bottom: 80px;  
    .wrapper {
      margin-right: auto;
      margin-left: auto;
@@ -154,6 +154,7 @@
    @media (min-width: 768px) {
      .wrapper {
        max-width: 780px;
+
        &.wrapper-small {
          max-width: 630px;
        }
@@ -185,9 +186,11 @@
      text-align: center;
      display: block;
 
-     img {
+     img,
+     svg {
        max-width: 100%;
        height: auto;
+       max-height: 110px;
        display: inline-block;
      }
    }
@@ -238,10 +241,10 @@
 
    .order-btn {
      margin: 26px 0;
-     padding: 21px 40px;
+     padding: 20px 40px 22px;
      background: $red;
      border: 0;
-     box-shadow: inset 2px 2px 0px rgba(255, 255, 255, 0.35), inset 0px -2px 0px rgba(0, 0, 0, 0.25);
+     box-shadow:  inset 0px -2px 0px rgba(0, 0, 0, 0.25);
      box-sizing: border-box;
      display: inline-block;
      vertical-align: middle;
@@ -275,7 +278,8 @@
          transition: .3s;
        }
 
-       &:hover, &:focus {
+       &:hover,
+       &:focus {
          &:before {
            border: 3px solid darken($red, 5%);
          }
@@ -285,6 +289,7 @@
          box-shadow: 0 0;
          color: $base-color-text;
        }
+       
      }
 
      &.unimportant-btn {
@@ -334,7 +339,8 @@
        padding-left: 15px;
        padding-right: 15px;
        color: #101010;
-
+        box-shadow: 0 0;
+       
        &:hover,
        &:focus {
 
@@ -342,9 +348,16 @@
          box-shadow: 0 0;
          color: $base-color-text;
        }
+       &:focus, &:active {
+         padding-left: 17px;
+         padding-right: 13px;
+         background: #fff;
+         box-shadow: 0 0;
+         color: $base-color-text;
+       }
      }
 
-     transition: .3s;
+     transition: 0s;
      font-style: normal;
      font-weight: 600;
      font-size: 22px;
@@ -363,10 +376,12 @@
      &:focus,
      &:active {
        box-shadow: inset 0px 2px 0px rgba(0, 0, 0, 0.25);
-
+      padding: 23px 38px 19px 42px;
        color: $white;
 
      }
+     
+     
 
 
    }
@@ -709,6 +724,9 @@
        text-transform: uppercase;
 
      }
+     .testimonials-item p.small a {
+           bottom: -5px;
+     }
    }
 
    &.open_sans_regular {
@@ -868,6 +886,9 @@
    }
 
    &.roboto_light {
+     .order-btn {
+       text-transform: uppercase;
+     }
      * {
        font-family: Roboto !important;
        font-weight: 300 !important;
@@ -953,13 +974,22 @@
      .step-count {
        text-transform: uppercase;
      }
+     .select-styled:before {
+       font-weight: 300;
+     }
    }
 
    &.roboto_extra_bold {
      * {
        font-family: Roboto !important;
      }
-
+     
+     .checbox-label label, .radio-label label {
+       text-transform: uppercase;
+     }
+     .checbox-label label:before {
+       top: -2px;
+     }
      h1 {
        margin-top: 60px;
        font-weight: 900;
@@ -1086,10 +1116,16 @@
        font-size: 18px;
        line-height: 31px;
      }
+     .label .label-text {
+       text-transform: uppercase;
+     }
    }
 
 
    &.open_sans_extra_bold {
+     .order-btn, .label-text, .veryfy-wrap .title, .checbox-label label, .radio-label label  {
+       text-transform: uppercase;
+     }
      h1 {
        margin-top: 60px;
        font-weight: 800;
@@ -1217,6 +1253,18 @@
      background: #183949;
      position: relative;
 
+     .logo {
+       svg {
+         path {
+           fill: #fff;
+
+           &.logo_color {
+             fill: #FFF56B;
+           }
+         }
+       }
+     }
+
      &:before {
        content: "";
        background: url('../images/dtmpl1.svg') no-repeat center;
@@ -1313,7 +1361,7 @@
        color: #FFF56B;
 
        &:before {
-         background: linear-gradient(270deg, #183949 18.37%, rgba(255, 255, 255, 0) 85.71%);
+         background: linear-gradient(270deg, #183949 18.37%, rgba(24, 57, 73, 0) 85.71%);
        }
 
      }
@@ -1368,8 +1416,14 @@
        border: 1px solid #7ADCBE;
        box-sizing: border-box;
        border-radius: 3px;
+
        &.error {
          border-color: red;
+       }
+       
+       &.blocked {
+          background: #274553;
+       border: 1px solid #274553;
        }
      }
 
@@ -1519,6 +1573,18 @@
      position: relative;
      background: #202428;
 
+     .logo {
+       svg {
+         path {
+           fill: #fff;
+
+           &.logo_color {
+             fill: #E6B814;
+           }
+         }
+       }
+     }
+
      section {
        position: relative;
        z-index: inherit;
@@ -1601,7 +1667,7 @@
        color: #E6B814;
 
        &:before {
-         background: linear-gradient(270deg, #202428 18.37%, rgba(255, 255, 255, 0) 85.71%);
+         background: linear-gradient(270deg, #202428 18.37%, rgba(32, 36, 40, 0) 85.71%);
        }
 
      }
@@ -1825,9 +1891,21 @@
 
    &.green-tmpl {
      position: relative;
-     background: url('../images/greenbg.png') repeat-y center;
+     background: url('../images/greenbg.png') repeat-y center top;
      background-size: 100%;
 
+     .logo {
+       svg {
+         path {
+           fill: #fff;
+
+           &.logo_color {
+             fill: #E6BA7B;
+           }
+         }
+       }
+     }
+     
      section {
        position: relative;
        z-index: inherit;
@@ -1908,7 +1986,7 @@
        color: #E6BA7B;
 
        &:before {
-         background: linear-gradient(270deg, #0F444D 18.37%, rgba(255, 255, 255, 0) 85.71%);
+         background: linear-gradient(270deg, #0F444D 18.37%, rgba(15, 68, 77, 0) 85.71%);
        }
 
      }
@@ -1933,7 +2011,7 @@
      .select-styled,
      .select-options {
        border-color: #E6BA7B;
-       background: #0F444D;
+       background: 0 0;
 
        li:hover {
          color: #0F444D;
@@ -2135,6 +2213,10 @@
        color: #005CBC;
      }
 
+     .logo_color {
+       fill: #005CBC;
+     }
+
      .price .old .discount {
        color: #005CBC;
        border-color: #005CBC;
@@ -2210,12 +2292,24 @@
        background-color: #005CBC;
        color: #fff;
      }
+     
+     .faq-item.active .arrow {
+       svg {
+         path {
+           fill: #005CBC;
+         }
+       }
+     }
 
    }
 
    &.white_black-tmpl {
      .red {
        color: #000;
+     }
+
+     .logo_color {
+       fill: #000;
      }
 
      .price .old .discount {
@@ -2298,6 +2392,17 @@
 
    &.cream-tmpl {
      background: #E5E3DD;
+     
+     .select-styled, .select-options {
+       border-color: #AF9075;
+     }
+     .select-styled, .select-styled:before, .label .label-text {
+       color: #AF9075;
+     }
+
+     .logo_color {
+       fill: #AF9075;
+     }
 
      .red {
        color: #AF9075;
@@ -2381,6 +2486,7 @@
 
      .order-btn.link-btn {
        background: #E5E3DD;
+       color: #AF9075;
      }
 
      .testimonials-rating .star svg,
@@ -2407,12 +2513,15 @@
        border-color: #EFEFEF;
        cursor: auto;
      }
+
      .testimonials-item p.small a {
        background: #E5E3DD;
+
        &:before {
-         background: linear-gradient(270deg,#E5E3DD 18.37%,rgba(255,255,255,0) 85.71%);
+         background: linear-gradient(270deg, #E5E3DD 18.37%, rgba(229, 227, 221, 0) 85.71%);
        }
      }
+
      .label.label-phone .label-text {
        z-index: 2;
      }

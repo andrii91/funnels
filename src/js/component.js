@@ -60,14 +60,14 @@ $(document).ready(function () {
     var $styledSelect = $this.next('div.select-styled');
     if ($this.children('option[selected]')) {
       $styledSelect.text($this.children('option[selected]').text());
-      
-      if($styledSelect.text() != '') {
+
+      if ($styledSelect.text() != '') {
         $styledSelect.addClass('select-item');
       }
 
     }
-    
-    
+
+
 
     var $list = $('<ul />', {
       'class': 'select-options'
@@ -223,10 +223,11 @@ $(document).ready(function () {
     infinite: false,
     draggable: false,
     arrows: false,
-    speed: 300,
+    speed: 750,
     slidesToShow: 1,
-    fade: true,
-    cssEase: 'linear',
+    //    fade: true,
+    centerMode: true,
+    //    cssEase: 'ease-in-out',
     adaptiveHeight: true
   });
 
@@ -240,59 +241,47 @@ $(document).ready(function () {
 
 
   $('.prev-step').click(function (e) {
+    e.preventDefault();
     $('.create-steps').slick('slickPrev');
   })
 
   $('.next-step').click(function (e) {
+    e.preventDefault();
     if ($(this).parents('form')) {
-      e.preventDefault();
-      var ref = $(this).closest('form').find('[required]');
-      $(ref).each(function () {
-        if ($(this).val() == '') {
-          var errorfield = $(this);
-          if ($(this).attr("type") == 'email') {
-            var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
-            if (!pattern.test($(this).val())) {
-              $("input[name=email]").val('');
-              $(this).addClass('error').parent('.label').addClass('error');
-              error = 1;
-              $(":input.error:first").focus();
-              return false;
-            }
-          } else if ($(this).attr("type") == 'tel') {
-            var patterntel = /^()[- +()0-9]{9,18}/i;
-            if (!patterntel.test($(this).val())) {
-              $("input[name=phone]").val('');
-              $(this).addClass('error').parent('.label').addClass('error');
-              error = 1;
-              $(":input.error:first").focus();
-              return false;
-            }
-          } else {
-            $(this).addClass('error').parent('.label').addClass('error');
+
+      var form = $(this).parents('form'),
+        error = 0;
+      var field = [];
+      form.find('input[data-validate]').each(function () {
+        field.push('input[data-validate]');
+        var value = $(this).val(),
+          line = $(this).closest('.label');
+        for (var i = 0; i < field.length; i++) {
+          if (!value) {
+            line.addClass('error');
             error = 1;
-            $(":input.error:first").focus();
-            return false;
+            setTimeout(function () {
+              line.removeClass('error')
+            }.bind(this), 2000);
+            event.preventDefault();
           }
-          error = 1;
-          return false;
-        } else {
-          error = 0;
-          $(this).removeClass('error').parent('.label').removeClass('error');
         }
       });
+
       if (error !== 1) {
         //        $(this).unbind('submit').submit();
         $('.create-steps').slick('slickNext');
 
-
-
       }
+
     }
   })
 
 
-  $('.create-steps').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+
+
+
+  $('.create-steps').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
 
     /*  console.log('event', event)
       console.log('slick', slick)
@@ -301,9 +290,9 @@ $(document).ready(function () {
       slidePosition = currentSlide + 1;*/
 
 
-    $('.progress .title span').text((100 / slideCount).toFixed() * currentSlide + '%')
+    $('.progress .title span').text((100 / slideCount).toFixed() * nextSlide + '%')
     $('.progress .line span').css({
-      'width': (100 / slideCount) * currentSlide + '%'
+      'width': (100 / slideCount) * nextSlide + '%'
     })
   });
 
