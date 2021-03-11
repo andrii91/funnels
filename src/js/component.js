@@ -85,26 +85,26 @@ $(document).ready(function () {
     $styledSelect.click(function (e) {
       e.stopPropagation();
       $('div.select-styled.active').not(this).each(function () {
-        $(this).removeClass('active').next('ul.select-options').hide();
+        $(this).removeClass('active').next('ul.select-options').slideUp();
       });
-      $(this).toggleClass('active').next('ul.select-options').toggle();
+      $(this).toggleClass('active').next('ul.select-options').slideToggle();
     });
 
     $listItems.click(function (e) {
       e.stopPropagation();
       $styledSelect.text($(this).text()).removeClass('active').addClass('select-item');
       $this.val($(this).attr('rel'));
-      $list.hide();
+      $list.slideUp();
       //console.log($this.val());
     });
 
     $(document).click(function () {
       $styledSelect.removeClass('active');
-      $list.hide();
+      $list.slideUp();
     });
 
   });
-
+ 
 
   $('.input-text').each(function () {
     $(this).parent().prepend('<div class="label-text">' + $(this).attr('placeholder') + '</div>')
