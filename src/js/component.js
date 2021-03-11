@@ -4,45 +4,57 @@ $(document).ready(function () {
     $(this).toggleClass('active');
     $(this).find('.more').slideToggle();
   })
+  var countThisInput = 0;
 
   if ($('input').hasClass('required-input')) {
-    $('.submit').attr('disabled', true);
     $('.required-input').mask("9");
 
-    var countAllInput = $('.required-input').length,
-      countThisInput = 0;
+    $('.number-inputs').each(function () {
+//      $(this).parent().find('.submit').attr('disabled', true);
 
-    $('.required-input').attr('disabled', 'disabled');
-    $($('.required-input').first()).removeAttr('disabled');
 
+
+      //      console.log($(this).find('.required-input').first());
+
+      $($(this).find('.required-input')).attr('disabled', 'disabled');
+
+      if (!$(this).find('.required-input').hasClass('blocked')) {
+        $($(this).find('.required-input').first()).removeAttr('disabled');
+      }
+
+
+
+
+    })
 
     $('.required-input').on('keyup', function (e) {
+      var countAllInput = $(this).parent().find('.required-input').length;
 
       if (e.keyCode == 8) {
         $(this).prev('input').focus();
         countThisInput = countAllInput - 1;
-        //        $('#submit').attr('disabled', true);
+//        $(this).parents('.veryfy').find('.submit').attr('disabled', true);
+        
       }
 
-      if ($(this).val().match(/^\d{1}$/) && $(this).val().length >= 1) {
+      if ($(this).val().match(/^\d{1}$/) && $(this).val().length >= 1 ) {
         $(this).next('input').removeAttr('disabled').focus();
         countThisInput++;
 
         /*if (countThisInput >= countAllInput) {
-          $('#submit').attr('disabled', false);
+          $(this).parents('.veryfy').find('.submit').removeAttr('disabled');
         } else {
-          $('#submit').attr('disabled', true);
+          $(this).parents('.veryfy').find('.submit').attr('disabled', true);
         }*/
       }
 
 
-      //    console.log('countThisInput', countThisInput)
+      console.log('countThisInput', countThisInput)
 
 
 
 
     });
-
 
 
   }
@@ -104,7 +116,7 @@ $(document).ready(function () {
     });
 
   });
- 
+
 
   $('.input-text').each(function () {
     $(this).parent().prepend('<div class="label-text">' + $(this).attr('placeholder') + '</div>')
@@ -271,6 +283,40 @@ $(document).ready(function () {
       if (error !== 1) {
         //        $(this).unbind('submit').submit();
         $('.create-steps').slick('slickNext');
+
+      }
+
+    }
+  })
+
+  $('.submit').click(function (e) {
+    e.preventDefault();
+    if ($(this).parents('.veryfy-wrap')) {
+
+      var form = $(this).parents('.veryfy-wrap'),
+        error = 0;
+      var field = [];
+      form.find('input[data-validate]').each(function () {
+        field.push('input[data-validate]');
+        var value = $(this).val(),
+          line = $(this).closest('.veryfy-wrap');
+        for (var i = 0; i < field.length; i++) {
+          if (!value) {
+            line.addClass('error');
+            line.find('.title').text('Enter correct PIN:')
+            error = 1;
+            setTimeout(function () {
+              line.removeClass('error')
+               line.find('.title').text('Enter PIN:')
+            }.bind(this), 2000);
+            event.preventDefault();
+          }
+        }
+      });
+
+      if (error !== 1) {
+        //        $(this).unbind('submit').submit();
+//        $('.create-steps').slick('slickNext');
 
       }
 

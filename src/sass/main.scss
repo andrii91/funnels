@@ -1,4 +1,59 @@
- @import 'info/fonts';
+
+/*плавная загрузка страниц*/
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fade-in {
+  0% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fade-in {
+  0% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  -webkit-animation: fade-in 1s linear;
+  /* Safari 4+ */
+  -moz-animation: fade-in 1s linear;
+  /* Fx 5+ */
+  -o-animation: fade-in 1s linear;
+  /* Opera 12+ */
+  animation: fade-in 1s linear;
+  /* IE 10+, Fx 29+ */
+}
+
+
+
+@import 'info/fonts';
  @import 'info/variables';
 
  @import 'info/modal';
@@ -250,6 +305,12 @@ padding-bottom: 80px;
      vertical-align: middle;
      border-radius: 4px;
      cursor: pointer;
+     
+     &[disabled] {
+       opacity: .5;
+       filter: grayscale(100%);
+       cursor: inherit;
+     }
 
      &.border-radius30 {
        border-radius: 30px;
@@ -1891,8 +1952,8 @@ padding-bottom: 80px;
 
    &.green-tmpl {
      position: relative;
-     background: url('../images/greenbg.png') repeat-y center top;
-     background-size: 100%;
+     background: url('../images/greenbg.jpg') repeat center top;
+//     background-size: 100%;
 
      .logo {
        svg {
