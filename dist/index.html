@@ -335,9 +335,9 @@
     <section>
       <div class="wrapper">
         <h2>Get ready to start?</h2>
-        <form action="#">
+        <form action="#" class="form">
           <label class="label label-phone" for="phone">
-            <input id="phone" class="input-text" type="tel" name="phone" placeholder="Enter your phone number" required>
+            <input id="phone" class="input-text" type="number" name="phone" placeholder="Enter your phone number" data-validate>
           </label>
           <div class="testimonials-rating large">
             <div class="star active"><svg width="23" height="21" viewBox="0 0 23 21" fill="#FF0000" xmlns="http://www.w3.org/2000/svg">
@@ -364,15 +364,17 @@
               <option value="Item 4">Item 4</option>
             </select>
           </div>
-
-          <div class="veryfy">
-            <div class="number-inputs">
-              <input type="number" class="required-input">
-              <input type="number" class="required-input">
-              <input type="number" class="required-input">
-              <input type="number" class="required-input">
+          <div class="veryfy-wrap">
+            <div class="veryfy">
+              <div class="number-inputs">
+                <input type="number" class="required-input" data-validate>
+                <input type="number" class="required-input" data-validate>
+                <input type="number" class="required-input" data-validate>
+                <input type="number" class="required-input" data-validate>
+              </div>
+              <button class="order-btn submit">Verify</button>
             </div>
-            <button class="order-btn">Verify</button>
+
           </div>
         </form>
 

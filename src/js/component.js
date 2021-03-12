@@ -193,7 +193,7 @@ $(document).ready(function () {
 
 
 
-  $('input[name="phone"], input[type="tel"]').intlTelInput({
+  $('input[name="phone"]').intlTelInput({
     defaultCountry: "us",
     initialCountry: "auto",
     //    preferredCountries: ["ua", "ru", 'az', 'am', 'by', 'kz', 'kg', 'md', 'tj', 'uz', 'tm', 'ge'],
