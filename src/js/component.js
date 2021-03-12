@@ -148,12 +148,15 @@ $(document).ready(function () {
 
   $('.copy-btn').click(function (e) {
     e.preventDefault();
-
+    $(this).parents('.keywords').find('input').addClass('active');
     var $tmp = $("<textarea>");
     $("body").append($tmp);
     $tmp.val($(this).parents('.keywords').find('input').val()).select();
     document.execCommand("copy");
     $tmp.remove();
+    setTimeout(function(){
+      $('.keywords input').removeClass('active');
+    }, 1000)
 
   })
 
