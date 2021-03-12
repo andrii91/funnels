@@ -1,0 +1,506 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <meta name="Title" content="" />
+  <meta name="description" content="" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:sitename" content="" />
+  <meta property="og:title" content="">
+  <meta property="og:image" content="" />
+  <title></title>
+  <link type="text/css" rel="stylesheet" href="css/app.css" />
+  <link rel="shortcut icon" href="images/favicon.png">
+</head>
+
+<body id="funnels-lib" class="">
+
+  <div class="create-steps">
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Warranty registration</h1>
+          <p>Thank you for purchasing! <br>Register your <b>{{brand}}</b> product and activate your warranty. <br>This offer is limited to existing customers of <b>{{brand}}</b>. <br>No additional purchase is required.</p>
+
+          <button class="order-btn  next-step">Continue</button>
+        </div>
+      </section>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small form">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Amazon order verification</h1>
+          <p>Please type the Amazon Order ID below. <br>Here is an example of what an Order ID should look like: <br>123-1234567-1234567 <br><b>Do NOT include</b>: "order" "#" ":" or anything else.</p>
+
+          <label class="label " for="number">
+            <input id="number" class="input-text" type="text" name="name" placeholder="Enter your order number" data-validate>
+          </label>
+
+          <div class="btn-group">
+            <button class="order-btn next-step">Verify order</button>
+            <button class="order-btn link-btn prev-step">Return back</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Is this your order?</h1>
+          <div class="wr-row">
+            <div class="wr-col-6">
+              <div class="product">
+                <div class="product-photo" data-fancybox="gallery" data-src="images/photo4.png">
+                  <img src="images/photo4.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="wr-col-6">
+              <div class="text-content">
+                <p>EXOMEND Posture Corrector for Men & Women - Back Support Brace for Upper Back & Neck Pain Relief - Anti-Slouching Trainer – Spine Alignment Correction Device - Best for Gamers – M to XL</p>
+
+              </div>
+              <div class="btn-group">
+                <button class="order-btn next-step">Yes</button>
+                <button class="order-btn link-btn prev-step">No</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Your email address</h1>
+          <p>Please enter your name and email address below.</p>
+          <form class="form" action="#">
+
+            <div class="input-group">
+              <label class="label" for="name2">
+                <input id="name2" class="input-text" type="text" name="name" placeholder="Enter your first name" data-validate autocomplete="off">
+              </label>
+              <label class="label" for="lastname2">
+                <input id="lastname2" class="input-text" type="text" name="lastname" placeholder="Enter your last name" data-validate autocomplete="off">
+              </label>
+            </div>
+            <label class="label" for="email">
+              <input id="email" class="input-text" type="email" name="email" placeholder="Enter your email here" data-validate autocomplete="off">
+            </label>
+
+
+            <div class="btn-group">
+              <button class="order-btn next-step">Verify</button>
+              <button class="order-btn link-btn prev-step">Return back</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Email verification</h1>
+          <p>We have just sent a code to <b>{{email_address}}</b> <br>Once you get your code, enter it below.</p>
+          <div class="veryfy-wrap">
+            <div class="veryfy ">
+              <div class="number-inputs">
+                <input type="number" class="required-input" data-validate>
+                <input type="number" class="required-input" data-validate>
+                <input type="number" class="required-input" data-validate>
+                <input type="number" class="required-input" data-validate>
+              </div>
+              <button class="order-btn submit">Verify</button>
+            </div>
+          </div>
+          <p>This is where we will send your Visa or Amazon Gift Card Rebate. Click <b>Change email</b> if you need to change your email address or click <b>Resend verification</b> if you haven’t got it for 10 minutes. Check your spam box — sometimes verification code may drop there.</p>
+          <div class="btn-group">
+            <button class="order-btn unimportant-btn next-step"> Resend verification</button>
+            <button class="order-btn unimportant-btn prev-step">Change email</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Your phone number</h1>
+          <p>Please enter your name and email address below.</p>
+          <form class="form" action="#">
+            <div class="input-group">
+              <label class="label" for="name">
+                <input id="name" class="input-text" type="text" name="name" placeholder="Enter your first name" data-validate autocomplete="off">
+              </label>
+              <label class="label" for="lastname">
+                <input id="lastname" class="input-text" type="text" name="lastname" placeholder="Enter your last name" data-validate autocomplete="off">
+              </label>
+            </div>
+            <label class="label label-phone" for="phone">
+              <input id="phone" class="input-text" type="tel" name="phone" placeholder="Enter your phone number" data-validate>
+            </label>
+
+            <div class="btn-group">
+              <button class="order-btn next-step">Verify</button>
+              <button class="order-btn link-btn prev-step">Back</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Your address</h1>
+          <p>Please, fill out your address information for warranty registration.</p>
+          <form class="form" action="#">
+            <label class="label" for="Street">
+              <input id="Street" class="input-text" type="text" name="street" placeholder="Street" data-validate autocomplete="off">
+            </label>
+            <label class="label" for="Street2">
+              <input id="Street2" class="input-text" type="text" name="street2" placeholder="Street (line 2)" data-validate autocomplete="off">
+            </label>
+            <label class="label" for="City">
+              <input id="City" class="input-text" type="text" name="city" placeholder="City" data-validate autocomplete="off">
+            </label>
+            <div class="input-group">
+              <label class="label large" for="satate">
+                <input id="satate" class="input-text" type="text" name="satate" placeholder="Satate/Province" data-validate autocomplete="off">
+              </label>
+              <label class="label small" for="zip">
+                <input id="zip" class="input-text" type="text" name="zip" placeholder="ZIP-code" data-validate autocomplete="off">
+              </label>
+            </div>
+
+            <div class="btn-group">
+              <button class="order-btn next-step">Verify</button>
+              <button class="order-btn link-btn prev-step">Back</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+
+
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>A bit early</h1>
+          <p>To get your honest and complete opinion about our product we would like that you use it for a couple more days. In {{days}} days we will send you a TEXT and/or email with a link that will lead you back to this page.</p>
+
+
+          <button class="order-btn next-step">next</button>
+        </div>
+      </section>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Some questions</h1>
+          <p>Please answer some questions about out product so we can improve.</p>
+          <form class="form" action="#">
+            <label class="label" for="qw1">
+              <input id="qw1" class="input-text" type="text" name="qw1" placeholder="How are you?" data-validate autocomplete="off">
+            </label>
+            <label class="label" for="qw2">
+              <input id="qw2" class="input-text" type="text" name="qw2" placeholder="Where is my king?" data-validate autocomplete="off">
+            </label>
+
+
+            <div class="btn-group">
+              <button class="order-btn next-step">Next</button>
+              <button class="order-btn link-btn prev-step">Back</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small form">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Rate your experience</h1>
+          <p>How would you rate our product?</p>
+
+          <div class="testimonials-rating large">
+            <div class="star active"><svg width="23" height="21" viewBox="0 0 23 21" fill="#FF0000" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.375 1.16101L14.2359 7.15652L14.3528 7.40144L14.6218 7.4369L21.208 8.30508L16.39 12.8787L16.1932 13.0655L16.2426 13.3323L17.4521 19.8644L11.6135 16.6956L11.375 16.5661L11.1365 16.6956L5.2979 19.8644L6.50744 13.3323L6.55685 13.0655L6.36003 12.8787L1.54204 8.30508L8.12817 7.4369L8.39722 7.40144L8.51409 7.15652L11.375 1.16101Z" stroke="#FF0000" />
+              </svg></div>
+            <div class="star active"><svg width="23" height="21" viewBox="0 0 23 21" fill="#FF0000" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.375 1.16101L14.2359 7.15652L14.3528 7.40144L14.6218 7.4369L21.208 8.30508L16.39 12.8787L16.1932 13.0655L16.2426 13.3323L17.4521 19.8644L11.6135 16.6956L11.375 16.5661L11.1365 16.6956L5.2979 19.8644L6.50744 13.3323L6.55685 13.0655L6.36003 12.8787L1.54204 8.30508L8.12817 7.4369L8.39722 7.40144L8.51409 7.15652L11.375 1.16101Z" stroke="#FF0000" />
+              </svg></div>
+            <div class="star "><svg width="23" height="21" viewBox="0 0 23 21" fill="#FF0000" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.375 1.16101L14.2359 7.15652L14.3528 7.40144L14.6218 7.4369L21.208 8.30508L16.39 12.8787L16.1932 13.0655L16.2426 13.3323L17.4521 19.8644L11.6135 16.6956L11.375 16.5661L11.1365 16.6956L5.2979 19.8644L6.50744 13.3323L6.55685 13.0655L6.36003 12.8787L1.54204 8.30508L8.12817 7.4369L8.39722 7.40144L8.51409 7.15652L11.375 1.16101Z" stroke="#FF0000" />
+              </svg></div>
+            <div class="star "><svg width="23" height="21" viewBox="0 0 23 21" fill="#FF0000" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.375 1.16101L14.2359 7.15652L14.3528 7.40144L14.6218 7.4369L21.208 8.30508L16.39 12.8787L16.1932 13.0655L16.2426 13.3323L17.4521 19.8644L11.6135 16.6956L11.375 16.5661L11.1365 16.6956L5.2979 19.8644L6.50744 13.3323L6.55685 13.0655L6.36003 12.8787L1.54204 8.30508L8.12817 7.4369L8.39722 7.40144L8.51409 7.15652L11.375 1.16101Z" stroke="#FF0000" />
+              </svg></div>
+            <div class="star "><svg width="23" height="21" viewBox="0 0 23 21" fill="#FF0000" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.375 1.16101L14.2359 7.15652L14.3528 7.40144L14.6218 7.4369L21.208 8.30508L16.39 12.8787L16.1932 13.0655L16.2426 13.3323L17.4521 19.8644L11.6135 16.6956L11.375 16.5661L11.1365 16.6956L5.2979 19.8644L6.50744 13.3323L6.55685 13.0655L6.36003 12.8787L1.54204 8.30508L8.12817 7.4369L8.39722 7.40144L8.51409 7.15652L11.375 1.16101Z" stroke="#FF0000" />
+              </svg></div>
+          </div>
+
+
+          <button class="order-btn next-step">Continue</button>
+
+        </div>
+      </section>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small form">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Rate your experience</h1>
+          <p>Please provide a few details about your experience with our product.</p>
+
+          <label class="label label-textarea" for="textarea">
+            <textarea class="input-text" name="textarea" id="textarea" placeholder="Your review" data-validate></textarea>
+          </label>
+
+          <div class="btn-group">
+            <button class="order-btn next-step">Verify</button>
+            <button class="order-btn link-btn prev-step">Return back</button>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small form">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Thank you!</h1>
+          <p>Are you willing to post this review to Amazon? As a small business, It would really help us out. Customer feedback is critical to our success.</p>
+
+          <h2>Just take a moment and follow the steps below.</h2>
+
+          <div class="step border-top0">
+            <div class="step-count">Step 1</div>
+            <div class="step-info">Copy your review to the clipboard of your device.</div>
+            <label class="label label-textarea active" for="textarea1">
+              <textarea class="input-text" name="textarea" id="textarea1" placeholder="Your review" data-validate>Here is the text of your review.</textarea>
+            </label>
+            <a href="#" class="order-btn unimportant-btn copy-textarea">Copy review</a>
+          </div>
+          <div class="step">
+            <div class="step-count">Step 2</div>
+            <div class="step-info">Ckick on a link below to open your Amazon account reviews page, look for this order:</div>
+            <div class="wr-row">
+              <div class="wr-col-6">
+                <div class="product">
+                  <div class="product-photo" data-fancybox="gallery" data-src="images/photo4.png">
+                    <img src="images/photo4.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="wr-col-6">
+                <div class="text-content">
+                  <p><b>123-123456-1234567 </b><br>EXOMEND Posture Corrector for Men & Women - Back Support Brace for Upper Back & Neck Pain Relief - Anti-Slouching Trainer – Spine Alignment Correction Device - Best for Gamers – M to XL</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-count">Step 3</div>
+            <div class="step-info">Paste your review and submit it to Amazon.</div>
+          </div>
+
+          <div class="btn-group">
+            <button class="order-btn next-step">Continue</button>
+            <button class="order-btn link-btn prev-step">Return back</button>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small form">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Warranty details</h1>
+          <p>Thank you for registering your product. <br>Your warranty reference number is generated below.</p>
+
+          <div class="keywords">
+            <input type="text" value="ABDL-3FF9L-KFMW-4KF9" disabled>
+            <a href="#" class="order-btn  unimportant-btn copy-btn">Copy</a>
+          </div>
+
+          <p>Your warranty will expire on <b>{{expire_date}}</b></p>
+
+          <button class="order-btn next-step">NextStep</button>
+
+        </div>
+      </section>
+    </div>
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small form">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Privacy policy</h1>
+          <p>Lorem ipsum to get your honest and complete opinion about our product we would like that you use it for a couple more days. In {{days}} days we will send you a TEXT and/or email with a link that will lead you back to this page.</p>
+
+          <p>Lorem ipsum to get your honest and complete opinion about our product we would like that you use it for a couple more days. In {{days}} days we will send you a TEXT and/or email with a link that will lead you back to this page.</p>
+
+          <h2>Interpritations and defenitions</h2>
+          <p>Lorem ipsum to get your honest and complete opinion about our product we would like that you use it for a couple more days. In {{days}} days we will send you a TEXT and/or email with a link that will lead you back to this page.</p>
+
+          <p>Lorem ipsum to get your honest and complete opinion about our product we would like that you use it for a couple more days. In {{days}} days we will send you a TEXT and/or email with a link that will lead you back to this page. </p>
+
+          <h2>Changes to this policy</h2>
+          <p>Lorem ipsum to get your honest and complete opinion about our product we would like that you use it for a couple more days. In {{days}} days we will send you a TEXT and/or email with a link that will lead you back to this page.</p>
+
+          <p>Lorem ipsum to get your honest and complete opinion about our product we would like that you use it for a couple more days. In {{days}} days we will send you a TEXT and/or email with a link that will lead you back to this page. </p>
+
+
+          <button class="order-btn next-step">Continue</button>
+        </div>
+      </section>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small form">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Custommer support</h1>
+          <p>Our customer support specialists are here to help. <br>Please pick an option below.</p>
+          <label class="label" for="name3">
+            <input id="name3" class="input-text" type="text" name="name" placeholder="Name" data-validate>
+          </label>
+          <label class="label" for="email6">
+            <input id="email6" class="input-text" type="email" name="email" placeholder="Email address" data-validate>
+          </label>
+          <label class="label label-textarea" for="textarea3">
+            <textarea class="input-text" name="textarea" id="textarea3" placeholder="Please enter your review here"></textarea>
+          </label>
+          <div class="btn-group">
+            <button class="order-btn next-step">Send</button>
+            <button class="order-btn link-btn prev-step">Cancel</button>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small form">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Custommer support</h1>
+          <p>Our customer support specialists are here to help. <br>Please pick an option below.</p>
+          <label class="label" for="name30">
+            <input id="name30" class="input-text" type="text" name="name" placeholder="Name" data-validate>
+          </label>
+          <label class="label" for="email60">
+            <input id="email60" class="input-text" type="email" name="email" placeholder="Email address" data-validate>
+          </label>
+          <label class="label label-textarea" for="textarea30">
+            <textarea class="input-text" name="textarea" id="textarea30" placeholder="Please enter your review here"></textarea>
+          </label>
+          <div class="btn-group">
+            <button class="order-btn next-step">Send</button>
+            <button class="order-btn link-btn prev-step">Cancel</button>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small form">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Send me a link</h1>
+          <p>Please enter the same email address or phone number that you used before. We will send you a link to continue where you left off.</p>
+
+          <label class="label" for="email16">
+            <input id="email16" class="input-text" type="email" name="email" placeholder="Email address" data-validate>
+          </label>
+
+          <div class="btn-group">
+            <button class="order-btn next-step">Send me a link</button>
+            <button class="order-btn link-btn prev-step">Cancel</button>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+  </div>
+
+  <div class="progress">
+    <div class="progress-info">
+      <div class="title"><span>14%</span> completed</div>
+      <div class="line"><span style="width: 14%"></span></div>
+    </div>
+    <div class="progress-logo">
+      <img src="images/plogo.svg" alt="">
+    </div>
+  </div>
+
+
+
+  <script defer src="js/vendor.js"></script>
+  <script defer src="js/app.js"></script>
+</body>
+
+</html>

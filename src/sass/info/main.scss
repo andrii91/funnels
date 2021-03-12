@@ -283,8 +283,10 @@ input:hover {
   .star {
     svg {
       fill: #fff;
+      transition: .1s;
 
       path {
+        transition: .1s;
         stroke: #FF0000;
       }
     }
@@ -299,6 +301,20 @@ input:hover {
       }
 
     }
+  }
+  
+  &.large {
+     .star {
+    width: 80px;
+    height: 80px;
+       margin-right: 5px;
+       cursor: pointer;
+
+    svg {
+      width: 80px;
+      height: 80px;
+    }
+  }
   }
 }
 
@@ -775,6 +791,14 @@ input::-webkit-inner-spin-button {
     }
   }
 
+  &.active.label-textarea {
+    .label-text {
+      font-size: 15px;
+      line-height: 19px;
+      transform: translateY(-55%);
+    }
+  }
+
   &.active {
     .label-text {
       font-size: 15px;
@@ -1076,4 +1100,33 @@ textarea.input-text {
     justify-content: center;
     min-height: 100vh;
   }
+}
+
+.paste-content {
+  display: flex;
+  .order-btn {
+    margin: 12px 0 12px 20px;
+  }
+}
+
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  .label {
+        width: calc(100%/2 - 5px);
+    &.large {
+      width:  calc(100% - 160px);
+    }
+    
+    &.small {
+      width: 150px;
+    }
+    &:first-child {
+      margin-right: 10px;
+    }
+  }
+}
+
+.border-top0 {
+  border-top: 0 !important;
 }

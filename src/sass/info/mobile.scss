@@ -112,5 +112,17 @@
   }
   
   padding-bottom: 80px;
+  
+  .input-group {
+  display: flex;
+  flex-wrap: wrap;
+  .label {
+        width:100%;
+    &:first-child {
+      margin-right: 0px;
+    }
+  }
+}
+  
 
 }

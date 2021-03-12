@@ -10,7 +10,7 @@ $(document).ready(function () {
     $('.required-input').mask("9");
 
     $('.number-inputs').each(function () {
-//      $(this).parent().find('.submit').attr('disabled', true);
+      //      $(this).parent().find('.submit').attr('disabled', true);
 
 
 
@@ -33,11 +33,11 @@ $(document).ready(function () {
       if (e.keyCode == 8) {
         $(this).prev('input').focus();
         countThisInput = countAllInput - 1;
-//        $(this).parents('.veryfy').find('.submit').attr('disabled', true);
-        
+        //        $(this).parents('.veryfy').find('.submit').attr('disabled', true);
+
       }
 
-      if ($(this).val().match(/^\d{1}$/) && $(this).val().length >= 1 ) {
+      if ($(this).val().match(/^\d{1}$/) && $(this).val().length >= 1) {
         $(this).next('input').removeAttr('disabled').focus();
         countThisInput++;
 
@@ -154,13 +154,23 @@ $(document).ready(function () {
 
   })
 
+  $('.copy-textarea').click(function (e) {
+    e.preventDefault();
+
+    var $tmp = $("<textarea>");
+    $("body").append($tmp);
+    $tmp.val($(this).parent().find('textarea').text()).select();
+    document.execCommand("copy");
+    $tmp.remove();
+
+  })
+
   //Show more
   var testimonialsLength = 0;
 
   $('.testimonials-item .small').each(function () {
     testimonialsLength = $(this).text().length;
 
-    //    console.log(testimonialsLength);
 
     if (testimonialsLength > 176) {
       $(this).css({
@@ -193,11 +203,6 @@ $(document).ready(function () {
       return "+" + selectedCountryData.dialCode;
     },
     geoIpLookup: function (success, failure) {
-      /*
-      $.get( "https://ip-api.com/json/", function( data ) {
-      	var countryCode = (data.countryCode) ? data.countryCode : "ru";
-      	success(countryCode);
-      }, "json" );*/
 
       $.get("https://ipinfo.io", function () {}, "jsonp").always(function (resp) {
         var countryCode = (resp && resp.country) ? resp.country : "us";
@@ -234,13 +239,13 @@ $(document).ready(function () {
     dots: false,
     infinite: false,
     draggable: false,
+    swipe: false,
     arrows: false,
     speed: 750,
     slidesToShow: 1,
-    //    fade: true,
     centerMode: true,
-    //    cssEase: 'ease-in-out',
-    adaptiveHeight: true
+    adaptiveHeight: true,
+    
   });
 
   var slideCount = $('.create-steps .item').length;
@@ -259,13 +264,13 @@ $(document).ready(function () {
 
   $('.next-step').click(function (e) {
     e.preventDefault();
-    if ($(this).parents('form')) {
+    if ($(this).parents('.form')) {
 
-      var form = $(this).parents('form'),
+      var form = $(this).parents('.form'),
         error = 0;
       var field = [];
-      form.find('input[data-validate]').each(function () {
-        field.push('input[data-validate]');
+      form.find('[data-validate]').each(function () {
+        field.push('[data-validate]');
         var value = $(this).val(),
           line = $(this).closest('.label');
         for (var i = 0; i < field.length; i++) {
@@ -283,6 +288,12 @@ $(document).ready(function () {
       if (error !== 1) {
         //        $(this).unbind('submit').submit();
         $('.create-steps').slick('slickNext');
+        var id = '#funnels-lib',
+          top = $(id).offset().top;
+
+        $('body,html').animate({
+          scrollTop: top - 80
+        }, 100);
 
       }
 
@@ -307,7 +318,7 @@ $(document).ready(function () {
             error = 1;
             setTimeout(function () {
               line.removeClass('error')
-               line.find('.title').text('Enter PIN:')
+              line.find('.title').text('Enter PIN:')
             }.bind(this), 2000);
             event.preventDefault();
           }
@@ -315,8 +326,8 @@ $(document).ready(function () {
       });
 
       if (error !== 1) {
-        //        $(this).unbind('submit').submit();
-//        $('.create-steps').slick('slickNext');
+        $(this).unbind(e);
+        //        $('.create-steps').slick('slickNext');
 
       }
 
@@ -328,18 +339,45 @@ $(document).ready(function () {
 
 
   $('.create-steps').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-
-    /*  console.log('event', event)
-      console.log('slick', slick)
-      console.log('currentSlide', currentSlide)
-      
-      slidePosition = currentSlide + 1;*/
-
-
-    $('.progress .title span').text((100 / slideCount).toFixed() * nextSlide + '%')
+    $('.progress .title span').text(((100 / slideCount) * nextSlide).toFixed() + '%')
     $('.progress .line span').css({
       'width': (100 / slideCount) * nextSlide + '%'
     })
+  });
+
+
+  /*  $('.paste-btn').click(function(e){
+      e.preventDefault();
+  //    $(this).parent().find('input').val(document.execCommand("paste"))
+      $(this).parent().find('input').val(paste())
+    })*/
+
+  var cStars = function (nowPos) {
+    // У всех убираем active
+    $('.testimonials-rating.large .star').removeClass('active');
+
+    for (var i = 0; nowPos + 1 > i; i++) {
+      $('.testimonials-rating.large .star').eq(i).toggleClass('active');
+    }
+  }
+  // переменная содержит количество активных звезд
+  var starsCount = $('.star.active').length;
+
+  // При наведении
+  $('.testimonials-rating.large .star').hover(function () {
+    cStars($(this).index());
+  });
+
+  // При клике
+  $('.testimonials-rating.large .star').click(function () {
+    cStars($(this).index());
+    // меняем количество по клику
+    starsCount = $('.star.active').length;
+  });
+
+  // Как только отводим мышку, возвращаем количество активных айтемов, которые были изначально
+  $('.testimonials-rating.large .star').on('mouseleave', function () {
+    cStars(+starsCount - 1);
   });
 
 
