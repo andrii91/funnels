@@ -2070,10 +2070,14 @@ padding-bottom: 80px;
        border-top: 8px solid #fff;
      }
 
-     .select-styled,
-     .select-options {
+     .select-styled {
        border-color: #E6BA7B;
        background: 0 0;
+
+     }
+     .select-options {
+       border-color: #E6BA7B;
+       background: #0F444D;
 
        li:hover {
          color: #0F444D;
