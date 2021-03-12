@@ -120,7 +120,10 @@ $(document).ready(function () {
 
   $('.input-text').each(function () {
     $(this).parent().prepend('<div class="label-text">' + $(this).attr('placeholder') + '</div>')
-    $(this).removeAttr('placeholder')
+    $(this).removeAttr('placeholder');
+    if ($(this).val().length !== 0) {
+      $(this).parents('.label').addClass('active');
+    }
   })
 
   $('.input-text').focusin(function () {
@@ -245,7 +248,7 @@ $(document).ready(function () {
     slidesToShow: 1,
     centerMode: true,
     adaptiveHeight: true,
-    
+
   });
 
   var slideCount = $('.create-steps .item').length;
@@ -342,7 +345,14 @@ $(document).ready(function () {
     $('.progress .title span').text(((100 / slideCount) * nextSlide).toFixed() + '%')
     $('.progress .line span').css({
       'width': (100 / slideCount) * nextSlide + '%'
+    });
+
+    $('.input-text').each(function () {
+      if ($(this).val().length !== 0) {
+        $(this).parents('.label').addClass('active');
+      }
     })
+
   });
 
 

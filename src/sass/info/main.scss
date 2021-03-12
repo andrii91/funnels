@@ -855,6 +855,12 @@ input::-webkit-inner-spin-button {
   &.error {
     border-color: red;
   }
+  
+  &:focus {
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(34, 60, 80, 0.5) inset;
+-moz-box-shadow: 0px 0px 3px 0px rgba(34, 60, 80, 0.5) inset;
+box-shadow: 0px 0px 3px 0px rgba(34, 60, 80, 0.5) inset;
+  }
 
   &[disabled] {
     background: #EFEFEF;
