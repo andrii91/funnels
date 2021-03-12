@@ -786,7 +786,7 @@ input::-webkit-inner-spin-button {
 
   &-textarea {
     .label-text {
-      transform: none;
+      transform: translateY(0%);
       top: 20px;
     }
   }
