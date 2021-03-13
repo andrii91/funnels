@@ -121,7 +121,7 @@ $(document).ready(function () {
   $('.input-text').each(function () {
     $(this).parent().prepend('<div class="label-text">' + $(this).attr('placeholder') + '</div>')
     $(this).removeAttr('placeholder');
-    if ($(this).val().length !== 0) {
+    if ($(this).val().length !== 0 || $(this).text().length !== 0) {
       $(this).parents('.label').addClass('active');
     }
   })
@@ -393,5 +393,13 @@ $(document).ready(function () {
     cStars(+starsCount - 1);
   });
 
+  var countClickTextarea = 0;
+  
+  $('textarea.input-text').click(function(){
+    if(countClickTextarea == 0) {
+      $(this).text('');
+//      countClickTextarea++;
+    }
+  })
 
 });
