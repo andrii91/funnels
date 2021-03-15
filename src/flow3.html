@@ -40,13 +40,17 @@
             </label>
 
 
-            <div class="btn-group">
-              <button class="order-btn next-step">Verify</button>
-              <button class="order-btn link-btn prev-step">Return back</button>
-            </div>
+            <button class="order-btn next-step">Verify</button>
+
           </form>
         </div>
       </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
     </div>
 
     <div class="item">
@@ -57,24 +61,27 @@
           </div>
           <h1>Email verification</h1>
           <p>We have just sent a code to <b>{{email_address}}</b> <br>Once you get your code, enter it below.</p>
-          <div class="veryfy-wrap">
+          <div class="veryfy-wrap form">
             <div class="veryfy ">
               <div class="number-inputs">
-                <input type="number" class="required-input" data-validate>
-                <input type="number" class="required-input" data-validate>
-                <input type="number" class="required-input" data-validate>
-                <input type="number" class="required-input" data-validate>
+                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
+                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
+                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
+                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
               </div>
-              <button class="order-btn submit">Verify</button>
+              <button class="order-btn submit next-step">Verify</button>
             </div>
           </div>
-          <p>This is where we will send your Visa or Amazon Gift Card Rebate. Click <b>Change email</b> if you need to change your email address or click <b>Resend verification</b> if you haven’t got it for 10 minutes. Check your spam box — sometimes verification code may drop there.</p>
-          <div class="btn-group">
-            <button class="order-btn unimportant-btn next-step"> Resend verification</button>
-            <button class="order-btn unimportant-btn prev-step">Change email</button>
-          </div>
+          <p>This is where we will send your Visa or Amazon Gift Card Rebate. <br>Click below if you need to change your email address.</p>
+          <button class="order-btn unimportant-btn prev-step">Change email</button>
         </div>
       </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
     </div>
 
     <div class="item">
@@ -93,16 +100,20 @@
               <input id="lastname" class="input-text" type="text" name="lastname" placeholder="Enter your last name" data-validate autocomplete="off">
             </label>
             <label class="label label-phone" for="phone">
-              <input id="phone" class="input-text" type="number" name="phone" placeholder="Enter your phone number" data-validate>
+              <input id="phone" class="input-text" type="number" inputmode="numeric" pattern="[0-9]*" name="phone" placeholder="Enter your phone number" data-validate>
             </label>
 
-            <div class="btn-group">
-              <button class="order-btn next-step">Verify</button>
-              <button class="order-btn link-btn prev-step">Return back</button>
-            </div>
+            <button class="order-btn next-step">Verify</button>
+
           </form>
         </div>
       </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
     </div>
 
     <div class="item">
@@ -113,24 +124,28 @@
           </div>
           <h1>Verify your phone number</h1>
           <p>We have just sent a code to <b>{{phone_number}}</b> <br>Once you get your code, enter it below.</p>
-          <div class="veryfy-wrap">
+          <div class="veryfy-wrap form">
             <div class="veryfy ">
               <div class="number-inputs">
-                <input type="number" class="required-input" data-validate>
-                <input type="number" class="required-input" data-validate>
-                <input type="number" class="required-input" data-validate>
-                <input type="number" class="required-input" data-validate>
+                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
+                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
+                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
+                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
               </div>
-              <button class="order-btn submit">Verify</button>
+              <button class="order-btn submit next-step">Verify</button>
             </div>
           </div>
-          <p>This is where we will send your Visa or Amazon Gift Card Rebate. Click <b>Change phone number</b> if you need to change your phone number or click <b>Resend verification</b> if you haven’t got it for 5 minutes.</p>
-          <div class="btn-group">
-            <button class="order-btn unimportant-btn next-step"> Resend verification</button>
-            <button class="order-btn unimportant-btn prev-step">Change phone number</button>
-          </div>
+          <p>This is where we will send your Visa or Amazon Gift Card Rebate. <br>Click below if you need to change your phone number.</p>
+          <button class="order-btn unimportant-btn prev-step">Change phone number</button>
+
         </div>
       </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
     </div>
 
     <div class="item">
@@ -149,6 +164,12 @@
           <button class="order-btn  next-step"> Got it!</button>
         </div>
       </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
     </div>
 
     <div class="item">
@@ -166,6 +187,12 @@
           </div>
         </div>
       </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
     </div>
 
     <div class="item">
@@ -179,6 +206,12 @@
           <button class="order-btn next-step">NextSlide</button>
         </div>
       </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
     </div>
 
 
@@ -286,6 +319,12 @@
 
         </div>
       </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
     </div>
 
     <div class="item">
@@ -389,6 +428,12 @@
 
         </div>
       </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
     </div>
 
     <div class="item">
@@ -484,6 +529,12 @@
 
         </div>
       </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
     </div>
 
     <div class="item">
@@ -575,6 +626,12 @@
           <button class="order-btn next-step">I bought it</button>
         </div>
       </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
     </div>
 
     <div class="item">
@@ -590,12 +647,17 @@
             <input id="number" class="input-text" type="text" name="name" placeholder="Enter your order number" data-validate>
           </label>
 
-          <div class="btn-group">
-            <button class="order-btn next-step">Confirm my order</button>
-            <button class="order-btn link-btn prev-step">Return back</button>
-          </div>
+          <button class="order-btn next-step">Confirm my order</button>
+
+
         </div>
       </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
     </div>
 
     <div class="item">
@@ -627,6 +689,12 @@
         </div>
 
       </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
     </div>
 
     <div class="item">
@@ -648,6 +716,12 @@
         </div>
 
       </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
     </div>
 
     <div class="item">
@@ -662,6 +736,12 @@
 
         </div>
       </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
     </div>
 
     <div class="item">
@@ -676,6 +756,12 @@
 
         </div>
       </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
     </div>
 
     <div class="item">
@@ -688,20 +774,20 @@
           <p>How would you rate our product?</p>
 
           <div class="testimonials-rating large">
-            <div class="star active"><svg width="23" height="21" viewBox="0 0 23 21" fill="#FF0000" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.375 1.16101L14.2359 7.15652L14.3528 7.40144L14.6218 7.4369L21.208 8.30508L16.39 12.8787L16.1932 13.0655L16.2426 13.3323L17.4521 19.8644L11.6135 16.6956L11.375 16.5661L11.1365 16.6956L5.2979 19.8644L6.50744 13.3323L6.55685 13.0655L6.36003 12.8787L1.54204 8.30508L8.12817 7.4369L8.39722 7.40144L8.51409 7.15652L11.375 1.16101Z" stroke="#FF0000" />
+            <div class="star active"><svg width="70" height="67" viewBox="0 0 70 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M34.0593 2.55663C34.377 1.6756 35.623 1.67559 35.9407 2.55663L43.2384 22.7941C43.6555 23.9507 44.736 24.7357 45.9648 24.775L67.4669 25.4618C68.403 25.4916 68.788 26.6767 68.0483 27.2511L51.0564 40.4453C50.0853 41.1994 49.6726 42.4696 50.015 43.6504L56.0064 64.3123C56.2672 65.2119 55.2591 65.9442 54.4843 65.4182L36.685 53.3352C35.6678 52.6447 34.3322 52.6447 33.315 53.3352L15.5157 65.4182C14.7409 65.9442 13.7328 65.2119 13.9937 64.3123L19.985 43.6504C20.3274 42.4696 19.9147 41.1994 18.9436 40.4453L1.95172 27.2511C1.21198 26.6767 1.59701 25.4916 2.53311 25.4618L24.0352 24.775C25.264 24.7357 26.3445 23.9507 26.7616 22.7941L34.0593 2.55663Z" stroke="#897869" stroke-width="2" />
               </svg></div>
-            <div class="star active"><svg width="23" height="21" viewBox="0 0 23 21" fill="#FF0000" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.375 1.16101L14.2359 7.15652L14.3528 7.40144L14.6218 7.4369L21.208 8.30508L16.39 12.8787L16.1932 13.0655L16.2426 13.3323L17.4521 19.8644L11.6135 16.6956L11.375 16.5661L11.1365 16.6956L5.2979 19.8644L6.50744 13.3323L6.55685 13.0655L6.36003 12.8787L1.54204 8.30508L8.12817 7.4369L8.39722 7.40144L8.51409 7.15652L11.375 1.16101Z" stroke="#FF0000" />
+            <div class="star active"><svg width="70" height="67" viewBox="0 0 70 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M34.0593 2.55663C34.377 1.6756 35.623 1.67559 35.9407 2.55663L43.2384 22.7941C43.6555 23.9507 44.736 24.7357 45.9648 24.775L67.4669 25.4618C68.403 25.4916 68.788 26.6767 68.0483 27.2511L51.0564 40.4453C50.0853 41.1994 49.6726 42.4696 50.015 43.6504L56.0064 64.3123C56.2672 65.2119 55.2591 65.9442 54.4843 65.4182L36.685 53.3352C35.6678 52.6447 34.3322 52.6447 33.315 53.3352L15.5157 65.4182C14.7409 65.9442 13.7328 65.2119 13.9937 64.3123L19.985 43.6504C20.3274 42.4696 19.9147 41.1994 18.9436 40.4453L1.95172 27.2511C1.21198 26.6767 1.59701 25.4916 2.53311 25.4618L24.0352 24.775C25.264 24.7357 26.3445 23.9507 26.7616 22.7941L34.0593 2.55663Z" stroke="#897869" stroke-width="2" />
               </svg></div>
-            <div class="star "><svg width="23" height="21" viewBox="0 0 23 21" fill="#FF0000" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.375 1.16101L14.2359 7.15652L14.3528 7.40144L14.6218 7.4369L21.208 8.30508L16.39 12.8787L16.1932 13.0655L16.2426 13.3323L17.4521 19.8644L11.6135 16.6956L11.375 16.5661L11.1365 16.6956L5.2979 19.8644L6.50744 13.3323L6.55685 13.0655L6.36003 12.8787L1.54204 8.30508L8.12817 7.4369L8.39722 7.40144L8.51409 7.15652L11.375 1.16101Z" stroke="#FF0000" />
+            <div class="star "><svg width="70" height="67" viewBox="0 0 70 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M34.0593 2.55663C34.377 1.6756 35.623 1.67559 35.9407 2.55663L43.2384 22.7941C43.6555 23.9507 44.736 24.7357 45.9648 24.775L67.4669 25.4618C68.403 25.4916 68.788 26.6767 68.0483 27.2511L51.0564 40.4453C50.0853 41.1994 49.6726 42.4696 50.015 43.6504L56.0064 64.3123C56.2672 65.2119 55.2591 65.9442 54.4843 65.4182L36.685 53.3352C35.6678 52.6447 34.3322 52.6447 33.315 53.3352L15.5157 65.4182C14.7409 65.9442 13.7328 65.2119 13.9937 64.3123L19.985 43.6504C20.3274 42.4696 19.9147 41.1994 18.9436 40.4453L1.95172 27.2511C1.21198 26.6767 1.59701 25.4916 2.53311 25.4618L24.0352 24.775C25.264 24.7357 26.3445 23.9507 26.7616 22.7941L34.0593 2.55663Z" stroke="#897869" stroke-width="2" />
               </svg></div>
-            <div class="star "><svg width="23" height="21" viewBox="0 0 23 21" fill="#FF0000" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.375 1.16101L14.2359 7.15652L14.3528 7.40144L14.6218 7.4369L21.208 8.30508L16.39 12.8787L16.1932 13.0655L16.2426 13.3323L17.4521 19.8644L11.6135 16.6956L11.375 16.5661L11.1365 16.6956L5.2979 19.8644L6.50744 13.3323L6.55685 13.0655L6.36003 12.8787L1.54204 8.30508L8.12817 7.4369L8.39722 7.40144L8.51409 7.15652L11.375 1.16101Z" stroke="#FF0000" />
+            <div class="star "><svg width="70" height="67" viewBox="0 0 70 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M34.0593 2.55663C34.377 1.6756 35.623 1.67559 35.9407 2.55663L43.2384 22.7941C43.6555 23.9507 44.736 24.7357 45.9648 24.775L67.4669 25.4618C68.403 25.4916 68.788 26.6767 68.0483 27.2511L51.0564 40.4453C50.0853 41.1994 49.6726 42.4696 50.015 43.6504L56.0064 64.3123C56.2672 65.2119 55.2591 65.9442 54.4843 65.4182L36.685 53.3352C35.6678 52.6447 34.3322 52.6447 33.315 53.3352L15.5157 65.4182C14.7409 65.9442 13.7328 65.2119 13.9937 64.3123L19.985 43.6504C20.3274 42.4696 19.9147 41.1994 18.9436 40.4453L1.95172 27.2511C1.21198 26.6767 1.59701 25.4916 2.53311 25.4618L24.0352 24.775C25.264 24.7357 26.3445 23.9507 26.7616 22.7941L34.0593 2.55663Z" stroke="#897869" stroke-width="2" />
               </svg></div>
-            <div class="star "><svg width="23" height="21" viewBox="0 0 23 21" fill="#FF0000" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.375 1.16101L14.2359 7.15652L14.3528 7.40144L14.6218 7.4369L21.208 8.30508L16.39 12.8787L16.1932 13.0655L16.2426 13.3323L17.4521 19.8644L11.6135 16.6956L11.375 16.5661L11.1365 16.6956L5.2979 19.8644L6.50744 13.3323L6.55685 13.0655L6.36003 12.8787L1.54204 8.30508L8.12817 7.4369L8.39722 7.40144L8.51409 7.15652L11.375 1.16101Z" stroke="#FF0000" />
+            <div class="star "><svg width="70" height="67" viewBox="0 0 70 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M34.0593 2.55663C34.377 1.6756 35.623 1.67559 35.9407 2.55663L43.2384 22.7941C43.6555 23.9507 44.736 24.7357 45.9648 24.775L67.4669 25.4618C68.403 25.4916 68.788 26.6767 68.0483 27.2511L51.0564 40.4453C50.0853 41.1994 49.6726 42.4696 50.015 43.6504L56.0064 64.3123C56.2672 65.2119 55.2591 65.9442 54.4843 65.4182L36.685 53.3352C35.6678 52.6447 34.3322 52.6447 33.315 53.3352L15.5157 65.4182C14.7409 65.9442 13.7328 65.2119 13.9937 64.3123L19.985 43.6504C20.3274 42.4696 19.9147 41.1994 18.9436 40.4453L1.95172 27.2511C1.21198 26.6767 1.59701 25.4916 2.53311 25.4618L24.0352 24.775C25.264 24.7357 26.3445 23.9507 26.7616 22.7941L34.0593 2.55663Z" stroke="#897869" stroke-width="2" />
               </svg></div>
           </div>
 
@@ -710,6 +796,12 @@
 
         </div>
       </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
     </div>
 
 
@@ -726,13 +818,18 @@
             <textarea class="input-text" name="textarea" id="textarea" placeholder="Your review" data-validate></textarea>
           </label>
 
-          <div class="btn-group">
-            <button class="order-btn next-step">Verify</button>
-            <button class="order-btn link-btn prev-step">Return back</button>
-          </div>
+          <button class="order-btn next-step">Verify</button>
+
+
 
         </div>
       </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
     </div>
 
     <div class="item">
@@ -778,13 +875,18 @@
             <div class="step-info">Paste your review and submit it to Amazon.</div>
           </div>
 
-          <div class="btn-group">
-            <button class="order-btn next-step">Continue</button>
-            <button class="order-btn link-btn prev-step">Return back</button>
-          </div>
+          <button class="order-btn next-step">Continue</button>
+
+
 
         </div>
       </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
     </div>
     <div class="item">
       <section>
@@ -798,6 +900,12 @@
           <button class="order-btn next-step">Continue</button>
         </div>
       </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
     </div>
 
 
@@ -826,6 +934,12 @@
           <button class="order-btn next-step">Continue</button>
         </div>
       </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
     </div>
 
 
@@ -845,13 +959,18 @@
               <option value="Item 4">Item 4</option>
             </select>
           </div>
-          <div class="btn-group">
-            <button class="order-btn next-step">Continue</button>
-            <button class="order-btn link-btn prev-step">Return back</button>
-          </div>
+          <button class="order-btn next-step">Continue</button>
+
+
 
         </div>
       </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
     </div>
 
 
@@ -880,6 +999,12 @@
 
         </div>
       </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
     </div>
 
     <div class="item">
@@ -902,6 +1027,12 @@
 
         </div>
       </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
     </div>
 
 
@@ -925,6 +1056,12 @@
 
         </div>
       </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
     </div>
 
 

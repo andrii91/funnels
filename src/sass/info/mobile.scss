@@ -96,33 +96,35 @@
   .intl-tel-input .selected-flag {
     padding: 0 12px;
   }
-  
+
   &#funnels-lib .veryfy {
     flex-wrap: wrap;
-        display: -ms-flexbox;
+    display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
     align-items: center;
     -ms-flex-pack: center;
     justify-content: center;
-    
+
     .number-inputs {
       margin-right: 0;
     }
   }
-  
+
   padding-bottom: 80px;
-  
+
   .input-group {
-  display: flex;
-  flex-wrap: wrap;
-  .label {
-        width:100%;
-    &:first-child {
-      margin-right: 0px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .label {
+      width: 100%;
+
+      &:first-child {
+        margin-right: 0px;
+      }
     }
   }
-}
-  
+
 
 }

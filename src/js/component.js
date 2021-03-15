@@ -17,6 +17,7 @@ $(document).ready(function () {
       //      console.log($(this).find('.required-input').first());
 
       $($(this).find('.required-input')).attr('disabled', 'disabled');
+      $($(this).find('.required-input')).attr('maxlength', '1');
 
       if (!$(this).find('.required-input').hasClass('blocked')) {
         $($(this).find('.required-input').first()).removeAttr('disabled');
@@ -137,6 +138,14 @@ $(document).ready(function () {
     }
   })
 
+  $('.input-text').on('keyup', function (e) {
+    if ($(this).val().length == 0) {
+      $(this).parents('.label').removeClass('active');
+    } else {
+      $(this).parents('.label').addClass('active');
+    }
+  })
+
 
   function copytext(el) {
     var $tmp = $("<textarea>");
@@ -154,7 +163,7 @@ $(document).ready(function () {
     $tmp.val($(this).parents('.keywords').find('input').val()).select();
     document.execCommand("copy");
     $tmp.remove();
-    setTimeout(function(){
+    setTimeout(function () {
       $('.keywords input').removeClass('active');
     }, 1000)
 
@@ -173,27 +182,31 @@ $(document).ready(function () {
 
   //Show more
   var testimonialsLength = 0;
+  var testimonialsText = 0;
 
   $('.testimonials-item .small').each(function () {
-    testimonialsLength = $(this).text().length;
+    testimonialsText = $(this).text();
+    testimonialsLength = testimonialsText.length;
 
 
-    if (testimonialsLength > 176) {
-      $(this).css({
+    if (testimonialsLength > 169) {
+      /*$(this).css({
         'height': '250px',
         'overflow': 'hidden',
         'text-overflow': 'ellipsis',
-      })
+      })*/
+      
+      $(this).text(testimonialsText.substring(0, 169))
+      $(this).append('<span class="more-hidden">'+testimonialsText.substring(170, testimonialsLength)+'</span>')
+      
       $(this).append('<a href="#more" class="testimonials-more">Show more</a>')
     }
   })
 
   $('.testimonials-more').click(function () {
-    $(this).hide(150);
+    $(this).hide(0);
 
-    $(this).parent().css({
-      'height': 'auto',
-    })
+    $(this).parent().find('.more-hidden').show();
   })
 
 
@@ -365,6 +378,21 @@ $(document).ready(function () {
       $(this).parent().find('input').val(paste())
     })*/
 
+  var countClickTextarea = 0;
+
+  $('textarea.input-text').click(function () {
+    if (countClickTextarea == 0) {
+      $(this).text('');
+      //      countClickTextarea++;
+    }
+  })
+
+  $("input[type='number']").keyup(function () {
+    $(this).val(this.value.match(/[0-9]*/));
+  });
+
+
+
   var cStars = function (nowPos) {
     // У всех убираем active
     $('.testimonials-rating.large .star').removeClass('active');
@@ -374,7 +402,7 @@ $(document).ready(function () {
     }
   }
   // переменная содержит количество активных звезд
-  var starsCount = $('.star.active').length;
+  var starsCount = $('.testimonials-rating.large .star.active').length;
 
   // При наведении
   $('.testimonials-rating.large .star').hover(function () {
@@ -385,21 +413,14 @@ $(document).ready(function () {
   $('.testimonials-rating.large .star').click(function () {
     cStars($(this).index());
     // меняем количество по клику
-    starsCount = $('.star.active').length;
+    starsCount = $('.testimonials-rating.large .star.active').length;
   });
+
 
   // Как только отводим мышку, возвращаем количество активных айтемов, которые были изначально
   $('.testimonials-rating.large .star').on('mouseleave', function () {
     cStars(+starsCount - 1);
   });
-
-  var countClickTextarea = 0;
-  
-  $('textarea.input-text').click(function(){
-    if(countClickTextarea == 0) {
-      $(this).text('');
-//      countClickTextarea++;
-    }
-  })
+  console.log('starsCount', starsCount)
 
 });
