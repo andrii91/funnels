@@ -1145,7 +1145,7 @@ textarea.input-text {
     align-items: center;
     -ms-flex-pack: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: calc(100vh - 171px);
   }
 }
 
