@@ -1,4 +1,13 @@
+
 $(document).ready(function () {
+  window.onkeydown = function(evt) {
+    if(evt.keyCode == 9) return false;
+};
+window.onkeypress = function(evt) {
+    if(evt.keyCode == 9) return false;
+};
+  
+  
   $('.faq-item').click(function () {
     //    console.log($(this))
     $(this).toggleClass('active');
