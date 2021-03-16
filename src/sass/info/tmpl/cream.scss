@@ -1,0 +1,149 @@
+
+  &.cream-tmpl {
+    background: #E5E3DD;
+
+    .faq-item.active .arrow path {
+      fill: #AF9075;
+    }
+
+    .select-styled,
+    .select-options {
+      border-color: #AF9075;
+    }
+
+    .select-styled,
+    .select-styled:before,
+    .label .label-text {
+      color: #AF9075;
+    }
+
+    .select-styled.select-item {
+      color: #000;
+    }
+
+    .logo_color {
+      fill: #AF9075;
+    }
+
+    .red {
+      color: #AF9075;
+    }
+
+    .price .old .discount {
+      color: #AF9075;
+      border-color: #AF9075;
+    }
+
+    .order-btn:not(.link-btn, .unimportant-btn, .secondary-btn) {
+      background: #AF9075;
+
+      &:hover {
+        opacity: .9;
+      }
+    }
+
+    .order-btn.secondary-btn:before {
+      border-color: #AF9075;
+    }
+
+    .step-count {
+      border-color: #AF9075;
+    }
+
+    .steps-item:before {
+      border-color: #AF9075;
+
+    }
+
+
+    .testimonials-item .testimonials-rating .star.active svg {
+      fill: #AF9075;
+    }
+
+    .testimonials-item .testimonials-rating .star svg path,
+    .testimonials-rating .star svg path {
+      stroke: #AF9075;
+    }
+
+    .testimonials-item .testimonials-rating .star svg {}
+
+    .testimonials-rating .star.active svg {
+      fill: #AF9075;
+    }
+
+    .testimonials-rating .star svg path,
+    .testimonials-rating .star svg path {
+      stroke: #AF9075;
+    }
+
+
+    .testimonials-item p.small a {
+      color: #AF9075;
+    }
+
+    .checbox-label input:checked + label:before {
+      background-color: #AF9075;
+      border-color: #AF9075;
+    }
+
+    .checbox-label input:checked:disabled + label:before {
+      background-color: #101010;
+      border-color: #101010;
+    }
+
+    .radio-label input:checked + label:before {
+      background: #AF9075;
+      border-color: #AF9075;
+    }
+
+    .radio-label input:checked:disabled + label:after {
+      background: #FFFFFF;
+    }
+
+    .select-options li:hover {
+      background-color: #AF9075;
+      color: #fff;
+    }
+
+    .order-btn.link-btn {
+      background: #E5E3DD;
+      color: #AF9075;
+    }
+
+    .testimonials-rating .star svg,
+    .fancybox-share__button svg path {
+      fill: #E5E3DD;
+    }
+
+    .input-text {
+      background: #fff;
+      border-color: #AF9075;
+    }
+
+    .text-link {
+      color: #000000;
+    }
+
+    .required-input {
+      border-color: #AF9075;
+
+    }
+
+    .required-input.blocked {
+      background: #EFEFEF;
+      border-color: #EFEFEF;
+      cursor: auto;
+    }
+
+    .testimonials-item p.small a {
+      background: #E5E3DD;
+
+      &:before {
+        background: linear-gradient(270deg, #E5E3DD 18.37%, rgba(229, 227, 221, 0) 85.71%);
+      }
+    }
+
+    .label.label-phone .label-text {
+      z-index: 2;
+    }
+  }

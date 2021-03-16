@@ -1,0 +1,324 @@
+ &.dark_green-tmpl {
+
+    background: #183949;
+    position: relative;
+
+    .logo {
+      svg {
+        path {
+          fill: #fff;
+
+          &.logo_color {
+            fill: #FFF56B;
+          }
+        }
+      }
+    }
+
+    &:before {
+      content: "";
+      background: url('../images/dtmpl1.svg') no-repeat center;
+      width: 843px;
+      height: 858px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+    }
+
+    &:after {
+      content: "";
+      background: url('../images/dtmpl2.svg') no-repeat center;
+      width: 893px;
+      height: 2350px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      z-index: -1;
+    }
+
+    section {
+      position: relative;
+      z-index: inherit;
+    }
+
+    h1,
+    h2 {
+      color: #7BE0BF;
+
+    }
+
+    * {
+      color: #fff;
+    }
+
+    .price .old .discount {
+      color: #FFF56B;
+      border-color: #FFF56B;
+    }
+
+    .price .old .summ:before {
+      background: #fff;
+    }
+
+    .secondary_info,
+    .secondary_info-version2 {
+      color: #828282;
+    }
+
+    .steps-item:before {
+      border-color: #FFF56B;
+      background: #183949;
+      
+    }
+
+    .steps-item:after {
+          background: url(../images/line_dark_green.svg) center no-repeat;
+    }
+
+    .order-btn {
+      background: #E94C5D;
+    }
+
+    .testimonials-item .testimonials-rating .star.active svg {
+      fill: #FFF56B;
+    }
+
+    .testimonials-item .testimonials-rating .star svg path,
+    .testimonials-rating .star svg path {
+      stroke: #FFF56B;
+    }
+
+    .testimonials-item .testimonials-rating .star svg {
+      fill: #183949;
+    }
+
+    .testimonials-rating .star.active svg {
+      fill: #FFF56B;
+    }
+
+    .testimonials-rating .star svg path,
+    .testimonials-rating .star svg path {
+      stroke: #FFF56B;
+    }
+
+    .testimonials-rating .star svg {
+      fill: #183949;
+    }
+
+    .testimonials-item p.small a {
+      background: #183949;
+      color: #FFF56B;
+
+      &:before {
+        background: linear-gradient(270deg, #183949 18.37%, rgba(24, 57, 73, 0) 85.71%);
+      }
+
+    }
+
+    .faq-item .arrow path {
+      fill: #fff;
+    }
+
+    .faq-item.active .arrow path {
+      fill: #FFF56B;
+    }
+
+    .order-btn.link-btn {
+      background: 0 0;
+      color: #E94C5D;
+    }
+
+    .intl-tel-input .selected-flag .iti-arrow {
+      border-top: 8px solid #fff;
+    }
+
+    .select-styled,
+    .select-options {
+      border-color: #7ADCBE;
+      background: #183949;
+
+      li:hover {
+        color: #183949;
+        background: #7ADCBE;
+      }
+    }
+
+    .select-options li {
+      border-color: #7ADCBE;
+
+    }
+
+    .select-styled:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border: 7px solid transparent;
+      border-color: #fff transparent transparent;
+      position: absolute;
+      top: calc(50% + 3px);
+      right: 20px;
+      transform: translateY(-50%);
+    }
+
+    .required-input {
+      background: #183949;
+      border: 1px solid #7ADCBE;
+      box-sizing: border-box;
+      border-radius: 3px;
+
+      &.error {
+        border-color: red;
+      }
+
+      &.blocked {
+        background: #274553;
+        border: 1px solid #274553;
+      }
+    }
+
+    .veryfy-wrap.error .title {
+      color: #EC3434;
+    }
+
+    .veryfy-wrap.error .veryfy .number-inputs input {
+      border-color: #EC3434;
+    }
+
+    .input-text,
+    .intl-tel-input .flag-container {
+      border-color: #7ADCBE;
+
+    }
+
+    .checbox-label label:before {
+      background-color: #183949;
+      border-color:  #7ADCBE;
+    }
+
+    .checbox-label input:checked + label:before {
+      background-color: #E94C5D;
+      border-color: #E94C5D
+    }
+
+    .checbox-label input:disabled + label:before {
+      cursor: auto;
+      background-color: #386175;
+      border-color: #386175;
+      border-radius: 3px;
+    }
+
+    .checbox-label input:disabled + label {
+      color: #386175;
+    }
+
+    .checbox-label input:checked:disabled + label:before {
+      cursor: auto;
+      background-color: #852341;
+      border-color:  #852341;
+      border-radius: 3px;
+      filter: invert(1);
+    }
+
+    .checbox-label input:checked:disabled + label {
+      color: #FFFFFF;
+    }
+
+    .order-btn.unimportant-btn {
+      color: #7ADCBE;
+      border-color: #7ADCBE;
+      background: 0 0;
+    }
+
+    .order-btn.unimportant-btn:before {
+
+      border-color: #7ADCBE;
+    }
+
+    .progress-info {
+      .title {
+        span {
+          color: #000;
+        }
+      }
+    }
+
+    .red {
+      color: #E94C5D;
+    }
+
+    .step-count {
+      background: 0 0;
+      color: #FFF56B;
+      border-color: #FFF56B;
+    }
+
+    .keywords input[disabled] {
+      background: #274553;
+      border-radius: 3px;
+      border-color: #274553;
+      cursor: default;
+    }
+
+    .order-btn.secondary-btn {
+      color: #E94C5D;
+      background: 0 0;
+
+      &:before {
+        border-color: #E94C5D;
+      }
+
+      &:hover {
+        &:before {
+          border-color: #E94C5D;
+        }
+      }
+    }
+
+    .radio-label label:before {
+      background: #7ADCBE;
+      border-color:  #7ADCBE;
+    }
+
+    .radio-label input:checked + label:before {
+      background: #7ADCBE;
+      border-color: #7ADCBE;
+    }
+
+    .radio-label input:checked + label:after {
+      background: #183949;
+    }
+
+    .input-text[disabled] {
+      background: #274553;
+      border-color: #274553;
+    }
+
+    .radio-label label {
+      &:hover {
+        &:before {
+          background: 0 0;
+          border-color:  #7ADCBE;
+        }
+      }
+    }
+
+    .radio-label input:disabled + label:hover:before {
+      background: #386175;
+      border-color: #386175;
+    }
+
+    .radio-label input:disabled + label:before {
+      background: #386175;
+      border-color: #386175;
+    }
+
+    .country-list {
+      background: #386175;
+    }
+
+   .footer-list li a {
+     color: #fff;
+   }
+  }

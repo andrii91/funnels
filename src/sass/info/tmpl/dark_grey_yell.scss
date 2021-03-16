@@ -1,0 +1,320 @@
+
+  &.dark_grey_yell-tmpl {
+    position: relative;
+    background: #202428;
+
+    .logo {
+      svg {
+        path {
+          fill: #fff;
+
+          &.logo_color {
+            fill: #E6B814;
+          }
+        }
+      }
+    }
+
+    section {
+      position: relative;
+      z-index: inherit;
+    }
+
+    h1,
+    h2 {
+      color: #E6B814;
+
+    }
+
+    h3 {
+      color: #876900;
+    }
+
+    * {
+      color: #fff;
+    }
+
+    .price .old .discount {
+      color: #E6B814;
+      border-color: #E6B814;
+    }
+
+    .price .old .summ:before {
+      background: #fff;
+    }
+
+    .secondary_info,
+    .secondary_info-version2 {
+      color: #828282;
+    }
+
+    .steps-item:before {
+      border-color: #876900;
+      background: #202428;
+    }
+
+    .steps-item:after {
+      background: url('../images/line_dark_grey_yell.svg') no-repeat center;
+    }
+
+    .order-btn {
+      background: #E6B814;
+      color: #202428;
+
+      &:hover {
+        opacity: .9;
+      }
+    }
+
+    .testimonials-item .testimonials-rating .star.active svg {
+      fill: #876900;
+    }
+
+    .testimonials-item .testimonials-rating .star svg path,
+    .testimonials-rating .star svg path {
+      stroke: #876900;
+    }
+
+    .testimonials-item .testimonials-rating .star svg {
+      fill: #202428;
+    }
+
+    .testimonials-rating .star.active svg {
+      fill: #876900;
+    }
+
+    .testimonials-rating .star svg path,
+    .testimonials-rating .star svg path {
+      stroke: #876900;
+    }
+
+    .testimonials-rating .star svg {
+      fill: #202428;
+    }
+
+    .testimonials-item p.small a {
+      background: #202428;
+      color: #E6B814;
+
+      &:before {
+        background: linear-gradient(270deg, #202428 18.37%, rgba(32, 36, 40, 0) 85.71%);
+      }
+
+    }
+
+    .faq-item .arrow path {
+      fill: #fff;
+    }
+
+    .faq-item.active .arrow path {
+      fill: #876900;
+    }
+
+    .order-btn.link-btn {
+      background: 0 0;
+      color: #E6B814;
+    }
+
+    .intl-tel-input .selected-flag .iti-arrow {
+      border-top: 8px solid #fff;
+    }
+
+    .select-styled,
+    .select-options {
+      border-color: #E6B814;
+      background: #202428;
+
+      li:hover {
+        color: #202428;
+        background: #E6B814;
+      }
+    }
+
+    .select-options li {
+      border-color: #E6B814;
+    }
+
+    .select-styled:before {
+      color: #876900;
+    }
+
+    .select-styled:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border: 7px solid transparent;
+      border-color: #fff transparent transparent;
+      position: absolute;
+      top: calc(50% + 3px);
+      right: 20px;
+      transform: translateY(-50%);
+    }
+
+    .required-input {
+      background: #202428;
+      border: 1px solid #E6B814;
+      box-sizing: border-box;
+      border-radius: 3px;
+    }
+
+    .required-input.blocked {
+      background: #424242;
+      border: 1px solid #424242;
+    }
+
+    .veryfy-wrap.error .title {
+      color: #EC3434;
+    }
+
+    .veryfy-wrap.error .veryfy .number-inputs input {
+      border-color: #EC3434;
+    }
+
+    .input-text,
+    .intl-tel-input .flag-container {
+      border-color: #E6B814;
+
+    }
+
+    .checbox-label label:before {
+      background-color: #202428;
+      border-color: #E6B814;
+    }
+
+    .checbox-label input:checked + label:before {
+      background-color: #1947eb;
+      border-color: #1947eb;
+      filter: invert(1);
+    }
+
+    .checbox-label input:disabled + label:before {
+      cursor: auto;
+      background-color: #424242;
+      border-color: #424242;
+      border-radius: 3px;
+    }
+
+    .checbox-label input:disabled + label {
+      color: rgba(255, 255, 255, 0.5);
+
+    }
+
+    .checbox-label input:checked:disabled + label:before {
+      cursor: auto;
+      background-color: #1947eb;
+      border-color: #1947eb;
+      border-radius: 3px;
+      filter: invert(1);
+    }
+
+    .checbox-label input:checked:disabled + label {
+      color: #FFFFFF;
+    }
+
+    .order-btn.unimportant-btn {
+      color: #E6B814;
+      border-color: #E6B814;
+      background: 0 0;
+    }
+
+    .order-btn.unimportant-btn:before {
+
+      border-color: #E6B814;
+    }
+
+    .progress-info {
+      .title {
+        span {
+          color: #000;
+        }
+      }
+    }
+
+    .red {
+      color: #E6B814;
+    }
+
+    .step-count {
+      background: 0 0;
+      color: #E6B814;
+      border-color: #E6B814;
+    }
+
+    .keywords input[disabled] {
+      background: #424242;
+      border-radius: 3px;
+      border-color: #424242;
+      cursor: default;
+    }
+
+    .order-btn.secondary-btn {
+      color: #E6B814;
+      background: 0 0;
+
+      &:before {
+        border-color: #E6B814;
+      }
+
+      &:hover {
+        &:before {
+          border-color: #E6B814;
+        }
+      }
+    }
+
+    .radio-label label:before {
+      background: #E6B814;
+      border-color: #E6B814;
+    }
+
+    .radio-label input:checked + label:before {
+      background: #E6B814;
+      border-color: #E6B814;
+    }
+
+    .radio-label input:checked + label:after {
+      background: #202428;
+    }
+
+    .testimonials-item .title {
+      color: #E6B814;
+    }
+
+    .label .label-text {
+      color: #876900;
+    }
+
+    .footer-list li a {
+      color: #fff;
+    }
+
+
+    .input-text[disabled] {
+      background: #274553;
+      border-color: #274553;
+    }
+
+    .radio-label label {
+      &:hover {
+        &:before {
+          background: 0 0;
+          //           border-color: #7ADCBE;
+        }
+      }
+    }
+
+    .radio-label input:disabled + label:hover:before {
+      background: #424242;
+      border-color: #424242;
+    }
+
+    .radio-label input:disabled + label:before {
+      background: #424242;
+      border-color: #424242;
+    }
+
+    .country-list {
+      background: #424242;
+    }
+
+  }

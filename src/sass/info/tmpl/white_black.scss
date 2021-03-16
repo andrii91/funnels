@@ -1,0 +1,87 @@
+
+  &.white_black-tmpl {
+    .red {
+      color: #000;
+    }
+
+    .logo_color {
+      fill: #000;
+    }
+
+    .price .old .discount {
+      color: #000;
+      border-color: #000;
+    }
+
+    .order-btn:not(.link-btn, .unimportant-btn, .secondary-btn) {
+      background: #000;
+
+      &:hover {
+        opacity: .9;
+      }
+    }
+
+    .order-btn.secondary-btn:before {
+      border-color: #000;
+    }
+
+    .step-count {
+      border-color: #000;
+    }
+
+    .steps-item:before {
+      border-color: #000;
+
+    }
+
+
+    .testimonials-item .testimonials-rating .star.active svg {
+      fill: #000;
+    }
+
+    .testimonials-item .testimonials-rating .star svg path,
+    .testimonials-rating .star svg path {
+      stroke: #000;
+    }
+
+    .testimonials-item .testimonials-rating .star svg {}
+
+    .testimonials-rating .star.active svg {
+      fill: #000;
+    }
+
+    .testimonials-rating .star svg path,
+    .testimonials-rating .star svg path {
+      stroke: #000;
+    }
+
+
+    .testimonials-item p.small a {
+      color: #000;
+    }
+
+    .checbox-label input:checked + label:before {
+      background-color: #000;
+      border-color: #000;
+    }
+
+    .checbox-label input:checked:disabled + label:before {
+      background-color: #101010;
+      border-color: #101010;
+    }
+
+    .radio-label input:checked + label:before {
+      background: #000;
+      border-color: #000;
+    }
+
+    .radio-label input:checked:disabled + label:after {
+      background: #FFFFFF;
+    }
+
+    .select-options li:hover {
+      background-color: #000;
+      color: #fff;
+    }
+
+  }
