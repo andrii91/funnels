@@ -29,6 +29,7 @@ input:hover {
   margin: 30px 0;
   max-width: 350px;
   overflow: hidden;
+
   &:hover {
     img {
       transform: scale(1.02);
@@ -231,14 +232,16 @@ input:hover {
 
   &:first-child {
     &:after {
-      content: "";
+      content: '';
+      background: url('../images/line.svg')no-repeat center;
+      background-size: 100%;
       position: absolute;
       width: 140px;
-      height: 0px;
-       border-color: #000000;
- border-width: 5px 0px 0px 0px;
- border-style: dashed none none none;
-//      border-top: 5px dashed #000000;
+      height: 3px;
+      //       border-color: #000000;
+      // border-width: 5px 0px 0px 0px;
+      // border-style: dashed none none none;
+      //      border-top: 5px dashed #000000;
       top: 45px;
       left: 106px;
 
@@ -250,8 +253,9 @@ input:hover {
       content: "";
       position: absolute;
       width: 140px;
-      height: 0px;
-      border-top: 5px dashed #000000;
+      height: 3px;
+      background: url('../images/line.svg')no-repeat center;
+      background-size: 100%;
       top: 45px;
       left: -158px;
 
@@ -305,34 +309,35 @@ input:hover {
 
     }
   }
-  
-  &.large {
-     .star {
-    width: 80px;
-    height: 80px;
-       margin-right: 15px;
-       cursor: pointer;
 
-    svg {
+  &.large {
+    .star {
       width: 80px;
       height: 80px;
+      margin-right: 15px;
+      cursor: pointer;
+
+      svg {
+        width: 80px;
+        height: 80px;
+      }
     }
   }
-  }
-  
+
   &.small {
     padding: 10px 0;
-     .star {
-    width: 25px;
-    height: 25px;
-       margin-right: 0px;
-       cursor: pointer;
 
-    svg {
+    .star {
       width: 25px;
       height: 25px;
+      margin-right: 0px;
+      cursor: pointer;
+
+      svg {
+        width: 25px;
+        height: 25px;
+      }
     }
-  }
   }
 }
 
@@ -353,14 +358,15 @@ input:hover {
     font-style: italic;
     margin: 20px 0 10px;
     position: relative;
-/*    height: 250px;
+
+    /*    height: 250px;
     overflow: hidden;
     text-overflow: ellipsis;*/
     a {
       position: relative;
       background: #fff;
-//      bottom: 2px;
-//      right: 0;
+      //      bottom: 2px;
+      //      right: 0;
       display: inline-block;
       color: $red;
       text-decoration: underline;
@@ -483,6 +489,7 @@ input:hover {
   &.active {
     .arrow {
       transform: rotate(90deg);
+
       path {
         fill: $red;
       }
@@ -624,7 +631,7 @@ input:hover {
       position: absolute;
       top: 2px;
       left: 0;
-//      transition: .3s;
+      //      transition: .3s;
     }
   }
 
@@ -873,19 +880,20 @@ input::-webkit-inner-spin-button {
   color: #000000;
 
   width: 100%;
-  
+
   &.error {
     border-color: red;
   }
-  
-  &:not(.error):focus, &:not(.error):hover {
- /*   -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5) inset;
+
+  &:not(.error):focus,
+  &:not(.error):hover {
+    /*   -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5) inset;
 -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5) inset;
 box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5) inset;*/
-  border-width: 2px;
-  padding: 29px 19px 9px;
-    
-    
+    border-width: 2px;
+    padding: 29px 19px 9px;
+
+
   }
 
   &[disabled] {
@@ -1044,10 +1052,11 @@ textarea.input-text {
     margin-right: 20px;
     margin-top: 6px;
     margin-bottom: 26px;
+
     &.active {
-          -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5) inset;
--moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5) inset;
-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5) inset;
+      -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5) inset;
+      -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5) inset;
+      box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5) inset;
     }
 
     &[disabled] {
@@ -1127,9 +1136,10 @@ box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5) inset;
     }
   }
 }
+
 .create-steps {
-  .item section{
-        display: -ms-flexbox;
+  .item section {
+    display: -ms-flexbox;
     display: flex !important;
     -ms-flex-align: center;
     align-items: center;
@@ -1141,6 +1151,7 @@ box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5) inset;
 
 .paste-content {
   display: flex;
+
   .order-btn {
     margin: 12px 0 12px 20px;
   }
@@ -1149,15 +1160,18 @@ box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5) inset;
 .input-group {
   display: flex;
   flex-wrap: wrap;
+
   .label {
-        width: calc(100%/2 - 5px);
+    width: calc(100%/2 - 5px);
+
     &.large {
-      width:  calc(100% - 160px);
+      width: calc(100% - 160px);
     }
-    
+
     &.small {
       width: 150px;
     }
+
     &:first-child {
       margin-right: 10px;
     }

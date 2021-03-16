@@ -13,7 +13,7 @@
   <meta property="og:title" content="">
   <meta property="og:image" content="" />
   <title></title>
-  <link type="text/css" rel="stylesheet" href="css/app.css?v=1.1" />
+  <link type="text/css" rel="stylesheet" href="css/app.css?v=1.2" />
   <link rel="shortcut icon" href="images/favicon.png">
 </head>
 
@@ -53,7 +53,7 @@
             <input id="number" class="input-text" type="text" name="name" placeholder="Enter your order number" data-validate>
           </label>
 
-          <button class="order-btn next-step">Verify order</button>
+          <button class="order-btn next-step">Verify </button>
 
         </div>
       </section>
@@ -247,15 +247,30 @@
 
     <div class="item">
       <section>
-        <div class="wrapper wrapper-small">
+        <div class="wrapper">
           <div class="logo">
             <img src="images/flowlogo.png" alt="">
           </div>
-          <h1>A bit early</h1>
-          <p>To get your honest and complete opinion about our product we would like that you use it for a couple more days. In {{days}} days we will send you a TEXT and/or email with a link that will lead you back to this page.</p>
+          <h1>Welcome back!</h1>
+          <div class="wr-row">
+            <div class="wr-col-6">
+              <div class="product">
+                <div class="product-photo" data-fancybox="gallery" data-src="images/photo4.png">
+                  <img src="images/photo4.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="wr-col-6">
+              <div class="text-content">
+                <p>We hope you had enough time to try out your product? we can not wait to heart your option!</p>
+
+              </div>
+              <button class="order-btn next-step">Continue</button>
+
+            </div>
+          </div>
 
 
-          <button class="order-btn next-step">next</button>
         </div>
       </section>
       <footer class="footer">
@@ -396,6 +411,7 @@
                 <div class="text-content">
                   <p><b>123-123456-1234567 </b><br>EXOMEND Posture Corrector for Men & Women - Back Support Brace for Upper Back & Neck Pain Relief - Anti-Slouching Trainer – Spine Alignment Correction Device - Best for Gamers – M to XL</p>
                 </div>
+                <a href="#" class="order-btn unimportant-btn">Go to Amazon</a>
               </div>
             </div>
           </div>
@@ -445,6 +461,31 @@
         </ul>
       </footer>
     </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small form">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Sorry...</h1>
+          <p>Thank you for your in our product.</p>
+          <p><b>We really appreciate it.</b></p>
+
+
+          <button class="order-btn next-step">NextStep</button>
+
+        </div>
+      </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
+    </div>
+
+
     <div class="item">
       <section>
         <div class="wrapper wrapper-small form">
@@ -467,7 +508,39 @@
           <p>Lorem ipsum to get your honest and complete opinion about our product we would like that you use it for a couple more days. In {{days}} days we will send you a TEXT and/or email with a link that will lead you back to this page. </p>
 
 
-          <button class="order-btn next-step">Continue</button>
+          <button class="order-btn next-step">Return to page</button>
+        </div>
+      </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small form">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Custommer support</h1>
+          <p>Our customer support specialists are here to help. <br>Please pick an option below.</p>
+          <div class="select-label">
+            <select name="" id="select">
+              <option value="Item 1">Item 1</option>
+              <option value="Item 2">Item 2</option>
+              <option value="Item 3">Item 3</option>
+              <option value="Item 4">Item 4</option>
+            </select>
+          </div>
+          <div class="btn-group">
+            <button class="order-btn next-step">Select option</button>
+            <button class="order-btn prev-step link-btn">Return to page</button>
+
+          </div>
+
         </div>
       </section>
       <footer class="footer">
@@ -497,7 +570,7 @@
           </label>
           <div class="btn-group">
             <button class="order-btn next-step">Send</button>
-            <button class="order-btn link-btn prev-step">Cancel</button>
+            <button class="order-btn link-btn prev-step">Back</button>
           </div>
 
         </div>
@@ -510,37 +583,6 @@
       </footer>
     </div>
 
-    <div class="item">
-      <section>
-        <div class="wrapper wrapper-small form">
-          <div class="logo">
-            <img src="images/flowlogo.png" alt="">
-          </div>
-          <h1>Custommer support</h1>
-          <p>Our customer support specialists are here to help. <br>Please pick an option below.</p>
-          <label class="label" for="name30">
-            <input id="name30" class="input-text" type="text" name="name" placeholder="Name" data-validate>
-          </label>
-          <label class="label" for="email60">
-            <input id="email60" class="input-text" type="email" name="email" placeholder="Email address" data-validate>
-          </label>
-          <label class="label label-textarea" for="textarea30">
-            <textarea class="input-text" name="textarea" id="textarea30" placeholder="Please enter your review here"></textarea>
-          </label>
-          <div class="btn-group">
-            <button class="order-btn next-step">Send</button>
-            <button class="order-btn link-btn prev-step">Cancel</button>
-          </div>
-
-        </div>
-      </section>
-      <footer class="footer">
-        <ul class="footer-list">
-          <li><a href="#">Privacy policy </a></li>
-          <li><a href="#">Support </a></li>
-        </ul>
-      </footer>
-    </div>
 
     <div class="item">
       <section>
@@ -557,7 +599,7 @@
 
           <div class="btn-group">
             <button class="order-btn next-step">Send me a link</button>
-            <button class="order-btn link-btn prev-step">Cancel</button>
+            <button class="order-btn link-btn prev-step">Back</button>
           </div>
 
         </div>
@@ -585,7 +627,7 @@
 
 
   <script defer src="js/vendor.js"></script>
-  <script defer src="js/app.js?v=1.1"></script>
+  <script defer src="js/app.js?v=1.2"></script>
 </body>
 
 </html>
