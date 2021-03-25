@@ -1,13 +1,12 @@
-
 $(document).ready(function () {
-  window.onkeydown = function(evt) {
-    if(evt.keyCode == 9) return false;
-};
-window.onkeypress = function(evt) {
-    if(evt.keyCode == 9) return false;
-};
-  
-  
+  window.onkeydown = function (evt) {
+    if (evt.keyCode == 9) return false;
+  };
+  window.onkeypress = function (evt) {
+    if (evt.keyCode == 9) return false;
+  };
+
+
   $('.faq-item').click(function () {
     //    console.log($(this))
     $(this).toggleClass('active');
@@ -204,10 +203,10 @@ window.onkeypress = function(evt) {
         'overflow': 'hidden',
         'text-overflow': 'ellipsis',
       })*/
-      
+
       $(this).text(testimonialsText.substring(0, 169))
-      $(this).append('<span class="more-hidden">'+testimonialsText.substring(170, testimonialsLength)+'</span>')
-      
+      $(this).append('<span class="more-hidden">' + testimonialsText.substring(170, testimonialsLength) + '</span>')
+
       $(this).append('<a href="#more" class="testimonials-more">Show more</a>')
     }
   })
@@ -258,9 +257,13 @@ window.onkeypress = function(evt) {
 
 
 
+  /*  var Star3 = $('.star3').html();
+    var Star4 = $('.star4').html();
+      var Star4_1 = $($('.star4')[0]).html();
+      var Star4_2 = $($('.star4')[1]).html();
 
-
-
+    $('.star3').remove();
+    $('.star4').remove();*/
 
 
   $('.create-steps').slick({
@@ -367,6 +370,8 @@ window.onkeypress = function(evt) {
 
 
   $('.create-steps').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    slideCount = $('.create-steps .item').length;
+
     $('.progress .title span').text(((100 / slideCount) * nextSlide).toFixed() + '%')
     $('.progress .line span').css({
       'width': (100 / slideCount) * nextSlide + '%'
@@ -418,11 +423,58 @@ window.onkeypress = function(evt) {
     cStars($(this).index());
   });
 
+
+
+$('.create-steps .item:not(".star4")').each(function(){
+  $(this).parents('.slick-slide').addClass('star3')
+})
+
+$('.create-steps .item:not(".star3thx")').each(function(){
+  $(this).parents('.slick-slide').addClass('star3notthx')
+})
+  
+  $('.star3thx').parents('.slick-slide').addClass('star3thx')
+
+var filtered = false;
   // При клике
   $('.testimonials-rating.large .star').click(function () {
     cStars($(this).index());
     // меняем количество по клику
     starsCount = $('.testimonials-rating.large .star.active').length;
+
+
+    if (starsCount < 4 && filtered === false) {
+      $('.create-steps').slick('slickUnfilter');
+      $('.create-steps').slick('slickFilter', '.star3');
+      console.log('Filter Slides');
+      filtered = true;
+    } else {
+      $('.create-steps').slick('slickUnfilter');
+      
+      $('.create-steps').slick('slickFilter', '.star3notthx');
+      console.log('Unfilter Slides');
+      filtered = false;
+    }
+
+
+
+    /*      $('.star3').remove();
+          $('.star4').remove();
+
+        if (starsCount > 3) {
+          $('.create-steps').slick('slickAdd', '<div class="item star4">' + Star4_1 + '</div>');
+          $('.create-steps').slick('slickAdd', '<div class="item star4">' + Star4_2 + '</div>');
+
+        } else {
+          $('.create-steps').slick('slickAdd', '<div class="item star4">' + Star3 + '</div>');
+
+        }*/
+
+
+
+
+
+
   });
 
 
@@ -431,5 +483,8 @@ window.onkeypress = function(evt) {
     cStars(+starsCount - 1);
   });
   console.log('starsCount', starsCount)
+
+
+
 
 });
