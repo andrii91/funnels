@@ -1,6 +1,6 @@
 & {
   .steps-item {
-    padding-left: 120px;
+    padding-left: 75px;
     padding-top: 0;
     max-width: 520px;
 
@@ -16,11 +16,11 @@
       content: "";
       position: absolute;
       background: url('../images/line_mob.svg') repeat-y center;
-      height: calc(100% - 50px);
+      height: calc(100% + 4px);
       background-size: 100%;
       width: 3px;
-      top: 95px;
-      left: 45px;
+      top: 68px;
+      left: 30px;
     }
 
     &:first-child {
@@ -28,11 +28,11 @@
         content: "";
         position: absolute;
         background: url('../images/line_mob.svg') repeat-y center;
-        height: calc(100% - 60px);
+        height: calc(100% - 5px);
         background-size: 100%;
         width: 3px;
-        top: 102px;
-        left: 45px;
+        top: 68px;
+        left: 30px;
       }
     }
 
@@ -57,6 +57,7 @@
     margin-left: 0;
   }
 
+  /*
   .order-btn {
     max-width: 350px;
     width: 100%;
@@ -67,6 +68,7 @@
     right: 0;
     margin-bottom: 27.5px;
   }
+*/
 
   &#funnels-lib .progress {
     left: 20px;
@@ -98,22 +100,10 @@
   }
 
   .intl-tel-input .selected-flag {
-    padding: 0 12px;
+    padding: 0 16px 0 22px;
   }
 
-  &#funnels-lib .veryfy {
-    flex-wrap: wrap;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: center;
-    justify-content: center;
 
-    .number-inputs {
-      margin-right: 0;
-    }
-  }
 
   padding-bottom: 80px;
 
@@ -134,6 +124,7 @@
     width: 60px;
     height: 60px;
     margin-right: 5px;
+
     svg {
       width: 60px;
       height: 60px;
@@ -151,7 +142,7 @@
   }
 
   overflow-x: hidden;
-  
+
 
   &.dark_green-tmpl {
     .steps {
@@ -162,7 +153,7 @@
       }
     }
   }
-  
+
   &.dark_grey_yell-tmpl {
     .steps {
       .steps-item {
@@ -172,7 +163,7 @@
       }
     }
   }
-  
+
   &.green-tmpl {
     .steps {
       .steps-item {
@@ -182,32 +173,275 @@
       }
     }
   }
-  
-  
-  
+
+
+
   &#funnels-lib {
     h1 {
-      font-size: 32px;
-      line-height: 38px;
-      margin: 30px 0 5px;
-    }
-    h2 {
-      font-size: 30px;
-      line-height: 36px;
-    }
-    h3 {
-      font-size: 20px;
+      font-size: 28px;
       line-height: 34px;
+      margin: 10px 0 5px;
     }
+
+    h2 {
+      font-size: 28px;
+      line-height: 34px;
+      margin: 50px 0 5px;
+    }
+
+    h3 {
+      font-size: 18px;
+      line-height: 31px;
+      margin: 5px 0 2px;
+    }
+
     p {
-      font-size: 16px;
-      line-height: 27px;
-    }
-    .order-btn {
-      font-size: 20px;
+      font-size: 14px;
       line-height: 24px;
-      padding: 16px 25px;
+      margin: 10px 0;
+    }
+
+    .order-btn {
+      font-size: 18px;
+      line-height: 22px;
+      padding: 15px 30px;
       width: auto;
+      margin-top: 11px;
+      margin-bottom: 11px;
+    }
+
+    .price {
+      .new {
+        font-size: 40px;
+        line-height: 48px;
+
+        sup {
+          font-size: 16px;
+        }
+      }
+
+      .summ {
+        font-size: 22px;
+        line-height: 26px;
+      }
+    }
+
+    .steps {
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+
+    .steps-item {
+      margin-bottom: 67px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:before {
+        top: 50%;
+        margin-top: -30px;
+        width: 60px;
+        height: 60px;
+        font-size: 32px;
+        line-height: 42px;
+      }
+
+      .title {
+        margin-top: 10px;
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 0;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 3px;
+        margin-bottom: 0;
+
+      }
+    }
+
+    .testimonials {
+      margin-top: 15px;
+
+      .testimonials-item {
+        margin-bottom: 25px;
+
+        .testimonials-rating {
+          margin-bottom: 0;
+        }
+
+        .title {
+          margin: 0;
+        }
+
+        p {
+          &.small {
+            margin: 5px 0 0;
+          }
+        }
+
+        .profile {
+          padding: 5px 0 0;
+
+          .username {
+            font-size: 14px;
+            line-height: 21px;
+          }
+        }
+      }
+    }
+
+    .faq {
+      margin: 15px 0;
+    }
+
+    .faq-item {
+      padding: 20px 48px 20px 10px;
+
+      .title {
+        font-size: 16px;
+        line-height: 21px;
+      }
+
+      .more {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+
+    .flag-container > .selected-flag > .iti-flag {
+      display: none;
+    }
+
+    .input-text,
+    .select-styled,
+    .select-options li {
+      font-size: 18px;
+      line-height: 23px;
+      padding-top: 15px;
+      padding-bottom: 14px;
+    }
+
+    .select-styled,
+    .select-styled:before {
+      font-size: 18px;
+      line-height: 23px;
+    }
+
+    .select-styled,
+    .select-options li {
+      min-height: 54px;
+    }
+
+    .label.active .label-text {
+      font-size: 13px;
+      line-height: 17px;
+      //      transform: translateY(-150%);
+    }
+
+    .input-text:not(.error):focus,
+    .input-text:not(.error):hover {
+      padding-top: 17px;
+      padding-bottom: 10px;
+    }
+
+    .label-text {
+      font-size: 18px;
+      line-height: 23px;
+    }
+
+    .testimonials-rating {
+      padding: 15px 0;
+    }
+
+    .veryfy-wrap {
+      padding-top: 0;
+    }
+
+    .number-inputs {
+      padding: 12px 0;
+      margin-right: 15px;
+
+      .required-input {
+        width: 40px;
+        height: 52px;
+        margin-right: 8px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .checbox-label,
+    .radio-label {
+      padding: 12px 0;
+
+      label {
+        font-size: 16px;
+
+        &:before {
+          top: -2px;
+        }
+      }
+    }
+
+    .radio-label input:checked + label:after {
+      top: 4px;
+    }
+
+    .btn-group .order-btn:first-child {
+      margin-right: 10px;
+    }
+
+    .step {
+      padding: 10px 0;
+
+      .step-count {
+        margin: 14px 0;
+        padding: 9px 20px;
+        font-size: 20px;
+        line-height: 34px;
+      }
+
+      .step-info {
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 24px;
+
+      }
+    }
+
+    .keywords {
+      flex-wrap: wrap;
+
+      input {
+        font-size: 18px;
+        line-height: 23px;
+        padding-top: 15px;
+        padding-bottom: 14px;
+        margin-right: 0;
+        margin-bottom: 14px;
+      }
+    }
+
+    .label {
+      margin: 11px 0;
+    }
+
+    .label.active.label-textarea .label-text {
+      font-size: 15px;
+      line-height: 19px;
+      transform: translateY(-95%);
+    }
+
+    .select-styled.select-item:before {
+      font-size: 13px;
+      line-height: 19px;
+      top: 2px;
     }
   }
 
