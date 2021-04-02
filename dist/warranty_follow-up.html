@@ -1,0 +1,715 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="Title" content="" />
+  <meta name="description" content="" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:sitename" content="" />
+  <meta property="og:title" content="">
+  <meta property="og:image" content="" />
+  <title></title>
+  <link type="text/css" rel="stylesheet" href="css/app.css?v=1.2" />
+  <link rel="shortcut icon" href="images/favicon.png">
+</head>
+
+<body id="funnels-lib" class="">
+
+  <div class="create-steps">
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Warranty registration</h1>
+          <p>Thank you for purchasing! <br>Register your <b>{{brand}}</b> product and activate your warranty. <br>This offer is limited to existing customers of <b>{{brand}}</b>. <br>No additional purchase is required.</p>
+
+          <button class="order-btn  next-step">Continue</button>
+        </div>
+      </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small form">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Amazon order verification</h1>
+          <p>Please type the Amazon Order ID below. <br>Here is an example of what an Order ID should look like: <br>123-1234567-1234567 <br><b>Do NOT include</b>: "order" "#" ":" or anything else.</p>
+
+          <label class="label " for="number">
+            <input id="number" class="input-text" type="text" name="name" placeholder="Enter your order number" data-validate>
+          </label>
+
+          <button class="order-btn next-step">Verify </button>
+
+        </div>
+      </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Is this your order?</h1>
+          <div class="wr-row">
+            <div class="wr-col-6">
+              <div class="product">
+                <div class="product-photo" data-fancybox="gallery" data-src="images/photo4.png">
+                  <img src="images/photo4.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="wr-col-6">
+              <div class="text-content">
+                <p>EXOMEND Posture Corrector for Men & Women - Back Support Brace for Upper Back & Neck Pain Relief - Anti-Slouching Trainer – Spine Alignment Correction Device - Best for Gamers – M to XL</p>
+
+              </div>
+              <div class="btn-group">
+                <button class="order-btn next-step">Yes</button>
+                <button class="order-btn link-btn prev-step">No</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Your email address</h1>
+          <p>Please enter your name and email address below.</p>
+          <form class="form" action="#">
+
+            <div class="input-group">
+              <label class="label" for="name2">
+                <input id="name2" class="input-text" type="text" name="name" placeholder="Enter your first name" data-validate autocomplete="off">
+              </label>
+              <label class="label" for="lastname2">
+                <input id="lastname2" class="input-text" type="text" name="lastname" placeholder="Enter your last name" data-validate autocomplete="off">
+              </label>
+            </div>
+            <label class="label" for="email">
+              <input id="email" class="input-text" type="email" name="email" placeholder="Enter your email here" data-validate autocomplete="off">
+            </label>
+
+
+            <button class="order-btn next-step">Verify</button>
+
+          </form>
+        </div>
+      </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Email verification</h1>
+          <p>We have just sent a code to <b>{{email_address}}</b> <br>Once you get your code, enter it below.</p>
+          <div class="veryfy-wrap form">
+            <div class="veryfy ">
+              <div class="number-inputs">
+                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
+                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
+                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
+                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
+              </div>
+              <button class="order-btn submit next-step">Verify</button>
+            </div>
+          </div>
+          <p>This is where we will send your Visa or Amazon Gift Card Rebate. <br>Click below if you need to change your email address.</p>
+          <button class="order-btn unimportant-btn prev-step">Change email</button>
+        </div>
+      </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Your phone number</h1>
+          <p>Please enter your name and email address below.</p>
+          <form class="form" action="#">
+            <div class="input-group">
+              <label class="label" for="name">
+                <input id="name" class="input-text" type="text" name="name" placeholder="Enter your first name" data-validate autocomplete="off">
+              </label>
+              <label class="label" for="lastname">
+                <input id="lastname" class="input-text" type="text" name="lastname" placeholder="Enter your last name" data-validate autocomplete="off">
+              </label>
+            </div>
+            <label class="label label-phone" for="phone">
+              <input id="phone" class="input-text" type="number" inputmode="numeric" pattern="[0-9]*" name="phone" placeholder="Enter your phone number" data-validate>
+            </label>
+
+            <button class="order-btn next-step">Verify</button>
+
+          </form>
+        </div>
+      </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
+    </div>
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Verify your phone number</h1>
+          <p>We have just sent a code to <b>{{phone_number}}</b> <br>Once you get your code, enter it below.</p>
+          <div class="veryfy-wrap form">
+            <div class="veryfy ">
+              <div class="number-inputs">
+                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
+                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
+                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
+                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
+              </div>
+              <button class="order-btn submit next-step">Verify</button>
+            </div>
+          </div>
+          <p>This is where we will send your Visa or Amazon Gift Card Rebate. <br>Click below if you need to change your phone number.</p>
+          <button class="order-btn unimportant-btn prev-step">Change phone number</button>
+
+        </div>
+      </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
+    </div>
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Your address</h1>
+          <p>Please, fill out your address information for warranty registration.</p>
+          <form class="form" action="#">
+            <label class="label" for="Street">
+              <input id="Street" class="input-text" type="text" name="street" placeholder="Street" data-validate autocomplete="off">
+            </label>
+            <label class="label" for="Street2">
+              <input id="Street2" class="input-text" type="text" name="street2" placeholder="Street (line 2)" data-validate autocomplete="off">
+            </label>
+            <label class="label" for="City">
+              <input id="City" class="input-text" type="text" name="city" placeholder="City" data-validate autocomplete="off">
+            </label>
+            <div class="input-group">
+              <label class="label large" for="satate">
+                <input id="satate" class="input-text" type="text" name="satate" placeholder="Satate/Province" data-validate autocomplete="off">
+              </label>
+              <label class="label small" for="zip">
+                <input id="zip" class="input-text" type="text" name="zip" placeholder="ZIP-code" data-validate autocomplete="off">
+              </label>
+            </div>
+
+            <button class="order-btn next-step">Verify</button>
+
+          </form>
+        </div>
+      </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small form">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>A bit too early</h1>
+          <p>Your rebate gift card has been generated! <br>Click on the button below to get your gift card!</p>
+          <button class="order-btn next-step">Continue</button>
+
+        </div>
+      </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
+    </div>
+    
+
+
+    <div class="item">
+      <section>
+        <div class="wrapper">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Welcome back!</h1>
+          <div class="wr-row">
+            <div class="wr-col-6">
+              <div class="product">
+                <div class="product-photo" data-fancybox="gallery" data-src="images/photo4.png">
+                  <img src="images/photo4.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="wr-col-6">
+              <div class="text-content">
+                <p>We hope you had enough time to twarranty_follow-up.htmlry out your product? we can not wait to heart your option!</p>
+
+              </div>
+              <button class="order-btn next-step">Continue</button>
+
+            </div>
+          </div>
+
+
+        </div>
+      </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Some questions</h1>
+          <p>Please answer some questions about out product so we can improve.</p>
+          <form class="form" action="#">
+            <label class="label" for="qw1">
+              <input id="qw1" class="input-text" type="text" name="qw1" placeholder="How are you?" data-validate autocomplete="off">
+            </label>
+            <label class="label" for="qw2">
+              <input id="qw2" class="input-text" type="text" name="qw2" placeholder="Where is my king?" data-validate autocomplete="off">
+            </label>
+            <label class="label" for="Street21">
+              <input id="Street21" class="input-text" type="text" name="street2" placeholder="Street (line 2)" data-validate autocomplete="off">
+            </label>
+            <label class="label" for="City1">
+              <input id="City1" class="input-text" type="text" name="city" placeholder="City" data-validate autocomplete="off">
+            </label>
+            <div class="input-group">
+              <label class="label large" for="satate1">
+                <input id="satate1" class="input-text" type="text" name="satate" placeholder="Satate/Province" data-validate autocomplete="off">
+              </label>
+              <label class="label small" for="zip1">
+                <input id="zip1" class="input-text" type="text" name="zip" placeholder="ZIP-code" data-validate autocomplete="off">
+              </label>
+            </div>
+
+            <button class="order-btn next-step">Next</button>
+
+          </form>
+        </div>
+      </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small form">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Rate your experience</h1>
+          <p>How would you rate our product?</p>
+
+          <div class="testimonials-rating large">
+            <div class="star active"><svg width="70" height="67" viewBox="0 0 70 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M34.0593 2.55663C34.377 1.6756 35.623 1.67559 35.9407 2.55663L43.2384 22.7941C43.6555 23.9507 44.736 24.7357 45.9648 24.775L67.4669 25.4618C68.403 25.4916 68.788 26.6767 68.0483 27.2511L51.0564 40.4453C50.0853 41.1994 49.6726 42.4696 50.015 43.6504L56.0064 64.3123C56.2672 65.2119 55.2591 65.9442 54.4843 65.4182L36.685 53.3352C35.6678 52.6447 34.3322 52.6447 33.315 53.3352L15.5157 65.4182C14.7409 65.9442 13.7328 65.2119 13.9937 64.3123L19.985 43.6504C20.3274 42.4696 19.9147 41.1994 18.9436 40.4453L1.95172 27.2511C1.21198 26.6767 1.59701 25.4916 2.53311 25.4618L24.0352 24.775C25.264 24.7357 26.3445 23.9507 26.7616 22.7941L34.0593 2.55663Z" stroke="#897869" stroke-width="2" />
+              </svg></div>
+            <div class="star active"><svg width="70" height="67" viewBox="0 0 70 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M34.0593 2.55663C34.377 1.6756 35.623 1.67559 35.9407 2.55663L43.2384 22.7941C43.6555 23.9507 44.736 24.7357 45.9648 24.775L67.4669 25.4618C68.403 25.4916 68.788 26.6767 68.0483 27.2511L51.0564 40.4453C50.0853 41.1994 49.6726 42.4696 50.015 43.6504L56.0064 64.3123C56.2672 65.2119 55.2591 65.9442 54.4843 65.4182L36.685 53.3352C35.6678 52.6447 34.3322 52.6447 33.315 53.3352L15.5157 65.4182C14.7409 65.9442 13.7328 65.2119 13.9937 64.3123L19.985 43.6504C20.3274 42.4696 19.9147 41.1994 18.9436 40.4453L1.95172 27.2511C1.21198 26.6767 1.59701 25.4916 2.53311 25.4618L24.0352 24.775C25.264 24.7357 26.3445 23.9507 26.7616 22.7941L34.0593 2.55663Z" stroke="#897869" stroke-width="2" />
+              </svg></div>
+            <div class="star "><svg width="70" height="67" viewBox="0 0 70 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M34.0593 2.55663C34.377 1.6756 35.623 1.67559 35.9407 2.55663L43.2384 22.7941C43.6555 23.9507 44.736 24.7357 45.9648 24.775L67.4669 25.4618C68.403 25.4916 68.788 26.6767 68.0483 27.2511L51.0564 40.4453C50.0853 41.1994 49.6726 42.4696 50.015 43.6504L56.0064 64.3123C56.2672 65.2119 55.2591 65.9442 54.4843 65.4182L36.685 53.3352C35.6678 52.6447 34.3322 52.6447 33.315 53.3352L15.5157 65.4182C14.7409 65.9442 13.7328 65.2119 13.9937 64.3123L19.985 43.6504C20.3274 42.4696 19.9147 41.1994 18.9436 40.4453L1.95172 27.2511C1.21198 26.6767 1.59701 25.4916 2.53311 25.4618L24.0352 24.775C25.264 24.7357 26.3445 23.9507 26.7616 22.7941L34.0593 2.55663Z" stroke="#897869" stroke-width="2" />
+              </svg></div>
+            <div class="star "><svg width="70" height="67" viewBox="0 0 70 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M34.0593 2.55663C34.377 1.6756 35.623 1.67559 35.9407 2.55663L43.2384 22.7941C43.6555 23.9507 44.736 24.7357 45.9648 24.775L67.4669 25.4618C68.403 25.4916 68.788 26.6767 68.0483 27.2511L51.0564 40.4453C50.0853 41.1994 49.6726 42.4696 50.015 43.6504L56.0064 64.3123C56.2672 65.2119 55.2591 65.9442 54.4843 65.4182L36.685 53.3352C35.6678 52.6447 34.3322 52.6447 33.315 53.3352L15.5157 65.4182C14.7409 65.9442 13.7328 65.2119 13.9937 64.3123L19.985 43.6504C20.3274 42.4696 19.9147 41.1994 18.9436 40.4453L1.95172 27.2511C1.21198 26.6767 1.59701 25.4916 2.53311 25.4618L24.0352 24.775C25.264 24.7357 26.3445 23.9507 26.7616 22.7941L34.0593 2.55663Z" stroke="#897869" stroke-width="2" />
+              </svg></div>
+            <div class="star "><svg width="70" height="67" viewBox="0 0 70 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M34.0593 2.55663C34.377 1.6756 35.623 1.67559 35.9407 2.55663L43.2384 22.7941C43.6555 23.9507 44.736 24.7357 45.9648 24.775L67.4669 25.4618C68.403 25.4916 68.788 26.6767 68.0483 27.2511L51.0564 40.4453C50.0853 41.1994 49.6726 42.4696 50.015 43.6504L56.0064 64.3123C56.2672 65.2119 55.2591 65.9442 54.4843 65.4182L36.685 53.3352C35.6678 52.6447 34.3322 52.6447 33.315 53.3352L15.5157 65.4182C14.7409 65.9442 13.7328 65.2119 13.9937 64.3123L19.985 43.6504C20.3274 42.4696 19.9147 41.1994 18.9436 40.4453L1.95172 27.2511C1.21198 26.6767 1.59701 25.4916 2.53311 25.4618L24.0352 24.775C25.264 24.7357 26.3445 23.9507 26.7616 22.7941L34.0593 2.55663Z" stroke="#897869" stroke-width="2" />
+              </svg></div>
+          </div>
+
+
+          <button class="order-btn next-step">Continue</button>
+
+        </div>
+      </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small form">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Rate your experience</h1>
+          <p>Please provide a few details about your experience with our product.</p>
+
+          <label class="label label-textarea" for="textarea">
+            <textarea class="input-text" name="textarea" id="textarea" placeholder="Your review" data-validate></textarea>
+          </label>
+
+          <button class="order-btn next-step">Verify</button>
+
+
+        </div>
+      </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small form">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Thank you!</h1>
+          <p>Are you willing to post this review to Amazon? As a small business, It would really help us out. Customer feedback is critical to our success.</p>
+
+          <h2>Just take a moment and follow the steps below.</h2>
+
+          <div class="step border-top0">
+            <div class="step-count">Step 1</div>
+            <div class="step-info">Copy your review to the clipboard of your device.</div>
+            <label class="label label-textarea active" for="textarea1">
+              <textarea class="input-text" name="textarea" id="textarea1" placeholder="Your review" data-validate>Here is the text of your review.</textarea>
+            </label>
+            <a href="#" class="order-btn unimportant-btn copy-textarea">Copy review</a>
+          </div>
+          <div class="step">
+            <div class="step-count">Step 2</div>
+            <div class="step-info">Ckick on a link below to open your Amazon account reviews page, look for this order:</div>
+            <div class="wr-row">
+              <div class="wr-col-6">
+                <div class="product">
+                  <div class="product-photo" data-fancybox="gallery" data-src="images/photo4.png">
+                    <img src="images/photo4.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="wr-col-6">
+                <div class="text-content">
+                  <p><b>123-123456-1234567 </b><br>EXOMEND Posture Corrector for Men & Women - Back Support Brace for Upper Back & Neck Pain Relief - Anti-Slouching Trainer – Spine Alignment Correction Device - Best for Gamers – M to XL</p>
+                </div>
+                <a href="#" class="order-btn unimportant-btn">Go to Amazon</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-count">Step 3</div>
+            <div class="step-info">Paste your review and submit it to Amazon.</div>
+          </div>
+
+          <button class="order-btn next-step">Continue</button>
+
+
+        </div>
+      </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small form">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Warranty details</h1>
+          <p>Thank you for registering your product. <br>Your warranty reference number is generated below.</p>
+
+          <div class="keywords">
+            <input type="text" value="ABDL-3FF9L-KFMW-4KF9" disabled>
+            <a href="#" class="order-btn  unimportant-btn copy-btn">Copy</a>
+          </div>
+
+          <p>Your warranty will expire on <b>{{expire_date}}</b></p>
+
+          <button class="order-btn next-step">NextStep</button>
+
+        </div>
+      </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small form">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Sorry...</h1>
+          <p>Thank you for your in our product.</p>
+          <p><b>We really appreciate it.</b></p>
+
+
+          <button class="order-btn next-step">NextStep</button>
+
+        </div>
+      </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
+    </div>
+
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small form">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Privacy policy</h1>
+          <p>Lorem ipsum to get your honest and complete opinion about our product we would like that you use it for a couple more days. In {{days}} days we will send you a TEXT and/or email with a link that will lead you back to this page.</p>
+
+          <p>Lorem ipsum to get your honest and complete opinion about our product we would like that you use it for a couple more days. In {{days}} days we will send you a TEXT and/or email with a link that will lead you back to this page.</p>
+
+          <h2>Interpritations and defenitions</h2>
+          <p>Lorem ipsum to get your honest and complete opinion about our product we would like that you use it for a couple more days. In {{days}} days we will send you a TEXT and/or email with a link that will lead you back to this page.</p>
+
+          <p>Lorem ipsum to get your honest and complete opinion about our product we would like that you use it for a couple more days. In {{days}} days we will send you a TEXT and/or email with a link that will lead you back to this page. </p>
+
+          <h2>Changes to this policy</h2>
+          <p>Lorem ipsum to get your honest and complete opinion about our product we would like that you use it for a couple more days. In {{days}} days we will send you a TEXT and/or email with a link that will lead you back to this page.</p>
+
+          <p>Lorem ipsum to get your honest and complete opinion about our product we would like that you use it for a couple more days. In {{days}} days we will send you a TEXT and/or email with a link that will lead you back to this page. </p>
+
+
+          <button class="order-btn next-step">Return to page</button>
+        </div>
+      </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small form">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Custommer support</h1>
+          <p>Our customer support specialists are here to help. <br>Please pick an option below.</p>
+          <div class="select-label">
+            <select name="" id="select">
+              <option value="Item 1">Item 1</option>
+              <option value="Item 2">Item 2</option>
+              <option value="Item 3">Item 3</option>
+              <option value="Item 4">Item 4</option>
+            </select>
+          </div>
+          <div class="btn-group">
+            <button class="order-btn next-step">Select option</button>
+            <button class="order-btn prev-step link-btn">Return to page</button>
+
+          </div>
+
+        </div>
+      </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small form">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Custommer support</h1>
+          <p>Our customer support specialists are here to help. <br>Please pick an option below.</p>
+          <label class="label" for="name3">
+            <input id="name3" class="input-text" type="text" name="name" placeholder="Name" data-validate>
+          </label>
+          <label class="label" for="email6">
+            <input id="email6" class="input-text" type="email" name="email" placeholder="Email address" data-validate>
+          </label>
+          <label class="label label-textarea" for="textarea3">
+            <textarea class="input-text" name="textarea" id="textarea3" placeholder="Please enter your review here"></textarea>
+          </label>
+          <div class="btn-group">
+            <button class="order-btn next-step">Send</button>
+            <button class="order-btn link-btn prev-step">Back</button>
+          </div>
+
+        </div>
+      </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
+    </div>
+
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small form">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Send me a link</h1>
+          <p>Please enter the same email address or phone number that you used before. We will send you a link to continue where you left off.</p>
+
+          <label class="label" for="email16">
+            <input id="email16" class="input-text" type="email" name="email" placeholder="Email address" data-validate>
+          </label>
+
+          <div class="btn-group">
+            <button class="order-btn next-step">Send me a link</button>
+            <button class="order-btn link-btn prev-step">Back</button>
+          </div>
+
+        </div>
+      </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small form">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Unavailable</h1>
+          <p>Currently, this page is not available</p>
+
+        </div>
+      </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
+    </div>
+    
+  </div>
+
+  <div class="progress">
+    <div class="progress-info">
+      <div class="title"><span>14%</span> completed</div>
+      <div class="line"><span style="width: 14%"></span></div>
+    </div>
+    <div class="progress-logo">
+      <img src="images/plogo.svg" alt="">
+    </div>
+  </div>
+
+
+
+  <script defer src="js/vendor.js"></script>
+  <script defer src="js/app.js?v=1.2"></script>
+</body>
+
+</html>
