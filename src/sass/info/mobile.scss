@@ -44,9 +44,6 @@
     }
   }
 
-  &#funnels-lib .steps-item {
-    margin-bottom: 59px;
-  }
 
   &#funnels-lib .steps-item .title {
     margin-top: 25px;
@@ -57,22 +54,7 @@
     margin-left: 0;
   }
 
-  /*
-  .order-btn {
-    max-width: 350px;
-    width: 100%;
-    text-align: center;
-  }
 
-  &#funnels-lib .btn-group .order-btn:first-child {
-    right: 0;
-    margin-bottom: 27.5px;
-  }
-*/
-
-  &#funnels-lib .progress {
-    left: 20px;
-  }
 
   .intl-tel-input .flag-container {
     width: 100px;
@@ -121,13 +103,17 @@
   }
 
   &#funnels-lib .testimonials-rating.large .star {
-    width: 60px;
-    height: 60px;
-    margin-right: 5px;
+    width: 55px;
+    height: 55px;
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
 
     svg {
-      width: 60px;
-      height: 60px;
+      width: 55px;
+      height: 55px;
     }
   }
 
@@ -176,273 +162,940 @@
 
 
 
-  &#funnels-lib {
-    h1 {
-      font-size: 28px;
-      line-height: 34px;
-      margin: 10px 0 5px;
+  //  &#funnels-lib {
+  h1 {
+    font-size: 28px;
+    line-height: 34px;
+    margin: 10px 0 5px !important;
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 34px;
+    margin: 50px 0 5px !important;
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 31px;
+    margin: 5px 0 2px !important;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 10px 0 !important;
+  }
+
+  .order-btn {
+    font-size: 18px;
+    line-height: 22px;
+    padding: 15px 30px;
+    width: auto;
+    margin-top: 11px;
+    margin-bottom: 11px;
+  }
+
+  .price {
+    .new {
+      font-size: 40px;
+      line-height: 48px;
+
+      sup {
+        font-size: 16px;
+      }
     }
 
-    h2 {
-      font-size: 28px;
-      line-height: 34px;
-      margin: 50px 0 5px;
+    .summ {
+      font-size: 22px;
+      line-height: 26px;
+    }
+  }
+
+  .steps {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  .steps-item {
+    margin-bottom: 52px;
+
+    &:last-child {
+      margin-bottom: 0;
     }
 
-    h3 {
-      font-size: 18px;
-      line-height: 31px;
-      margin: 5px 0 2px;
+    &:before {
+      top: 50%;
+      margin-top: -30px;
+      width: 60px;
+      height: 60px;
+      font-size: 32px;
+      line-height: 42px;
+    }
+
+    .title {
+      margin-top: 10px;
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 0;
     }
 
     p {
-      font-size: 14px;
+      font-size: 16px;
       line-height: 24px;
-      margin: 10px 0;
+      margin-top: 3px;
+      margin-bottom: 0;
+
     }
+  }
 
-    .order-btn {
-      font-size: 18px;
-      line-height: 22px;
-      padding: 15px 30px;
-      width: auto;
-      margin-top: 11px;
-      margin-bottom: 11px;
-    }
+  .testimonials {
+    margin-top: 15px;
 
-    .price {
-      .new {
-        font-size: 40px;
-        line-height: 48px;
+    .testimonials-item {
+      margin-bottom: 25px;
 
-        sup {
-          font-size: 16px;
-        }
-      }
-
-      .summ {
-        font-size: 22px;
-        line-height: 26px;
-      }
-    }
-
-    .steps {
-      margin-top: 5px;
-      margin-bottom: 10px;
-    }
-
-    .steps-item {
-      margin-bottom: 67px;
-
-      &:last-child {
+      .testimonials-rating {
         margin-bottom: 0;
-      }
-
-      &:before {
-        top: 50%;
-        margin-top: -30px;
-        width: 60px;
-        height: 60px;
-        font-size: 32px;
-        line-height: 42px;
       }
 
       .title {
-        margin-top: 10px;
-        font-size: 20px;
-        line-height: 26px;
-        margin-bottom: 0;
+        margin: 0;
+      }
+
+      p {
+        &.small {
+          margin: 5px 0 0;
+        }
+      }
+
+      .profile {
+        padding: 5px 0 0;
+
+        .username {
+          font-size: 14px;
+          line-height: 21px;
+        }
+      }
+    }
+  }
+
+  .faq {
+    margin: 15px 0;
+  }
+
+  .faq-item {
+    padding: 20px 48px 20px 10px;
+
+    .title {
+      font-size: 16px;
+      line-height: 21px;
+    }
+
+    .more {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+  .flag-container > .selected-flag > .iti-flag {
+    display: none;
+  }
+
+  .input-text,
+  .select-styled,
+  .select-options li {
+    font-size: 18px;
+    line-height: 23px;
+    padding-top: 14px;
+    padding-bottom: 13px;
+  }
+
+  .select-styled {
+    padding-top: 19px;
+    padding-bottom: 10px;
+  }
+
+  .select-styled,
+  .select-styled:before {
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  .select-styled,
+  .select-options li {
+    min-height: 52px;
+  }
+
+  .label.active .label-text {
+    font-size: 13px;
+    line-height: 17px;
+    //      transform: translateY(-150%);
+  }
+
+  .input-text:not(.error):focus,
+  .input-text:not(.error):hover {
+    padding-top: 16px;
+    padding-bottom: 9px;
+  }
+
+  .label-text {
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  .testimonials-rating {
+    padding: 15px 0;
+  }
+
+  .veryfy-wrap {
+    padding-top: 0;
+  }
+
+  .number-inputs, .veryfy .number-inputs, .veryfy-wrap .veryfy .number-inputs {
+    padding: 12px 0;
+    margin-right: 15px;
+
+    .required-input {
+      width: 40px;
+      height: 52px;
+      margin-right: 8px;
+      padding: 0;
+      font-size: 25px;
+      line-height: 1.2;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .checbox-label,
+  .radio-label {
+    padding: 12px 0;
+
+    label {
+      font-size: 16px;
+
+      &:before {
+        top: -2px;
+      }
+    }
+  }
+
+  .radio-label input:checked + label:after {
+    top: 4px;
+  }
+
+  .btn-group .order-btn:first-child {
+    margin-right: 10px;
+  }
+
+  .step {
+    padding: 10px 0;
+
+    .step-count {
+      margin: 14px 0;
+      padding: 9px 20px;
+      font-size: 20px;
+      line-height: 34px;
+    }
+
+    .step-info {
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 24px;
+
+    }
+  }
+
+  .keywords {
+    flex-wrap: wrap;
+
+    input {
+      font-size: 18px;
+      line-height: 23px;
+      padding-top: 14px;
+      padding-bottom: 13px;
+      margin-right: 0;
+      margin-bottom: 14px;
+    }
+  }
+
+  .label {
+    margin: 11px 0;
+  }
+
+  .label.active.label-textarea .label-text {
+    font-size: 15px;
+    line-height: 19px;
+    transform: translateY(-95%);
+  }
+
+  .select-styled.select-item:before {
+    font-size: 13px;
+    line-height: 19px;
+    top: 2px;
+  }
+
+  .progress {
+    border-radius: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .create-steps .item section {
+    min-height: inherit;
+
+  }
+  .veryfy-wrap .veryfy .order-btn{
+          margin-top: 12px;
+        margin-bottom: 12px;
+      padding: 12px 22px;
+      
+    }
+  .btn-group .order-btn:first-child {
+    margin-right: 0;
+  }
+  /*font*/
+  &.georgia {
+
+
+    h1 {
+      font-size: 55px;
+      line-height: 130%;
+
+      + h3 {
+        font-size: 24px;
+        line-height: 130%;
+      }
+    }
+
+
+    .text-content p {
+      font-size: 18px;
+      line-height: 130%;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 130%;
+    }
+
+    h2 {
+      font-size: 41px;
+      line-height: 130%;
+
+    }
+
+    .testimonials-item {
+      .title {
+        font-size: 22px;
+        line-height: 130%;
+
+      }
+
+      p {
+        &.small {
+          font-size: 14px;
+          line-height: 130%;
+        }
+      }
+    }
+
+    .faq-item {
+      .title {
+        font-size: 22px;
+        line-height: 130%;
+      }
+
+      .more {
+        font-size: 16px;
+        line-height: 130%;
+      }
+    }
+
+
+  }
+
+  &.open_sans_ovo {
+
+    h1 {
+      font-size: 40px;
+      line-height: 130%;
+
+    }
+
+    h3 {
+      font-size: 22px;
+      line-height: 130%;
+    }
+
+    h2 {
+      font-size: 40px;
+      line-height: 130%;
+    }
+
+    .steps-item {
+      margin-bottom: 44px;
+
+      .title {
+        font-size: 28px;
+        line-height: 130%;
+      }
+    }
+
+    .testimonials-item,
+    .faq-item {
+      .title {
+        font-size: 24px;
+        line-height: 130%;
+
+      }
+    }
+
+    .step-count {
+      font-size: 22px;
+      line-height: 44px;
+    }
+  }
+
+  &.helvetica_neue_light_set {
+
+    h1 {
+      font-size: 40px;
+      line-height: 130%;
+    }
+
+    h3 {
+      font-size: 26px;
+      line-height: 130%;
+    }
+
+    h2 {
+      font-size: 41px;
+      line-height: 130%;
+    }
+
+    .text-content p {
+      font-size: 18px;
+      line-height: 130%;
+    }
+
+    .steps-item {
+      .title {
+        font-size: 28px;
+        line-height: 130%;
+      }
+    }
+
+    .testimonials-item,
+    .faq-item {
+      .title {
+        font-size: 22px;
+        line-height: 130%;
+
+      }
+    }
+
+    .step-count {
+      font-size: 22px;
+      line-height: 130%;
+    }
+
+    .price .new sup {
+      line-height: 44px;
+    }
+
+    .checbox-label label:before,
+    .radio-label label:before {
+      top: -9px;
+    }
+
+    .radio-label input:checked + label:after {
+      top: -3px;
+    }
+  }
+
+  &.open_sans_bolt {
+    h1 {
+      font-size: 45px;
+      line-height: 130%;
+    }
+
+    h3 {
+      font-size: 24px;
+      line-height: 130%;
+    }
+
+    .text-content p {
+      font-size: 18px;
+      line-height: 130%;
+    }
+
+    h2 {
+      font-size: 41px;
+      line-height: 130%;
+    }
+
+    .steps-item {
+      .title {
+        font-size: 24px;
+        line-height: 130%;
       }
 
       p {
         font-size: 16px;
-        line-height: 24px;
-        margin-top: 3px;
-        margin-bottom: 0;
-
+        line-height: 130%;
       }
     }
 
-    .testimonials {
-      margin-top: 15px;
-
-      .testimonials-item {
-        margin-bottom: 25px;
-
-        .testimonials-rating {
-          margin-bottom: 0;
-        }
-
-        .title {
-          margin: 0;
-        }
-
-        p {
-          &.small {
-            margin: 5px 0 0;
-          }
-        }
-
-        .profile {
-          padding: 5px 0 0;
-
-          .username {
-            font-size: 14px;
-            line-height: 21px;
-          }
-        }
-      }
+    .order-btn {
+      font-size: 20px;
+      line-height: 130%;
     }
 
-    .faq {
-      margin: 15px 0;
+    p {
+      font-size: 16px;
+      line-height: 130%;
+
     }
 
+    .testimonials-item,
     .faq-item {
-      padding: 20px 48px 20px 10px;
-
       .title {
-        font-size: 16px;
-        line-height: 21px;
+        font-size: 20px;
+        line-height: 130%;
       }
-
-      .more {
-        font-size: 14px;
-        line-height: 24px;
-      }
-    }
-
-    .flag-container > .selected-flag > .iti-flag {
-      display: none;
     }
 
     .input-text,
-    .select-styled,
     .select-options li {
-      font-size: 18px;
-      line-height: 23px;
-      padding-top: 15px;
-      padding-bottom: 14px;
+      font-weight: bold;
     }
 
-    .select-styled,
-    .select-styled:before {
-      font-size: 18px;
-      line-height: 23px;
+
+    .order-btn, .veryfy-wrap .veryfy .order-btn{
+          margin-top: 12px;
+        margin-bottom: 12px;
+      padding: 12px 22px;
+      
     }
+  }
 
-    .select-styled,
-    .select-options li {
-      min-height: 54px;
-    }
+  &.open_sans_regular {
 
-    .label.active .label-text {
-      font-size: 13px;
-      line-height: 17px;
-      //      transform: translateY(-150%);
-    }
+    h1 {
+      font-size: 55px;
+      line-height: 130%;
 
-    .input-text:not(.error):focus,
-    .input-text:not(.error):hover {
-      padding-top: 17px;
-      padding-bottom: 10px;
-    }
-
-    .label-text {
-      font-size: 18px;
-      line-height: 23px;
-    }
-
-    .testimonials-rating {
-      padding: 15px 0;
-    }
-
-    .veryfy-wrap {
-      padding-top: 0;
-    }
-
-    .number-inputs {
-      padding: 12px 0;
-      margin-right: 15px;
-
-      .required-input {
-        width: 40px;
-        height: 52px;
-        margin-right: 8px;
-
-        &:last-child {
-          margin-right: 0;
-        }
+      + h3 {
+        font-size: 24px;
+        line-height: 130%;
       }
     }
 
-    .checbox-label,
-    .radio-label {
-      padding: 12px 0;
+    h2 {
+      font-size: 41px;
+      line-height: 130%;
+    }
 
-      label {
-        font-size: 16px;
+    .text-content p {
+      font-size: 18px;
+      line-height: 130%;
+    }
 
-        &:before {
-          top: -2px;
-        }
+    .steps-item {
+      .title {
+        font-size: 22px;
+        line-height: 130%;
       }
-    }
 
-    .radio-label input:checked + label:after {
-      top: 4px;
-    }
-
-    .btn-group .order-btn:first-child {
-      margin-right: 10px;
-    }
-
-    .step {
-      padding: 10px 0;
-
-      .step-count {
-        margin: 14px 0;
-        padding: 9px 20px;
+      p {
         font-size: 20px;
         line-height: 34px;
       }
+    }
 
-      .step-info {
-        margin-top: 10px;
-        font-size: 14px;
-        line-height: 24px;
+    p {
+      font-size: 20px;
+      line-height: 34px;
+    }
 
+    .testimonials-item {
+      .title {
+        font-size: 24px;
+        line-height: 36px;
+      }
+
+      p {
+        &.small {
+          font-size: 18px;
+          line-height: 31px;
+        }
       }
     }
 
-    .keywords {
-      flex-wrap: wrap;
-
-      input {
-        font-size: 18px;
-        line-height: 23px;
-        padding-top: 15px;
-        padding-bottom: 14px;
-        margin-right: 0;
-        margin-bottom: 14px;
+    .faq-item {
+      .title {
+        font-size: 24px;
+        line-height: 31px;
       }
-    }
 
-    .label {
-      margin: 11px 0;
-    }
-
-    .label.active.label-textarea .label-text {
-      font-size: 15px;
-      line-height: 19px;
-      transform: translateY(-95%);
-    }
-
-    .select-styled.select-item:before {
-      font-size: 13px;
-      line-height: 19px;
-      top: 2px;
+      .more {
+        font-size: 20px;
+        line-height: 34px;
+      }
     }
   }
+
+  &.merriweather {
+
+
+    h1 {
+      font-size: 32px;
+      line-height: 130%;
+
+
+    }
+
+    h2 {
+      font-size: 31px;
+      line-height: 130%;
+    }
+
+    h3 {
+      font-size: 20px;
+      line-height: 130%;
+    }
+
+    .text-content p {
+      font-size: 18px;
+      line-height: 130%;
+    }
+
+    .steps-item {
+      .title {
+        font-size: 22px;
+        line-height: 130%;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 130%;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 130%;
+    }
+
+    .testimonials-item {
+      .title {
+        font-size: 22px;
+        line-height: 130%;
+      }
+
+      p {
+        &.small {
+          font-size: 18px;
+          line-height: 130%;
+        }
+      }
+    }
+
+    .faq-item {
+      .title {
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 130%;
+      }
+
+      .more {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 130%;
+      }
+    }
+  }
+
+  &.roboto_light {
+
+
+    h1 {
+      font-size: 40px;
+      line-height: 130%;
+    }
+
+    h2 {
+      font-size: 36px;
+      line-height: 130%;
+    }
+
+    h3 {
+      font-size: 20px;
+      line-height: 130%;
+    }
+
+    .text-content p {
+      font-size: 18px;
+      line-height: 130%;
+    }
+
+
+
+    .steps-item {
+      .title {
+        font-size: 24px;
+        line-height: 130%;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 130%;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 130%;
+    }
+
+    .testimonials-item {
+      .title {
+        font-size: 22px;
+        line-height: 130%;
+      }
+
+      p {
+        &.small {
+          font-size: 14px;
+          line-height: 130%;
+        }
+      }
+    }
+
+    .faq-item {
+      .title {
+        font-size: 22px;
+        line-height: 130%;
+      }
+
+      .more {
+        font-size: 16px;
+        line-height: 130%;
+      }
+    }
+    .price .new sup {
+      line-height: 40px;
+    }
+
+  }
+
+  &.roboto_extra_bold {
+    .price .new sup {
+      line-height: 40px;
+    }
+
+    .checbox-label label:before {
+      top: -2px;
+    }
+
+    h1 {
+      font-size: 50px;
+      line-height: 130%;
+
+      + h3 {
+        font-size: 24px;
+        line-height: 130%;
+      }
+
+    }
+
+    h2 {
+      font-size: 41px;
+      line-height: 130%;
+
+    }
+
+    h3 {
+      font-size: 18px;
+      line-height: 130%;
+    }
+
+    .text-content {
+      p {
+        font-size: 18px;
+        line-height: 130%;
+      }
+    }
+
+
+    .steps-item {
+      .title {
+        font-size: 22px;
+        line-height: 130%;
+
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 130%;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 130%;
+    }
+
+    .testimonials-item {
+      .title {
+        font-size: 22px;
+        line-height: 130%;
+      }
+
+      p {
+        &.small {
+          font-size: 14px;
+          line-height: 130%;
+        }
+      }
+    }
+
+
+    .faq-item {
+      .title {
+        font-size: 22px;
+        line-height: 130%;
+      }
+
+      .more {
+        font-size: 16px;
+        line-height: 130%;
+      }
+    }
+
+
+    .step-info {
+      font-size: 14px;
+      line-height: 130%;
+    }
+
+ 
+  }
+
+
+  &.open_sans_extra_bold {
+
+
+    h1 {
+      font-size: 55px;
+      line-height: 130%;
+    }
+
+    h2 {
+      font-size: 41px;
+      line-height: 130%;
+    }
+
+    h3 {
+      font-size: 24px;
+      line-height: 130%;
+    }
+
+    .text-content {
+      p {
+        font-size: 18px;
+        line-height: 130%;
+      }
+    }
+
+
+
+    .steps-item {
+      .title {
+        font-size: 22px;
+        line-height: 130%;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 130%;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 130%;
+    }
+
+    .testimonials-item {
+      .title {
+        font-size: 22px;
+        line-height: 130%;
+      }
+
+      p {
+        &.small {
+          font-size: 14px;
+          line-height: 130%;
+        }
+      }
+    }
+
+    .price .new sup {
+      line-height: 50px;
+    }
+
+    .faq-item {
+      .title {
+        font-size: 22px;
+        line-height: 130%;
+      }
+
+      .more {
+        font-size: 16px;
+        line-height: 130%;
+      }
+    }
+
+
+  }
+  
+  .input-group .label.small {
+    input {
+      border-left: 0;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+  }
+  .input-group .label.large {
+        width: calc(100% - 150px);
+    input {
+        border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+  .secondary_info {
+    font-size: 12px;
+    line-height: 150%;
+    svg {
+      height: 15px;
+      width: 15px;
+    }
+  }
+  .secondary_info-version2 {
+    font-size: 12px;
+    line-height: 150%;
+    svg {
+      height: 15px;
+      width: 15px;
+    }
+  }
+  //  }
 
 }

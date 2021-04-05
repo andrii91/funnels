@@ -470,7 +470,7 @@ body {
 
 
   @import 'info/main';
-  @import 'info/MediaQueries/main';
+
 
   &.georgia {
     * {
@@ -1333,4 +1333,7 @@ body {
   @import 'info/tmpl/white_black';
   @import 'info/tmpl/cream';
 
+  
+    @import 'info/MediaQueries/main';
+  
 }
