@@ -128,11 +128,31 @@ $(document).ready(function () {
 
 
   $('.input-text').each(function () {
-    $(this).parent().prepend('<div class="label-text">' + $(this).attr('placeholder') + '</div>')
+    var typeInput = $(this).attr('name'), errorValue;
+    
+    switch (typeInput) {
+      case 'name':
+       errorValue = "Please enter correct name";
+        break;
+      case 'lastname':
+       errorValue = "Please enter correct lastname";
+        break;
+      case 'email':
+       errorValue = "Please enter correct email";
+        break;
+      default:
+        errorValue = "Enter valid value";
+    }    
+    
+    $(this).parent().prepend('<div data-error="'+errorValue+'" data-placeholder="'+$(this).attr('placeholder')+'" class="label-text">' + $(this).attr('placeholder') + '</div>')
     $(this).removeAttr('placeholder');
     if ($(this).val().length !== 0 || $(this).text().length !== 0) {
       $(this).parents('.label').addClass('active');
     }
+  })
+  
+  $('.form').each(function(){
+    $(this).prepend('<div class="form-error">Error: Something went wrong. Please try to. Bla-bla or enter your name and phone number below. Your Rebate Gift Card will be sent to this number via TEXT message. </div>')
   })
 
   $('.input-text').focusin(function () {
@@ -396,6 +416,45 @@ $(document).ready(function () {
       }
 
     }
+    
+      if ($(this).parents('.form')) {
+
+      var form = $(this).parents('.form'),
+        error = 0;
+      var field = [];
+      form.find('input[data-validate]').each(function () {
+        field.push('input[data-validate]');
+        var value = $(this).val(),
+          line = $(this).closest('.label');
+        for (var i = 0; i < field.length; i++) {
+          if (!value) {
+            line.addClass('error');
+            line.find('.label-text').text(line.find('.label-text').data('error')).addClass('error')
+            error = 1;
+            setTimeout(function () {
+              line.removeClass('error')
+            line.find('.label-text').text(line.find('.label-text').data('placeholder')).removeClass('error')
+            }.bind(this), 2000);
+            event.preventDefault();
+            
+            form.find('.form-error').show();
+          }
+        }
+      });
+
+      if (error !== 1) {
+        $(this).unbind(e);
+        form.find('.form-error').hide();
+        //        $('.create-steps').slick('slickNext');
+
+      }
+
+    }
+    
+    
+    
+    
+    
   })
 
 
@@ -526,6 +585,88 @@ $(document).ready(function () {
   });
   console.log('starsCount', starsCount)
 
+
+
+
+  /*valid*/
+  /*
+  function validInput(el, type) {
+    const btn = $(el).parents('.form').find('.submit')
+    const parent = $(el).parent()
+    if (type === 'email') {
+      if (!checkIfEmailInString($(el).val()) && $(el).val()) {
+        toggleValidInput('show', parent, btn)
+      } else {
+        toggleValidInput('hide', parent, btn)
+      }
+    } else if (type === 'password') {
+      if ($(el).val().length < 8 && $(el).val()) {
+        toggleValidInput('show', parent, btn)
+      } else {
+        toggleValidInput('hide', parent, btn)
+      }
+    }
+  }
+
+  function toggleValidInput(type, parent, btn) {
+    if (type === 'show') {
+      parent.addClass('error')
+      parent.find('.inp-form__label').hide()
+      parent.find('.label-err').show()
+      $(btn).attr('disabled', true)
+    } else {
+      parent.removeClass('inp-form__wrapper_error')
+      parent.find('.inp-form__label').show()
+      parent.find('.label-err').hide()
+      if (parent.parent().parent().find('.valid-label.inp-form__wrapper_error').length === 0) $(btn).attr('disabled', false)
+    }
+  }
+
+  function checkIfEmailInString(text) {
+    let re = /(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
+    return re.test(text);
+  }
+
+
+
+  $('.inp-form_website').on('input', function (e) {
+    validInput(this, 'website')
+  })
+
+  $('.inp-form_email').on('input', function (e) {
+    validInput(this, 'email')
+  })
+
+  $('.inp-form_password').on('input', function (e) {
+    validInput(this, 'password')
+  })
+
+  $('#email_submit').click(function (e) {
+    e.preventDefault();
+    const email = $('#signup_email').val();
+
+    if (!email || !checkIfEmailInString(email)) {
+      $('#signup_email').addClass('input_err');
+    } else {
+      $('#signup_email').removeClass('input_err').val('');
+
+      doPreSignup(email);
+    }
+  });
+
+  $('.inp-form__label_select').each(function (i, el) {
+    $(el).parent().find('.jq-selectbox').append($(el))
+  })
+  $('.inp-form__label_select').click(function (e) {
+    $(this).parent().find('.jq-selectbox__select').trigger('click')
+  })
+
+  $('.inp-form').on('input', function (e) {
+    if (!$(this).parent().hasClass('valid-label')) {
+      $(this).parent().removeClass('inp-form__wrapper_error')
+    }
+  })
+*/
 
 
 

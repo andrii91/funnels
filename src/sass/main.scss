@@ -214,6 +214,21 @@ body {
     padding-left: 15px;
     width: 100%;
   }
+  
+  .form-error {
+    display: none;
+    padding: 20px 30px;
+    background: #EC3434;
+    border-radius: 2px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 170%;
+    /* or 31px */
+
+
+    color: #FFFFFF;
+  }
 
 
   @media (min-width: 768px) {

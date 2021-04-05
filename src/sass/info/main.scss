@@ -806,6 +806,10 @@ input::-webkit-inner-spin-button {
     user-select: none;
     /* Non-prefixed version, currently*/
     transition: .1s;
+    
+    &.error {
+      color: #EC3434;
+    }
 
   }
 
