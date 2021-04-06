@@ -809,6 +809,7 @@ input::-webkit-inner-spin-button {
     
     &.error {
       color: #EC3434;
+//      display: none;
     }
 
   }
@@ -896,6 +897,10 @@ input::-webkit-inner-spin-button {
 box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5) inset;*/
     border-width: 2px;
     padding: 29px 19px 9px;
+    
+    &[name="phone"] {
+      padding-left: 178px;
+    }
 
 
   }

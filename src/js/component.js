@@ -128,31 +128,41 @@ $(document).ready(function () {
 
 
   $('.input-text').each(function () {
-    var typeInput = $(this).attr('name'), errorValue;
-    
+    var typeInput = $(this).attr('name'),
+      errorValue, errorNotice;
+
     switch (typeInput) {
       case 'name':
-       errorValue = "Please enter correct name";
+        errorValue = "Please enter correct name";
+        errorNotice = "ERROR: Please enter correct name";
+
         break;
       case 'lastname':
-       errorValue = "Please enter correct lastname";
+        errorValue = "Please enter correct lastname";
+        errorNotice = "ERROR: Please enter correct lastname";
         break;
       case 'email':
-       errorValue = "Please enter correct email";
+        errorValue = "Please enter correct email";
+        errorNotice = "ERROR: Please enter correct email";
+        break;
+      case 'phone':
+        errorValue = "Please enter correct phone";
+        errorNotice = "ERROR: Please enter correct phone";
         break;
       default:
         errorValue = "Enter valid value";
-    }    
-    
-    $(this).parent().prepend('<div data-error="'+errorValue+'" data-placeholder="'+$(this).attr('placeholder')+'" class="label-text">' + $(this).attr('placeholder') + '</div>')
+        errorNotice = "ERROR: Enter valid value";
+    }
+
+    $(this).parent().prepend('<div data-errornotice="' + errorNotice + '" data-error="' + errorValue + '" data-placeholder="' + $(this).attr('placeholder') + '" class="label-text">' + $(this).attr('placeholder') + '</div>')
     $(this).removeAttr('placeholder');
     if ($(this).val().length !== 0 || $(this).text().length !== 0) {
       $(this).parents('.label').addClass('active');
     }
   })
-  
-  $('.form').each(function(){
-    $(this).prepend('<div class="form-error">Error: Something went wrong. Please try to. Bla-bla or enter your name and phone number below. Your Rebate Gift Card will be sent to this number via TEXT message. </div>')
+
+  $('.form').each(function () {
+    $(this).prepend('<div class="form-error">Error: Something went wrong. Please enter correct data!</div>')
   })
 
   $('.input-text').focusin(function () {
@@ -166,12 +176,16 @@ $(document).ready(function () {
     }
   })
 
+
+
   $('.input-text').on('keyup', function (e) {
     if ($(this).val().length == 0) {
       $(this).parents('.label').removeClass('active');
     } else {
       $(this).parents('.label').addClass('active');
     }
+
+
   })
 
 
@@ -342,52 +356,52 @@ $(document).ready(function () {
     $('.create-steps').slick('slickPrev');
   })
 
-  $('.next-step').click(function (e) {
-    e.preventDefault();
-    if ($(this).parents('.form')) {
+  /*  $('.next-step').click(function (e) {
+      e.preventDefault();
+      if ($(this).parents('.form')) {
 
-      var form = $(this).parents('.form'),
-        error = 0;
-      var field = [];
-      form.find('[data-validate]').each(function () {
-        field.push('[data-validate]');
-        var value = $(this).val(),
-          line = $(this).closest('.label');
-        for (var i = 0; i < field.length; i++) {
-          if (!value) {
-            line.addClass('error');
-            error = 1;
-            setTimeout(function () {
-              line.removeClass('error')
-            }.bind(this), 2000);
-            event.preventDefault();
+        var form = $(this).parents('.form'),
+          error = 0;
+        var field = [];
+        form.find('[data-validate]').each(function () {
+          field.push('[data-validate]');
+          var value = $(this).val(),
+            line = $(this).closest('.label');
+          for (var i = 0; i < field.length; i++) {
+            if (!value) {
+              line.addClass('error');
+              error = 1;
+              setTimeout(function () {
+                line.removeClass('error')
+              }.bind(this), 2000);
+              event.preventDefault();
+            }
           }
+        });
+
+        if (error !== 1) {
+          //        $(this).unbind('submit').submit();
+
+
+
+
+          $('.create-steps').slick('slickNext');
+          var id = '#funnels-lib',
+            top = $(id).offset().top;
+
+          $('body,html').animate({
+            scrollTop: top - 80
+          }, 100);
+
         }
-      });
-
-      if (error !== 1) {
-        //        $(this).unbind('submit').submit();
-
-
-
-
-        $('.create-steps').slick('slickNext');
-        var id = '#funnels-lib',
-          top = $(id).offset().top;
-
-        $('body,html').animate({
-          scrollTop: top - 80
-        }, 100);
 
       }
-
-    }
-  })
+    })*/
 
   $('.submit').click(function (e) {
     e.preventDefault();
-    if ($(this).parents('.veryfy-wrap')) {
 
+    if ($(this).parents('.veryfy-wrap')) {
       var form = $(this).parents('.veryfy-wrap'),
         error = 0;
       var field = [];
@@ -404,7 +418,7 @@ $(document).ready(function () {
               line.removeClass('error')
               line.find('.title').text('Enter PIN:')
             }.bind(this), 2000);
-            event.preventDefault();
+            //            event.preventDefault();
           }
         }
       });
@@ -414,49 +428,9 @@ $(document).ready(function () {
         //        $('.create-steps').slick('slickNext');
 
       }
-
     }
-    
-      if ($(this).parents('.form')) {
 
-      var form = $(this).parents('.form'),
-        error = 0;
-      var field = [];
-      form.find('input[data-validate]').each(function () {
-        field.push('input[data-validate]');
-        var value = $(this).val(),
-          line = $(this).closest('.label');
-        for (var i = 0; i < field.length; i++) {
-          if (!value) {
-            line.addClass('error');
-            line.find('.label-text').text(line.find('.label-text').data('error')).addClass('error')
-            error = 1;
-            setTimeout(function () {
-              line.removeClass('error')
-            line.find('.label-text').text(line.find('.label-text').data('placeholder')).removeClass('error')
-            }.bind(this), 2000);
-            event.preventDefault();
-            
-            form.find('.form-error').show();
-          }
-        }
-      });
-
-      if (error !== 1) {
-        $(this).unbind(e);
-        form.find('.form-error').hide();
-        //        $('.create-steps').slick('slickNext');
-
-      }
-
-    }
-    
-    
-    
-    
-    
   })
-
 
 
 
@@ -589,84 +563,189 @@ $(document).ready(function () {
 
 
   /*valid*/
-  /*
-  function validInput(el, type) {
-    const btn = $(el).parents('.form').find('.submit')
-    const parent = $(el).parent()
-    if (type === 'email') {
-      if (!checkIfEmailInString($(el).val()) && $(el).val()) {
-        toggleValidInput('show', parent, btn)
+
+
+
+
+  function validateEmail(email) {
+    var pattern = (/(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/);
+    console.log(pattern.test(email))
+    return pattern.test(email);
+  }
+
+  $('.input-text').on('keyup', function (e) {
+    const value = $(this).val(),
+      type = $(this).attr('name'),
+      line = $(this).parents('.label');
+
+    if (type == 'name' || type == 'lastname') {
+      if (!value || value && !/^[а-яa-z]+$/i.test(value)) {
+        line.addClass('error');
+        line.find('.label-text').text(line.find('.label-text').data('error')).addClass('error');
+        $(this).parents('.form').find('.form-error').text(line.find('.label-text').data('errornotice')).show();
       } else {
-        toggleValidInput('hide', parent, btn)
+        line.removeClass('error');
+        line.find('.label-text').text(line.find('.label-text').data('placeholder')).removeClass('error');
+        $(this).parents('.form').find('.form-error').hide();
       }
-    } else if (type === 'password') {
-      if ($(el).val().length < 8 && $(el).val()) {
-        toggleValidInput('show', parent, btn)
+    } else if (type == 'email') {
+      if (!value || value && !validateEmail(value)) {
+
+        console.log(type);
+
+        line.addClass('error');
+        line.find('.label-text').text(line.find('.label-text').data('error')).addClass('error');
+        $(this).parents('.form').find('.form-error').text(line.find('.label-text').data('errornotice')).show();
       } else {
-        toggleValidInput('hide', parent, btn)
+        line.removeClass('error');
+        line.find('.label-text').text(line.find('.label-text').data('placeholder')).removeClass('error');
+        $(this).parents('.form').find('.form-error').hide();
+
       }
+
+    } else if (type == 'phone') {
+      if (!value || value && !/^\d+$/.test(value)) {
+
+        line.addClass('error');
+        line.find('.label-text').text(line.find('.label-text').data('error')).addClass('error');
+        $(this).parents('.form').find('.form-error').text(line.find('.label-text').data('errornotice')).show();
+      } else {
+        line.removeClass('error');
+        line.find('.label-text').text(line.find('.label-text').data('placeholder')).removeClass('error');
+        $(this).parents('.form').find('.form-error').hide();
+
+      }
+
     }
-  }
 
-  function toggleValidInput(type, parent, btn) {
-    if (type === 'show') {
-      parent.addClass('error')
-      parent.find('.inp-form__label').hide()
-      parent.find('.label-err').show()
-      $(btn).attr('disabled', true)
-    } else {
-      parent.removeClass('inp-form__wrapper_error')
-      parent.find('.inp-form__label').show()
-      parent.find('.label-err').hide()
-      if (parent.parent().parent().find('.valid-label.inp-form__wrapper_error').length === 0) $(btn).attr('disabled', false)
-    }
-  }
-
-  function checkIfEmailInString(text) {
-    let re = /(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
-    return re.test(text);
-  }
-
-
-
-  $('.inp-form_website').on('input', function (e) {
-    validInput(this, 'website')
   })
 
-  $('.inp-form_email').on('input', function (e) {
-    validInput(this, 'email')
-  })
 
-  $('.inp-form_password').on('input', function (e) {
-    validInput(this, 'password')
-  })
-
-  $('#email_submit').click(function (e) {
+  var errorForm = 0;
+  $('.submit_form').click(function (e) {
     e.preventDefault();
-    const email = $('#signup_email').val();
 
-    if (!email || !checkIfEmailInString(email)) {
-      $('#signup_email').addClass('input_err');
-    } else {
-      $('#signup_email').removeClass('input_err').val('');
+    if ($(this).parents('.form')) {
 
-      doPreSignup(email);
+      var form = $(this).parents('.form');
+      var field = [],
+        type;
+
+      form.find('input[data-validate]').each(function () {
+        field.push('input[data-validate]');
+        var value = $(this).val(),
+          line = $(this).closest('.label')
+        type = $(this).attr('name');
+
+        if (type == 'email') {
+          console.log(2)
+          for (var i = 0; i < field.length; i++) {
+            if (!value || value && !validateEmail(value)) {
+
+              console.log(type);
+
+              line.addClass('error');
+              line.find('.label-text').text(line.find('.label-text').data('error')).addClass('error');
+              form.find('.form-error').text(line.find('.label-text').data('errornotice')).show();
+
+              errorForm = 1;
+              return false;
+
+            } else {
+
+              line.removeClass('error');
+              line.find('.label-text').text(line.find('.label-text').data('placeholder')).removeClass('error');
+              errorForm = 0;
+
+            }
+          }
+
+        } else if (type == 'name' || type == 'lastname') {
+          if (!value || value && !/^[а-яa-z]+$/i.test(value)) {
+            line.addClass('error');
+            line.find('.label-text').text(line.find('.label-text').data('error')).addClass('error');
+            form.find('.form-error').text(line.find('.label-text').data('errornotice')).show();
+            errorForm = 1;
+            return false;
+          } else {
+            line.removeClass('error');
+            line.find('.label-text').text(line.find('.label-text').data('placeholder')).removeClass('error');
+            errorForm = 0;
+          }
+        } else if (type == 'phone') {
+          if (!value || value && !/^\d+$/.test(value)) {
+            console.log('valueph', value)
+
+            line.addClass('error');
+            line.find('.label-text').text(line.find('.label-text').data('error')).addClass('error');
+            $(this).parents('.form').find('.form-error').text(line.find('.label-text').data('errornotice')).show();
+             errorForm = 1;
+            return false;
+            
+          } else {
+            line.removeClass('error');
+            line.find('.label-text').text(line.find('.label-text').data('placeholder')).removeClass('error');
+            $(this).parents('.form').find('.form-error').hide();
+            errorForm = 0;
+          }
+
+        } else {
+          for (var i = 0; i < field.length; i++) {
+            if (!value) {
+
+              console.log(type);
+
+
+              line.addClass('error');
+              line.find('.label-text').text(line.find('.label-text').data('error')).addClass('error');
+              form.find('.form-error').text(line.find('.label-text').data('errornotice')).show();
+
+
+              errorForm = 1;
+              return false;
+
+            } else {
+
+
+              line.removeClass('error');
+              line.find('.label-text').text(line.find('.label-text').data('placeholder')).removeClass('error');
+              errorForm = 0;
+
+
+
+            }
+          }
+
+        }
+
+
+
+
+      });
+
+      console.log('errorForm', errorForm)
+
+      if (errorForm !== 1) {
+        $(this).unbind(e);
+        form.find('.form-error').hide();
+
+        if ($(this).hasClass('next-step')) {
+          $('.create-steps').slick('slickNext');
+          var id = '#funnels-lib',
+            top = $(id).offset().top;
+
+          $('body,html').animate({
+            scrollTop: top - 80
+          }, 100);
+        }
+
+
+      }
+
     }
-  });
 
-  $('.inp-form__label_select').each(function (i, el) {
-    $(el).parent().find('.jq-selectbox').append($(el))
-  })
-  $('.inp-form__label_select').click(function (e) {
-    $(this).parent().find('.jq-selectbox__select').trigger('click')
   })
 
-  $('.inp-form').on('input', function (e) {
-    if (!$(this).parent().hasClass('valid-label')) {
-      $(this).parent().removeClass('inp-form__wrapper_error')
-    }
-  })
-*/
 
 
 
