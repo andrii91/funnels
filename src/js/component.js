@@ -133,20 +133,20 @@ $(document).ready(function () {
 
     switch (typeInput) {
       case 'name':
-        errorValue = "Please enter correct name";
+        errorValue = "Enter correct name";
         errorNotice = "ERROR: Please enter correct name";
 
         break;
       case 'lastname':
-        errorValue = "Please enter correct lastname";
+        errorValue = "Enter correct lastname";
         errorNotice = "ERROR: Please enter correct lastname";
         break;
       case 'email':
-        errorValue = "Please enter correct email";
+        errorValue = "Enter correct email";
         errorNotice = "ERROR: Please enter correct email";
         break;
       case 'phone':
-        errorValue = "Please enter correct phone";
+        errorValue = "Enter correct phone";
         errorNotice = "ERROR: Please enter correct phone";
         break;
       default:
