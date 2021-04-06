@@ -356,7 +356,13 @@ html {
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
-
+&.no-gutters {
+    margin-right: -5px;
+  margin-left: -5px;
+  .wr-col-6 {
+    padding: 0 5px;
+  }
+}
 }
 
 
@@ -372,3 +378,20 @@ html {
 
 
 
+
+
+
+.lang-photo {
+  overflow: hidden;
+  border-radius: 6px;
+  margin: 5px 0;
+  display: block;
+  img {
+    transition: .1s;
+  }
+  &:hover {
+    img {
+      transform: scale(1.05);
+    }
+  }
+}
