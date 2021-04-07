@@ -462,8 +462,8 @@
   }
 
   .create-steps .item section {
-    min-height: inherit;
-
+      align-items: flex-start;
+    min-height: calc(100vh - 215px);
   }
 
   .veryfy-wrap .veryfy .order-btn {
