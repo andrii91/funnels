@@ -954,6 +954,9 @@ textarea.input-text {
       color: $red;
     }
 
+    .veryfy-input {
+        border: 2px solid $red;
+    }
     .veryfy {
       .number-inputs {
         input {
@@ -1203,4 +1206,50 @@ textarea.input-text {
   line-height: 31px;
   color: #000000;
 
+}
+.veryfy-input {
+  background: none;
+  border: 1px solid #909BA6;
+  border-radius: 3px;
+  display: block;
+  z-index: 1;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    font-size: 40px;
+    line-height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    height: 68px;
+  color: #000000;
+text-align: center;
+margin-right: 30px;
+      max-width: 250px;
+  &.error {
+    border-color: red;
+  }
+
+  &:not(.error):focus,
+  &:not(.error):hover {
+    /*   -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5) inset;
+-moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5) inset;
+box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5) inset;*/
+    border-width: 2px;
+    
+
+
+  }
+
+  &[disabled] {
+    background: #EFEFEF;
+    border-radius: 3px;
+    border-color: #EFEFEF;
+  }
+}
+
+.veryfy_single {
+  display: flex;
+  align-items: center;
+  position: relative;
 }

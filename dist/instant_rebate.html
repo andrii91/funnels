@@ -332,17 +332,11 @@
         <div class="wrapper wrapper-small">
           <h1>Email verification</h1>
           <p>We have just sent a code to <b>{{email_address}}</b> <br>Once you get your code, enter it below.</p>
-          <div class="veryfy-wrap form">
-            <div class="veryfy ">
-              <div class="number-inputs">
-                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
-                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
-                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
-                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
-              </div>
-              <button class="order-btn submit next-step submit_form">Verify</button>
-            </div>
+          <div class="veryfy_single veryfy-wrap form">
+            <input class="veryfy-input " type="text" inputmode="numeric" pattern="[0-9]*" data-validate>
+            <button class="order-btn submit next-step submit_form">Verify</button> 
           </div>
+          
           <p>This is where we will send your Visa or Amazon Gift Card Rebate. <br>Click below if you need to change your email address.</p>
           <button class="order-btn unimportant-btn prev-step">Change email</button>
         </div>
@@ -399,16 +393,9 @@
         <div class="wrapper wrapper-small">
           <h1>Verify your phone number</h1>
           <p>We have just sent a code to <b>{{phone_number}}</b> <br>Once you get your code, enter it below.</p>
-          <div class="veryfy-wrap form">
-            <div class="veryfy ">
-              <div class="number-inputs">
-                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
-                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
-                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
-                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
-              </div>
-              <button class="order-btn submit next-step submit_form">Verify</button>
-            </div>
+          <div class="veryfy_single veryfy-wrap form">
+            <input class="veryfy-input " type="text" inputmode="numeric" pattern="[0-9]*" data-validate>
+            <button class="order-btn submit next-step submit_form">Verify</button> 
           </div>
           <p>This is where we will send your Visa or Amazon Gift Card Rebate. <br>Click below if you need to change your phone number.</p>
           <button class="order-btn unimportant-btn prev-step">Change phone number</button>

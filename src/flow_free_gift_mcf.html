@@ -339,16 +339,9 @@
         <div class="wrapper wrapper-small">
           <h1>Email verification</h1>
           <p>We have just sent a code to <b>{{email_address}}</b> <br>Once you get your code, enter it below.</p>
-          <div class="veryfy-wrap form">
-            <div class="veryfy ">
-              <div class="number-inputs">
-                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
-                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
-                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
-                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
-              </div>
-              <button class="order-btn submit next-step submit_form">Verify</button>
-            </div>
+          <div class="veryfy_single veryfy-wrap form">
+            <input class="veryfy-input " type="text" inputmode="numeric" pattern="[0-9]*" data-validate>
+            <button class="order-btn submit next-step submit_form">Verify</button> 
           </div>
           <p>This is where we will send your Visa or Amazon Gift Card Rebate. <br>Click below if you need to change your email address.</p>
           <button class="order-btn unimportant-btn prev-step">Change email</button>
@@ -398,16 +391,9 @@
         <div class="wrapper wrapper-small">
           <h1>Verify your phone number</h1>
           <p>We have just sent a code to <b>{{phone_number}}</b> <br>Once you get your code, enter it below.</p>
-          <div class="veryfy-wrap form">
-            <div class="veryfy ">
-              <div class="number-inputs">
-                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
-                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
-                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
-                <input type="number" inputmode="numeric" pattern="[0-9]*" class="required-input" data-validate>
-              </div>
-              <button class="order-btn submit next-step submit_form">Verify</button>
-            </div>
+          <div class="veryfy_single veryfy-wrap form">
+            <input class="veryfy-input " type="text" inputmode="numeric" pattern="[0-9]*" data-validate>
+            <button class="order-btn submit next-step submit_form">Verify</button> 
           </div>
           <p>This is where we will send your Visa or Amazon Gift Card Rebate. <br>Click below if you need to change your phone number.</p>
           <button class="order-btn unimportant-btn prev-step">Change phone number</button>
@@ -429,7 +415,7 @@
           <h1>It's a bit too early...</h1>
           <p>We really appreciate you buying our product. To get your honest opinion, we would like you to use it for a couple more days before giving us your feedback.</p>
           <p>In 2 days we will send you an email and/or text message with a link that will lead you right back to this page.</p>
-          <button class="order-btn next-step">NextSlide</button>
+          <button class="order-btn next-step submit_form">NextSlide</button>
 
         </div>
       </section>
@@ -484,12 +470,36 @@
             <label class="label" for="qw1">
               <input id="qw1" class="input-text" type="text" name="qw1" placeholder="How are you?" data-validate autocomplete="off">
             </label>
+
+
+            <button class="order-btn next-step submit_form">Next</button>
+
+          </form>
+        </div>
+      </section>
+      <footer class="footer">
+        <ul class="footer-list">
+          <li><a href="#">Privacy policy </a></li>
+          <li><a href="#">Support </a></li>
+        </ul>
+      </footer>
+    </div>
+    <div class="item">
+      <section>
+        <div class="wrapper wrapper-small">
+          <div class="logo">
+            <img src="images/flowlogo.png" alt="">
+          </div>
+          <h1>Some questions</h1>
+          <p>Please answer some questions about out product so we can improve.</p>
+          <form class="form" action="#">
+
             <label class="label" for="qw2">
               <input id="qw2" class="input-text" type="text" name="qw2" placeholder="Where is my king?" data-validate autocomplete="off">
             </label>
 
 
-            <button class="order-btn next-step">Next</button>
+            <button class="order-btn next-step submit_form">Next</button>
 
           </form>
         </div>
@@ -657,7 +667,7 @@
               </label>
             </div>
 
-            <button class="order-btn next-step">Verify</button>
+            <button class="order-btn next-step submit_form">Verify</button>
 
           </form>
         </div>
@@ -769,7 +779,7 @@
           <p>Lorem ipsum to get your honest and complete opinion about our product we would like that you use it for a couple more days. In {{days}} days we will send you a TEXT and/or email with a link that will lead you back to this page. </p>
 
 
-          <button class="order-btn next-step">Return to page</button>
+          <button class="order-btn next-step submit_form">Return to page</button>
         </div>
       </section>
       <footer class="footer">
@@ -796,7 +806,7 @@
             </select>
           </div>
           <div class="btn-group">
-            <button class="order-btn next-step">Select option</button>
+            <button class="order-btn next-step submit_form">Select option</button>
             <button class="order-btn prev-step link-btn">Return to page</button>
 
           </div>
@@ -831,7 +841,7 @@
               <textarea class="input-text" name="textarea" id="textarea3" placeholder="Please enter your review here"></textarea>
             </label>
             <div class="btn-group">
-              <button class="order-btn next-step">Send</button>
+              <button class="order-btn next-step submit_form">Send</button>
               <button class="order-btn link-btn prev-step">Back</button>
             </div>
           </div>

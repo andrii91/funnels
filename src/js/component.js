@@ -14,6 +14,8 @@ $(document).ready(function () {
   })
   var countThisInput = 0;
 
+    
+  
   if ($('input').hasClass('required-input')) {
     $('.required-input').mask("9");
 
@@ -480,6 +482,7 @@ $(document).ready(function () {
 
 
 
+
   var cStars = function (nowPos) {
     // У всех убираем active
     $('.testimonials-rating.large .star').removeClass('active');
@@ -746,7 +749,18 @@ $(document).ready(function () {
 
   })
 
+  
 
+  $('.veryfy-input').mask("9-9-9-9");
+  
+  $('.veryfy_single .submit').attr('disabled', 'disabled');
 
-
+  $(".veryfy-input").keyup(function () {
+    
+    if($(this).val().length > 6) {
+       $(this).parent().find('.submit').removeAttr('disabled');
+    }else{
+       $(this).parent().find('.submit').attr('disabled', 'disabled');
+    }
+  });
 });
