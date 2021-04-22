@@ -67,7 +67,7 @@ body {
 
 @import 'info/modal';
 @import 'info/phone';
-@import 'info/slick';
+
 @import 'info/funnels';
 
 
@@ -203,7 +203,7 @@ body {
 
 
 #funnels-lib {
-
+@import 'info/slick';
   color: $base-color-text;
   //  padding-bottom: 80px;
 
