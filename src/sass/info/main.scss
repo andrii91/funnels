@@ -1253,3 +1253,23 @@ box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5) inset;*/
   align-items: center;
   position: relative;
 }
+
+.price-bottom {
+  display: flex;
+  .bonus {
+    margin: 11px;
+    border: 1px solid #00A441;
+    border-radius: 30px;
+    min-height: 45px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 34px;
+    color: #00A441;
+    padding: 4px 22px;
+  }
+}
