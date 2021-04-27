@@ -854,11 +854,13 @@ input::-webkit-inner-spin-button {
   .intl-tel-input.separate-dial-code input[type=tel],
   .intl-tel-input.separate-dial-code input[type=text] {
     padding-left: 179px;
+    padding-left: 130px;
   }
 
   &.label-phone {
     .label-text {
       left: 179px;
+      left: 130px;
     }
   }
 }
@@ -892,14 +894,12 @@ input::-webkit-inner-spin-button {
 
   &:not(.error):focus,
   &:not(.error):hover {
-    /*   -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5) inset;
--moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5) inset;
-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5) inset;*/
     border-width: 2px;
     padding: 29px 19px 9px;
     
     &[name="phone"] {
       padding-left: 178px;
+      padding-left: 129px;
     }
 
 

@@ -257,21 +257,23 @@ $(document).ready(function () {
 
 
   $('input[name="phone"]').intlTelInput({
-    defaultCountry: "us",
-    initialCountry: "auto",
+//    defaultCountry: "us",
+//    initialCountry: "auto",
     //    preferredCountries: ["ua", "ru", 'az', 'am', 'by', 'kz', 'kg', 'md', 'tj', 'uz', 'tm', 'ge'],
+        onlyCountries: ["us"],
     autoPlaceholder: 'aggressive',
     nationalMode: true,
+    allowDropdown: false,
     customPlaceholder: function (selectedCountryPlaceholder, selectedCountryData) {
       return "+" + selectedCountryData.dialCode;
     },
-    geoIpLookup: function (success, failure) {
+  /*  geoIpLookup: function (success, failure) {
 
       $.get("https://ipinfo.io", function () {}, "jsonp").always(function (resp) {
         var countryCode = (resp && resp.country) ? resp.country : "us";
         success(countryCode);
       });
-    },
+    },*/
     separateDialCode: true,
     formatOnDisplay: true,
     //		utilsScript: 'https://mk.beauty-matrix.ru/assets/plugins/intltelinput/js/utils.js',
