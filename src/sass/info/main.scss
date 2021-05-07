@@ -183,6 +183,12 @@ input:hover {
   margin-top: 50px;
   counter-reset: list;
 }
+.animation-steps {
+  flex-wrap: nowrap;
+  .steps-item {
+    max-width: 33.33%;
+  }
+}
 
 .steps-item {
   padding-top: 115px;
@@ -305,6 +311,22 @@ input:hover {
     &.active {
       svg {
         fill: #FF0000;
+      }
+
+    }
+
+    &.active-4-5 {
+      svg {
+        path {
+          stroke: #FF0000;
+        }
+       
+        linearGradient {
+           stop {
+            offset: 0.45;
+            stop-color: #FF0000;
+          }
+        }
       }
 
     }
@@ -1047,6 +1069,11 @@ textarea.input-text {
 .keywords {
   display: flex;
 
+  &.half {
+    input, .order-btn  {
+      width: 50%;
+    }
+  }
   input {
     background: none;
     border: 1px solid #909BA6;
@@ -1295,6 +1322,7 @@ box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5) inset;*/
   width: 100%;
   height: inherit;
   margin-top: 65px;
+  filter: drop-shadow(0px 0px 99px rgba(255, 245, 107, 0.2)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   svg {
      width: 100%;
   height: inherit;

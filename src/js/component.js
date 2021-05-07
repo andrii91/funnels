@@ -210,6 +210,10 @@ $(document).ready(function () {
     setTimeout(function () {
       $('.keywords input').removeClass('active');
     }, 1000)
+    
+    if($(this).attr('href')!= "#") {
+       $(location).attr('href',$(this).attr('href'));
+    }
 
   })
 
@@ -810,10 +814,23 @@ var jsonDataAnimationMob = {"v":"5.6.3","fr":29.9700012207031,"ip":0,"op":436.00
     var animMob = bodymovin.loadAnimation(animDataMob);
 
     window.onresize = anim.resize.bind(animMob);
-
-    setTimeout(function () {
+  
+  
+  if($('div').hasClass('typing')) {
+        setTimeout(function () {
       typingText();
     }, 1000)
+    
+        setInterval(function () {
+      $('.typing').removeClass('active');
+      $('.typing span:not(.text)').remove();
+      setTimeout(function () {
+        typingText();
+        }, 1000)
+    }, 14500)
+
+  }
+
 
     function typingText() {
       var wrapper = document.querySelector(".typing");
@@ -836,13 +853,7 @@ var jsonDataAnimationMob = {"v":"5.6.3","fr":29.9700012207031,"ip":0,"op":436.00
 
     }
   
-    setInterval(function () {
-      $('.typing').removeClass('active');
-      $('.typing span:not(.text)').remove();
-      setTimeout(function () {
-        typingText();
-        }, 1000)
-    }, 14500)
+
   
   
   

@@ -1,4 +1,10 @@
  &.dark_green-tmpl {
+   
+   p {
+     a {
+       color: #FFF56B !important;
+     }
+   }
 
     background: #183949;
     position: relative;
@@ -75,6 +81,7 @@
     .steps-item:before {
       border-color: #FFF56B;
       background: #183949;
+      border-width: 3px;
       
     }
 
@@ -84,6 +91,23 @@
 
     .order-btn {
       background: #E94C5D;
+    }
+      .testimonials-rating .star {
+        &.active-4-5 {
+        svg {
+          path {
+            stroke: #FFF56B;
+          }
+
+          linearGradient {
+             stop {
+              offset: 0.45;
+              stop-color: #FFF56B;
+            }
+          }
+        }
+
+      }
     }
 
     .testimonials-item .testimonials-rating .star.active svg {
@@ -132,7 +156,7 @@
 
     .order-btn.link-btn {
       background: 0 0;
-      color: #E94C5D;
+      color: #fff;
     }
 
     .intl-tel-input .selected-flag .iti-arrow {

@@ -70,6 +70,24 @@
         opacity: .9;
       }
     }
+    
+    .testimonials-rating .star {
+        &.active-4-5 {
+        svg {
+          path {
+            stroke: #E6BA7B;
+          }
+
+          linearGradient {
+             stop {
+              offset: 0.45;
+              stop-color: #E6BA7B;
+            }
+          }
+        }
+
+      }
+    }
 
     .testimonials-item .testimonials-rating .star.active svg {
       fill: #E6BA7B;

@@ -58,6 +58,25 @@
     }
 
 
+    .testimonials-rating .star {
+        &.active-4-5 {
+        svg {
+          path {
+            stroke: #AF9075;
+          }
+
+          linearGradient {
+             stop {
+              offset: 0.45;
+              stop-color: #AF9075;
+            }
+          }
+        }
+
+      }
+    }
+
+
     .testimonials-item .testimonials-rating .star.active svg {
       fill: #AF9075;
     }

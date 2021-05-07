@@ -1,48 +1,51 @@
 & {
-  .steps-item {
-    padding-left: 75px;
-    padding-top: 0;
-    max-width: 520px;
+  .steps:not(.animation-steps) {
+    .steps-item {
+      padding-left: 75px;
+      padding-top: 0;
+      max-width: 520px;
 
-    &:before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: #fff;
-      z-index: 3;
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #fff;
+        z-index: 3;
 
-    }
+      }
 
-    &:after {
-      content: "";
-      position: absolute;
-      background: url('../images/line_mob.svg') repeat-y center;
-      height: calc(100% - 18px);
-      background-size: 100%;
-      width: 3px;
-      top: 73px;
-      left: 30px;
-    }
-
-    &:first-child {
       &:after {
         content: "";
         position: absolute;
         background: url('../images/line_mob.svg') repeat-y center;
-        height: calc(100% - 45px);
+        height: calc(100% - 18px);
         background-size: 100%;
         width: 3px;
         top: 73px;
         left: 30px;
       }
-    }
 
-    &:last-child {
-      &:after {
-        display: none;
-        content: "";
+      &:first-child {
+        &:after {
+          content: "";
+          position: absolute;
+          background: url('../images/line_mob.svg') repeat-y center;
+          height: calc(100% - 45px);
+          background-size: 100%;
+          width: 3px;
+          top: 73px;
+          left: 30px;
+        }
+      }
+
+      &:last-child {
+        &:after {
+          display: none;
+          content: "";
+        }
       }
     }
+
   }
 
 
@@ -136,11 +139,13 @@
 
 
   &.dark_green-tmpl {
-  &:after,
-  &:before {
-    width: 100% !important;
-  }
-    .steps {
+
+    &:after,
+    &:before {
+      width: 100% !important;
+    }
+
+    .steps:not(.animation-steps) {
       .steps-item {
         &:after {
           background: url('../images/line_mob_dg.svg') repeat-y center;
@@ -150,7 +155,7 @@
   }
 
   &.dark_grey_yell-tmpl {
-    .steps {
+    .steps:not(.animation-steps) {
       .steps-item {
         &:after {
           background: url('../images/line_mob_dy.svg') repeat-y center;
@@ -160,7 +165,7 @@
   }
 
   &.green-tmpl {
-    .steps {
+    .steps:not(.animation-steps) {
       .steps-item {
         &:after {
           background: url('../images/line_mob_gr.svg') repeat-y center;
@@ -235,7 +240,7 @@
     }
   }
 
-  .steps {
+  .steps:not(.animation-steps) {
     margin-top: 5px;
     margin-bottom: 10px;
   }
@@ -1217,7 +1222,7 @@
 
 
   //  }
-  
+
   .typing {
     left: 15%;
     top: 5%;
@@ -1225,14 +1230,67 @@
 
   }
 
-    &.dark_green-tmpl:after, &.dark_green-tmpl:before {
-      width: 100%;
-    }
-  
+  &.dark_green-tmpl:after,
+  &.dark_green-tmpl:before {
+    width: 100%;
+  }
+
   #bodymovinMob {
     display: block;
   }
+
   #bodymovin {
     display: none;
+  }
+
+  .keywords {
+    display: flex;
+
+    &.half {
+      flex-wrap: wrap;
+
+      input,
+      .order-btn {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .animation-steps {
+    margin-top: 40px;
+    max-width: 396px;
+    margin-left: auto;
+    margin-right: auto;
+    .steps-item {
+    margin-bottom: 30px;
+      padding-top: 75px;
+
+      .title {
+        text-align: center;
+        font-size: 16px;
+        line-height: 130%;
+      }
+
+      &:before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &:after {
+        width: 90%;
+        height: 3px;
+        top: 35px;
+            left: 86px;
+      }
+
+      &:last-child {
+        &:after {
+          left: -72%;
+        }
+      }
+
+    }
   }
 }

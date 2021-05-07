@@ -34,7 +34,23 @@
       border-color: #005CBC;
 
     }
+.testimonials-rating .star {
+        &.active-4-5 {
+        svg {
+          path {
+            stroke: #005CBC;
+          }
 
+          linearGradient {
+             stop {
+              offset: 0.45;
+              stop-color: #005CBC;
+            }
+          }
+        }
+
+      }
+    }
 
     .testimonials-item .testimonials-rating .star.active svg {
       fill: #005CBC;
