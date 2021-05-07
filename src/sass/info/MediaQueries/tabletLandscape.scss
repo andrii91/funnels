@@ -2,4 +2,10 @@
 
 @media #{$tabletLandscape} {
     @import '../desktop';
+     &.dark_green-tmpl {
+      &:after,
+      &:before {
+        width: 100% !important;
+      }
+    }
 }

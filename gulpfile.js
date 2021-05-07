@@ -35,12 +35,12 @@ gulp.task('js', function() {
 gulp.task('js_v', function() {
     gulp.src([
             'src/js/vendor/jquery.js',
-            // 'src/js/vendor/bootstrap.min.js',
-            // 'src/js/vendor/inputmask.js',
-            // 'src/js/vendor/jquery.inputmask.js',
-            // 'src/js/vendor/jquery.animateNumber.min.js',
-            // 'src/js/vendor/jquery.scrollTo.js',
-            // 'src/js/vendor/jquery.waypoints.min.js',
+            'src/js/vendor/fansybox.js',
+            'src/js/vendor/jquery.mask.js',
+            'src/js/vendor/intl-tel-input.js',
+            'src/js/vendor/slick.js',
+            'src/js/vendor/typed.min.js',
+            'src/js/vendor/lt.min.js',
             // 'src/js/vendor/jqueryrotate.2.1.js',
         ])
         .pipe(concat('vendor.js'))

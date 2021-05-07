@@ -50,9 +50,17 @@
     margin-top: 10px;
   }
 
-  &#funnels-lib .text-content {
-    max-width: 100%;
-    margin-left: 0;
+  &#funnels-lib {
+
+    .mt-7,
+    .animation_bl-item {
+      margin-top: 30px;
+    }
+
+    .text-content {
+      max-width: 100%;
+      margin-left: 0;
+    }
   }
 
 
@@ -123,15 +131,15 @@
 
   }
 
-  &#funnels-lib.dark_green-tmpl:after,
-  &#funnels-lib.dark_green-tmpl:before {
-    width: 100%;
-  }
 
   overflow-x: hidden;
 
 
   &.dark_green-tmpl {
+  &:after,
+  &:before {
+    width: 100% !important;
+  }
     .steps {
       .steps-item {
         &:after {
@@ -202,7 +210,7 @@
 
     }
   }
-  
+
   .veryfy-input {
     height: 52px;
     font-size: 35px;
@@ -318,7 +326,7 @@
   }
 
   .flag-container > .selected-flag > .iti-flag {
-//    display: none;
+    //    display: none;
   }
 
   .input-text,
@@ -469,11 +477,12 @@
   }
 
   .create-steps .item section {
-      align-items: flex-start;
+    align-items: flex-start;
     min-height: calc(100vh - 350px);
   }
 
-  .veryfy-wrap .veryfy .order-btn, .veryfy-wrap .order-btn {
+  .veryfy-wrap .veryfy .order-btn,
+  .veryfy-wrap .order-btn {
     margin-top: 12px;
     margin-bottom: 12px;
     padding: 15px 22px;
@@ -1196,16 +1205,34 @@
       }
     }
   }
-  
-  &.open_sans_ovo, &.roboto_light {
+
+  &.open_sans_ovo,
+  &.roboto_light {
     .steps-item {
       &:before {
         border-width: 4px;
       }
     }
   }
-  
+
 
   //  }
+  
+  .typing {
+    left: 15%;
+    top: 5%;
+    font-size: 3vw;
 
+  }
+
+    &.dark_green-tmpl:after, &.dark_green-tmpl:before {
+      width: 100%;
+    }
+  
+  #bodymovinMob {
+    display: block;
+  }
+  #bodymovin {
+    display: none;
+  }
 }

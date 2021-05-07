@@ -1273,3 +1273,44 @@ box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5) inset;*/
     padding: 4px 22px;
   }
 }
+
+#bodymovin {
+   max-width: 100%;
+  max-height: 100%;
+/*  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;*/
+  margin: auto;
+}
+
+.wr-col-7 {
+  position: relative;
+  height: 380px;
+}
+
+.animation_bl-item {
+  position: relative;
+  width: 100%;
+  height: inherit;
+  margin-top: 65px;
+  svg {
+     width: 100%;
+  height: inherit;
+  }
+  overflow: hidden;
+}
+
+hr {
+  border: 0;
+  border-top: 0.833333px solid #909BA6;
+}
+
+.mt-7 {
+  margin-top: 70px;
+}
+
+#bodymovinMob {
+  display: none;
+}

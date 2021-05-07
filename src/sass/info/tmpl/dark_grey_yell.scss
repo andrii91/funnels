@@ -12,6 +12,11 @@
             fill: #E6B814;
           }
         }
+        circle {
+          &.logo_color {
+            stroke: #E6B814; 
+          }
+        }
       }
     }
 
