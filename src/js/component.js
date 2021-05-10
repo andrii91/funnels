@@ -819,14 +819,14 @@ var jsonDataAnimationMob = {"v":"5.6.3","fr":29.9700012207031,"ip":0,"op":465.00
   if($('div').hasClass('typing')) {
         setTimeout(function () {
       typingText();
-    }, 1900)
+    }, 1800)
     
         setInterval(function () {
       $('.typing').removeClass('active');
       $('.typing span:not(.text)').remove();
       setTimeout(function () {
         typingText();
-        }, 1900)
+        }, 1800)
     }, 15400)
 
   }
