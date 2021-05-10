@@ -211,9 +211,9 @@ $(document).ready(function () {
       $('.keywords input').removeClass('active');
     }, 1000)
     
-    if($(this).attr('href')!= "#") {
+   /* if($(this).attr('href')!= "#") {
        $(location).attr('href',$(this).attr('href'));
-    }
+    }*/
 
   })
 
