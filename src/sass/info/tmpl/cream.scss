@@ -21,11 +21,29 @@
       color: #000;
     }
 
-    .logo_color {
-      fill: #AF9075;
-      stroke: #AF9075;
-      
+  .logo {
+    svg {
+      path {
+
+        &.logo_color {
+          fill: #AF9075;
+        }
+      }
+
+      circle {
+        &.logo_color {
+          stroke: #AF9075;
+        }
+      }
     }
+  }
+
+  p {
+    a {
+      color: #AF9075;
+    }
+  }
+
 
     .red {
       color: #AF9075;

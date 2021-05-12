@@ -825,6 +825,15 @@ body {
     .keywords input {
       font-weight: bold;
     }
+    
+    .keywords {
+      &.half {
+        .order-btn {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+    }
 
     .radio-label label,
     .checbox-label label {
@@ -838,6 +847,10 @@ body {
 
     .testimonials-item p.small a {
       bottom: -5px;
+    }
+    
+    .steps-item:last-child:after {
+    width: 158px;
     }
   }
 
@@ -1237,6 +1250,17 @@ body {
     .label .label-text {
       text-transform: uppercase;
     }
+    .keywords {
+      &.half {
+        .order-btn {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+    }
+        .steps-item:last-child:after {
+    width: 158px;
+    }
   }
 
 
@@ -1368,6 +1392,18 @@ body {
 
     .footer-list li a {
       font-weight: 800;
+    }
+    
+    .keywords {
+      &.half {
+        .order-btn {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+    }
+        .steps-item:last-child:after {
+    width: 158px;
     }
   }
 

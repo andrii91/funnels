@@ -659,6 +659,15 @@
   }
 
   &.open_sans_bolt {
+      .keywords {
+  
+    &.half {
+      .order-btn  {
+        max-width: 290px;
+      }
+    }
+  }
+    
     h1 {
       font-size: 45px;
       line-height: 130%;
@@ -1032,7 +1041,15 @@
 
   &.open_sans_extra_bold {
 
-
+  .keywords {
+  
+    &.half {
+      .order-btn  {
+        max-width: 290px;
+      }
+    }
+  }
+    
     h1 {
       font-size: 55px;
       line-height: 130%;
@@ -1247,21 +1264,24 @@
     display: flex;
 
     &.half {
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
       input {
         width: 100%;
       }
 
       input,
       .order-btn {
+//        margin-top: 6px;
         margin-right: 0;
         margin-left: 0;
         margin-bottom: 11px;
       }
       .order-btn  {
-        width: 195px;
-        margin-left: 10px;
-        padding: 6.5px 10px;
+//        width: 195px;
+//        margin-left: 10px;
+//        padding: 6.5px 10px;
+        max-width: 270px;
+        width: 100%;
       }
     }
   }
@@ -1274,7 +1294,7 @@
     .steps-item {
     margin-bottom: 30px;
       padding-top: 75px;
-
+//z-index: 9;
       .title {
         text-align: center;
         font-size: 16px;
@@ -1291,6 +1311,7 @@
         height: 3px;
         top: 35px;
             left: 86px;
+        z-index: -1;
       }
 
       &:last-child {
@@ -1300,5 +1321,9 @@
       }
 
     }
+  }
+  
+  &.dark_green-tmpl:after, &.dark_green-tmpl:before {
+    z-index: -2 !important;
   }
 }

@@ -4,10 +4,29 @@
       color: #000;
     }
 
-    .logo_color {
-      fill: #000;
-      stroke: #000;
+  .logo {
+    svg {
+      path {
+
+        &.logo_color {
+          fill: #000;
+        }
+      }
+
+      circle {
+        &.logo_color {
+          stroke: #000;
+        }
+      }
     }
+  }
+
+  p {
+    a {
+      color: #000;
+    }
+  }
+
 
     .price .old .discount {
       color: #000;

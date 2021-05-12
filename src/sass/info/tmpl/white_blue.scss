@@ -1,112 +1,132 @@
-
-  &.white_blue-tmpl {
-    .red {
-      color: #005CBC;
-    }
-
-    .logo_color {
-      fill: #005CBC;
-      stroke: #005CBC;
-    }
-
-    .price .old .discount {
-      color: #005CBC;
-      border-color: #005CBC;
-    }
-
-    .order-btn:not(.link-btn, .unimportant-btn, .secondary-btn) {
-      background: #005CBC;
-
-      &:hover {
-        opacity: .9;
-      }
-    }
-
-    .order-btn.secondary-btn:before {
-      border-color: #005CBC;
-    }
-
-    .step-count {
-      border-color: #005FC1;
-    }
-
-    .steps-item:before {
-      border-color: #005CBC;
-
-    }
-.testimonials-rating .star {
-        &.active-4-5 {
-        svg {
-          path {
-            stroke: #005CBC;
-          }
-
-          linearGradient {
-             stop {
-              offset: 0.45;
-              stop-color: #005CBC;
-            }
-          }
-        }
-
-      }
-    }
-
-    .testimonials-item .testimonials-rating .star.active svg {
-      fill: #005CBC;
-    }
-
-    .testimonials-item .testimonials-rating .star svg path,
-    .testimonials-rating .star svg path {
-      stroke: #005CBC;
-    }
-
-    .testimonials-item .testimonials-rating .star svg {}
-
-    .testimonials-rating .star.active svg {
-      fill: #005CBC;
-    }
-
-    .testimonials-rating .star svg path,
-    .testimonials-rating .star svg path {
-      stroke: #005CBC;
-    }
+&.white_blue-tmpl {
+  .red {
+    color: #005CBC;
+  }
 
 
-    .testimonials-item p.small a {
-      color: #005CBC;
-    }
+  .logo {
+    svg {
+      path {
 
-    .checbox-label input:checked + label:before {
-      background-color: #005CBC;
-      border-color: #005CBC;
-    }
-
-    .checbox-label input:checked:disabled + label:before {
-      background-color: #101010;
-      border-color: #101010;
-    }
-
-    .radio-label input:checked + label:before {
-      background: #005CBC;
-      border-color: #005CBC;
-    }
-
-    .radio-label input:checked:disabled + label:after {
-      background: #FFFFFF;
-    }
-
-    .select-options li:hover {
-      background-color: #005CBC;
-      color: #fff;
-    }
-
-    .faq-item.active .arrow {
-      svg {
-        path {
+        &.logo_color {
           fill: #005CBC;
         }
       }
+
+      circle {
+        &.logo_color {
+          stroke: #005CBC;
+        }
+      }
     }
+  }
+
+  p {
+    a {
+      color: #005CBC;
+    }
+  }
+
+  .price .old .discount {
+    color: #005CBC;
+    border-color: #005CBC;
+  }
+
+  .order-btn:not(.link-btn, .unimportant-btn, .secondary-btn) {
+    background: #005CBC;
+
+    &:hover {
+      opacity: .9;
+    }
+  }
+
+  .order-btn.secondary-btn:before {
+    border-color: #005CBC;
+  }
+
+  .step-count {
+    border-color: #005FC1;
+  }
+
+  .steps-item:before {
+    border-color: #005CBC;
 
   }
+
+  .testimonials-rating .star {
+    &.active-4-5 {
+      svg {
+        path {
+          stroke: #005CBC;
+        }
+
+        linearGradient {
+          stop {
+            offset: 0.45;
+            stop-color: #005CBC;
+          }
+        }
+      }
+
+    }
+  }
+
+  .testimonials-item .testimonials-rating .star.active svg {
+    fill: #005CBC;
+  }
+
+  .testimonials-item .testimonials-rating .star svg path,
+  .testimonials-rating .star svg path {
+    stroke: #005CBC;
+  }
+
+  .testimonials-item .testimonials-rating .star svg {}
+
+  .testimonials-rating .star.active svg {
+    fill: #005CBC;
+  }
+
+  .testimonials-rating .star svg path,
+  .testimonials-rating .star svg path {
+    stroke: #005CBC;
+  }
+
+
+  .testimonials-item p.small a {
+    color: #005CBC;
+  }
+
+  .checbox-label input:checked + label:before {
+    background-color: #005CBC;
+    border-color: #005CBC;
+  }
+
+  .checbox-label input:checked:disabled + label:before {
+    background-color: #101010;
+    border-color: #101010;
+  }
+
+  .radio-label input:checked + label:before {
+    background: #005CBC;
+    border-color: #005CBC;
+  }
+
+  .radio-label input:checked:disabled + label:after {
+    background: #FFFFFF;
+  }
+
+  .select-options li:hover {
+    background-color: #005CBC;
+    color: #fff;
+  }
+
+  .faq-item.active .arrow {
+    svg {
+      path {
+        fill: #005CBC;
+      }
+    }
+  }
+
+
+}
