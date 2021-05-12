@@ -1247,13 +1247,21 @@
     display: flex;
 
     &.half {
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
+      input {
+        width: 100%;
+      }
 
       input,
       .order-btn {
-        width: 100%;
         margin-right: 0;
         margin-left: 0;
+        margin-bottom: 11px;
+      }
+      .order-btn  {
+        width: 195px;
+        margin-left: 10px;
+        padding: 6.5px 10px;
       }
     }
   }

@@ -1,4 +1,10 @@
 $(document).ready(function () {
+
+  $('.animation-btn').click(function (e) {
+    $('body').addClass('animate__animated animate__fadeOutLeft')
+  })
+  
+  
   window.onkeydown = function (evt) {
     if (evt.keyCode == 9) return false;
   };
@@ -857,5 +863,6 @@ var jsonDataAnimationMob = {"v":"5.6.3","fr":29.9700012207031,"ip":0,"op":465.00
   
   
   
+
   
 });
