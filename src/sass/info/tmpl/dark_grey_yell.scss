@@ -2,7 +2,11 @@
   &.dark_grey_yell-tmpl {
     position: relative;
     background: #202428;
-
+    p {
+      a {
+      color: #E6B814;
+      }
+    }
     .logo {
       svg {
         path {
