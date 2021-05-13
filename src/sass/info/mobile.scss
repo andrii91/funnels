@@ -1300,6 +1300,8 @@
     .steps-item {
       margin-bottom: 30px;
       padding-top: 75px;
+      padding-left: 10px;
+      padding-right: 10px;
 
       //z-index: 9;
       .title {
@@ -1323,7 +1325,7 @@
 
       &:last-child {
         &:after {
-          left: -72%;
+          left: -66%;
         }
       }
 

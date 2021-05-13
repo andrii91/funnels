@@ -188,6 +188,11 @@ input:hover {
   .steps-item {
     max-width: 33.33%;
     padding-right: 25px;
+    &:last-child {
+      &:after {
+        left: -151px;
+      }
+    }
   }
 }
 
