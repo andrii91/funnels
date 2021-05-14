@@ -9,7 +9,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        background: #fff;
+//        background: #fff;
         z-index: 3;
 
       }
@@ -27,14 +27,14 @@
 
       &:first-child {
         &:after {
-          content: "";
+        /*  content: "";
           position: absolute;
-          background: url('../images/line_mob.svg') repeat-y center;
+          background: url('../images/line_mob.svg') repeat-y center;*/
           height: calc(100% - 45px);
-          background-size: 100%;
+         /* background-size: 100%;
           width: 3px;
           top: 73px;
-          left: 30px;
+          left: 30px;*/
         }
       }
 

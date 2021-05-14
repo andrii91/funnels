@@ -87,6 +87,7 @@ body {
 
 @import 'info/modal';
 @import 'info/phone';
+@import 'info/timer';
 
 @import 'info/funnels';
 
@@ -268,6 +269,27 @@ body {
 
     .steps {
       max-width: 750px;
+        &.steps-center {
+          .steps-item {
+            padding-right: 0;
+            .title, p {
+              padding-right: 20px;
+            }
+
+              &:before {
+                left: 50%;
+                transform: translateX(-50%);
+              }
+            &:after {
+              left: 180px;
+            }
+              &:last-child {
+                &:after {
+                      left: -70px;
+                }
+              }
+            }
+        }
 
       .steps-item {
         max-width: 220px;
@@ -409,6 +431,10 @@ body {
       position: relative;
       font-weight: normal;
       font-size: 20px;
+      svg {
+        fill: #747C84;
+        margin-left: 10px;
+      }
 
       &:before {
         content: "";
