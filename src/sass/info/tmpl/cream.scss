@@ -1,6 +1,34 @@
 
   &.cream-tmpl {
     background: #E5E3DD;
+    
+      .timer {
+    background: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15), inset 0px -1px 0px rgba(0, 0, 0, 0.3);
+    .loader-spinner {
+      border-color: #AF9075;
+    }
+    .loader {
+      background: #fff;
+      .text {
+        color: #000;
+      }
+      
+    }
+    &-title {
+      color: #000;
+    }
+  }
+  
+  .order-btn {
+    svg {
+      path {
+          fill: #000;
+      }
+    }
+  }
+  
+    
 
     .faq-item.active .arrow path {
       fill: #AF9075;

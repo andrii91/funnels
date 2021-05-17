@@ -431,8 +431,12 @@ body {
       position: relative;
       font-weight: normal;
       font-size: 20px;
+      
       svg {
         fill: #747C84;
+        path {
+          fill: #747C84;
+        }
         margin-left: 10px;
       }
 

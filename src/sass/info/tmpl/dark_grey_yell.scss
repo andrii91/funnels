@@ -1,5 +1,32 @@
 
   &.dark_grey_yell-tmpl {
+    
+      .timer {
+    background: #202428;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15), inset 0px -1px 0px rgba(0, 0, 0, 0.3);
+    .loader-spinner {
+      border-color: #E6B814;
+    }
+    .loader {
+      background: #202428;
+      .text {
+        color: #fff;
+      }
+      
+    }
+    &-title {
+      color: #fff;
+    }
+  }
+  
+  .order-btn {
+    svg {
+      path {
+          fill: #E6B814;
+      }
+    }
+  }
+    
     position: relative;
     background: #202428;
     p {
