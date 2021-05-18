@@ -460,17 +460,29 @@ $(document).ready(function () {
     }
     
     if($(this).parents('.form').find('.select-styled')) {
-      var SelThis = $(this).parents('.form').find('.select-styled');
+      var SelThis = $(this).parents('.form').find('.select-styled'),
+           error = 0 ;
       SelThis.each(function(){
         if($(this).hasClass('required-select') ) {
           if(!$(this).hasClass('select-item')) {
-               $(this).addClass('error')
+               $(this).addClass('error');
+                 error = 1;
              }else{
-               $(this).removeClass('error')
+               $(this).removeClass('error');
+                 error = 0;
+               
              }
           
         }
       })
+      
+      
+      if (error !== 1) {
+        $(this).unbind(e);
+        //        $('.create-steps').slick('slickNext'); 
+
+      }
+      
     }
     
     
