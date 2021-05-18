@@ -122,6 +122,13 @@ body {
   margin: 0;
   position: relative;
   min-height: 68px;
+  
+  &.error {
+    border-color: red;
+    &:before {
+      color: red;
+    }
+  }
 
   &:before {
     content: 'Please pick an option';

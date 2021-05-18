@@ -84,7 +84,13 @@ $(document).ready(function () {
 
     $this.addClass('select-hidden');
     $this.wrap('<div class="select"></div>');
-    $this.after('<div class="select-styled"></div>');
+    
+    
+    if($this.attr('required')) {
+      $this.after('<div class="select-styled required-select"></div>');
+    }else{
+      $this.after('<div class="select-styled"></div>');
+    }
 
     var $styledSelect = $this.next('div.select-styled');
     if ($this.children('option[selected]')) {
@@ -121,7 +127,7 @@ $(document).ready(function () {
 
     $listItems.click(function (e) {
       e.stopPropagation();
-      $styledSelect.text($(this).text()).removeClass('active').addClass('select-item');
+      $styledSelect.text($(this).text()).removeClass('active error').addClass('select-item');
       $this.val($(this).attr('rel'));
       $list.slideUp();
       //console.log($this.val());
@@ -131,8 +137,17 @@ $(document).ready(function () {
       $styledSelect.removeClass('active');
       $list.slideUp();
     });
+    
+    
 
   });
+  
+  
+  $('.select-options li').each(function(){
+    if($(this).text() == '' || $(this).text() == ' ') {
+      $(this).hide();
+    }
+  })
 
 
   $('.input-text').each(function () {
@@ -439,12 +454,28 @@ $(document).ready(function () {
 
       if (error !== 1) {
         $(this).unbind(e);
-        //        $('.create-steps').slick('slickNext');
+        //        $('.create-steps').slick('slickNext'); 
 
       }
     }
+    
+    if($(this).parents('.form').find('.select-styled')) {
+      var SelThis = $(this).parents('.form').find('.select-styled');
+      SelThis.each(function(){
+        if($(this).hasClass('required-select') ) {
+          if(!$(this).hasClass('select-item')) {
+               $(this).addClass('error')
+             }else{
+               $(this).removeClass('error')
+             }
+          
+        }
+      })
+    }
+    
+    
 
-  })
+    })
 
 
 
