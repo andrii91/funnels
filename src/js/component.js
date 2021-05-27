@@ -911,13 +911,16 @@ var jsonDataAnimationMob = {"v":"5.6.3","fr":29.9700012207031,"ip":0,"op":465.00
 /*timer*/
 
 document.addEventListener('DOMContentLoaded', function(){ 
-	$("#circle-1").Circlebar({
-		maxValue: $('#circle-1').data('second')*2,
-		startTime: $('#circle-1').data('second'),
-		fontSize: "24px",
-		skin: 'yellow',
-		triggerPercentage: true
-	});
+  if($('div').hasClass('timer')) {
+    $("#circle-1").Circlebar({
+      maxValue: $('#circle-1').data('second')*2,
+      startTime: $('#circle-1').data('second'),
+      fontSize: "24px",
+      skin: 'yellow',
+      triggerPercentage: true
+    });
+    
+  }
 
 
 }); 
@@ -1016,8 +1019,11 @@ function Circlebar(prefs) {
 }
 
 (function($) {
-	$.fn.Circlebar = function(prefs) {
-		prefs.element = this[0];
-		new Circlebar(prefs);
-	};
-})(jQuery);
+   if($('div').hasClass('timer')) {
+      $.fn.Circlebar = function(prefs) {
+        prefs.element = this[0];
+        new Circlebar(prefs);
+      };
+   }
+    })(jQuery);
+     
